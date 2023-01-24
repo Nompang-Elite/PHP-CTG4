@@ -7,7 +7,6 @@ require("views/partials/navbar.php");
 <!-- Home contents -->
 <!DOCTYPE html>
 <html lang="en">
-
     <div class="main-top grid grid-cols-4 gap-4 pt-10">
         <div class="main-top-left bg-red-500 lg:h-80 md:h-64 sm:h-48 rounded-r">left</div>
         <div class="main-top-center  bg-red-400  col-span-2 rounded ">center</div>
