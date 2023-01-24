@@ -4,7 +4,7 @@
   "description": "PHP Project based",
   "main": "tailwind.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "Script is working!!!",
     "init-tailwindcss": "npx tailwindcss -i views/css/tw-input.php -o views/css/tw-style.php --watch"
   },
   "author": "P.KHID",
