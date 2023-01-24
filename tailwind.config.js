@@ -1,8 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: filesToCompile,
   theme: {
     extend: {},
   },
   plugins: [],
-}
+};
+
+var filesToCompile = [
+  "views\\home\\home.view.php",
+];
