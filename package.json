@@ -5,7 +5,7 @@
   "main": "tailwind.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "init-tailwindcss": "npx tailwindcss -i views/css/tw-input.php -o views/css/tw-style.php --watch"
+    "init-tailwindcss": "npx tailwindcss -i views/css/tw-input.css -o views/css/tw-style.css --watch"
   },
   "author": "P.KHID",
   "license": "ISC",
