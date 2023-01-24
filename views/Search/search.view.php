@@ -1,5 +1,13 @@
-<?php require("../partials/header.php") ?>
-<?php require("../partials/nav.php") ?>
+<?php
+$header = "Search";
+require("views/partials/header.php");
+require("views/partials/navbar.php");
+?>
 
 
-<?php require("../partials/footer.php") ?>
+<!--  -->
+
+
+
+
+<?php require("views/partials/footer.php")?>

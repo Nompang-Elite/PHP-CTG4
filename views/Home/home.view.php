@@ -1,6 +1,9 @@
-<?php require("../partials/header.php") ?>
-<?php require("../partials/nav.php") ?>
+<?php
+$header = "Home";
+require("views/partials/header.php");
+require("views/partials/navbar.php");
+?>
 
+<!-- Home contents -->
 
-
-<?php require("../partials/footer.php") ?>
+<?php require("views/partials/footer.php")?>
