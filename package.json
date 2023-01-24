@@ -1,0 +1,13 @@
+{
+  "name": "concert-ticket-ctg4",
+  "version": "1.0.0",
+  "description": "PHP Project based",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "init-tailwindcss": "npx tailwindcss -i views/css/tw-input.php -o views/css/tw-style.php --watch"
+  },
+  "author": "P.KHID",
+  "license": "ISC",
+  "homepage": "https://github.com/CTG-4/PHP-CTG4#readme"
+}
