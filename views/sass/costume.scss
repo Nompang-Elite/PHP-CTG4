@@ -5,13 +5,17 @@ $color-1: #fef9e6;
 $color-2: #101b37;
 $color-3: #e41376;
 $color-4: #01c8ee;
-
+@font-face {
+  font-family: OpenSans;
+  src: url("../../assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf");
+}
 * {
+  font-family: OpenSans;
   padding: 0;
   margin: 0;
 }
-body{
-    background-color: $color-1;
+body {
+  background-color: $color-1;
 }
 .card:hover {
   top: -0.4rem;
@@ -35,7 +39,12 @@ body{
   border: 1px solid transparent;
   &-primary {
     color: $color-1;
-    background-color: $secondary-color;
+    padding: .5rem 1rem;
+    border-radius: 1.5rem;
+    background-color: $primary-color;
+    &:hover{
+      background-color: $secondary-color;
+    }
   }
 }
 .footer-nav {
@@ -44,4 +53,28 @@ body{
   .foot-link {
     color: inherit;
   }
+}
+#nav-searchbox {
+  color: $primary-color;
+}
+.active {
+  background-color: $secondary-color;
+}
+/* clears the ‘X’ from Internet Explorer */
+input[type="search"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type="search"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
 }

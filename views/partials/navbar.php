@@ -1,17 +1,16 @@
- <!-- Navigation Start -->
- <nav class="navbar flex justify-between w-full items-center text-white bg-slate-600">
-   <ul class="flex">
-     <li class="flex p-2"><img src="../../assets/imgs/logo-no-background.png" width="120"></li>
-     <li class="flex nav-item"><a href="#" class="p-1.5 py-3 px-4 nav-link">Home</a></li>
-     <li class="flex nav-item"><a href="#" class="p-1.5 py-3 px-4 nav-link">Categories</a></li>
-     <li class="flex nav-item"><a href="#" class="p-1.5 py-3 px-4 nav-link">Abouts</a></li>
+ <nav class="navbar container flex justify-between items-center">
+   <ul class="flex items-center">
+     <li class="flex pl-4 pr-3"><img src="../../assets/imgs/logo-no-background.png" class="w-22 h-9"></li>
+     <li class="flex"><a href="/" class="nav-link p-1 px-3.5 my-2.5 rounded-2xl transition duration-400 active">Home</a></li>
+     <li class="flex"><a href="#" class="nav-link p-1 px-3.5 my-2.5 rounded-2xl transition duration-400">Explores</a></li>
+     <li class="flex"><a href="#" class="nav-link p-1 px-3.5 my-2.5 rounded-2xl transition duration-400">Trending</a></li>
+     <!-- Navbar Search-box -->
+     <li class="flex items-center"><input type="search" id="nav-searchbox" placeholder="Search" class="px-3 py-1.5 m-3 w-80 rounded-3xl outline-none"></li>
    </ul>
-   <ul class="flex w-4/12 mx-5">
-     <li class="flex items-center w-full"><input type="text" placeholder="Search..." class="w-full p-1.5 outline-none border-b-2 border-gray-300"><button class="p-2 btn-primary">Search</button></li>
-   </ul>
-   <ul class="flex text-sm">
-     <li class="flex nav-item"><a href="/login" class="p-1.5 px-4 nav-link flex items-center justify-center flex-col"><i class="material-icons text-center -mb-1.5 text-xs">person</i>Login</a></li>
-     <li class="flex nav-item"><a href="#" class="p-1.5 px-4 nav-link flex items-center justify-center flex-col"><i class="material-icons text-center -mb-1.5 text-xs">app_registration</i>Register</a></li>
+   <!-- Right nav -->
+   <ul class="flex items-center mr-4">
+     <li class="flex"><a href="/login" class="nav-link p-1 px-3.5 my-2.5 rounded-2xl transition duration-400">Login</a></li>
+     <li class="flex"><a href="#" class="nav-link p-1 px-3.5 my-2.5 rounded-2xl transition duration-400">Register</a></li>
    </ul>
  </nav>
  <!-- Navigation End -->

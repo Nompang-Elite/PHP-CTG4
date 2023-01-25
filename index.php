@@ -7,5 +7,3 @@ require("database/Database.php");
 require("utils/function.php");
 // Import page router:
 require("router.php");
-// Establish database connection:
-$myDatabase = new Database($configure["databaseInfo"], "admin", "Iseeyou1234");

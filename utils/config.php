@@ -1,9 +1,8 @@
 <?php
-
 return [
     "route" => [
         "/" => "controllers/home/home.controller.php",
-        "/search" => "views/search/search.view.php",
+        "/search" => "controllers/search/search.controller.php",
         "/login" => "controllers/login/login.controller.php",
     ],
     "databaseInfo" => [
