@@ -568,6 +568,18 @@ video {
   margin-bottom: -0.25rem;
 }
 
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
+.ml-64 {
+  margin-left: 16rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
 .block {
   display: block;
 }
@@ -596,6 +608,10 @@ video {
   height: 75%;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .w-80 {
   width: 20rem;
 }
@@ -622,6 +638,22 @@ video {
 
 .w-4\/12 {
   width: 33.333333%;
+}
+
+.w-5\/6 {
+  width: 83.333333%;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-11\/12 {
+  width: 91.666667%;
+}
+
+.w-10\/12 {
+  width: 83.333333%;
 }
 
 .max-w-sm {
