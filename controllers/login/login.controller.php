@@ -16,9 +16,9 @@ function loginValidation(string $email, string $password): bool
     if ((!empty($email) and $email !== null) and (!empty($password)) and $password !== null) {
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
             return true;
-        } else {
-            return false;
-        }
+        } 
+    } else {
+        return false;
     }
 }
 
