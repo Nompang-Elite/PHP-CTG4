@@ -1,3 +1,2 @@
 <?php
-// Get value
-require("views\login\login.view.php");
+require("views/html/login/login.view.php");

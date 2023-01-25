@@ -15,4 +15,3 @@ function routeToPage(string $value, array $routes)
 $uri = parse_url($_SERVER["REQUEST_URI"])["path"];
 // $routes = require("utils/config.php");
 // Routing the path based on URI
-routeToPage($uri, $configure["route"]);

@@ -1,2 +1,2 @@
 <?php
-require("views\Home\home.view.php");
+require("views/html/home/home.view.php");
