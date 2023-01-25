@@ -36,7 +36,7 @@ function validateLoginInfo(Database $db, string $email, string $password): void
         $sanitizedEmail = htmlspecialchars($email);
         $sanitizedpasswd = htmlspecialchars($password);
         // Query info for the matched user:
-        $statement = $db->query("SELECT Users.ID, First_name, Last_name, Email, Users.Password FROM Users WHERE Users.Email = :email", [":email" => $sanitizedEmail]);
+        $statement = $db->query("SELECT Users.ID, Email, Users.Password FROM Users WHERE Users.Email = :email", [":email" => $sanitizedEmail]);
         $getEmail = $statement->fetch();
         // Goto user home page If the password and info matched:
         if ($getEmail["Password"] === $sanitizedpasswd) {
