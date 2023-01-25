@@ -75,6 +75,10 @@ input[type=search]::-ms-reveal {
   height: 0;
 }
 
+.login-form-bg {
+  background-color: #ffffff;
+}
+
 /* clears the ‘X’ from Chrome */
 input[type=search]::-webkit-search-decoration,
 input[type=search]::-webkit-search-cancel-button,

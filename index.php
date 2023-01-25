@@ -1,6 +1,5 @@
 <?php
 // Import configuration file:
-global $configure;
 $configure = require("utils/config.php");
 // Import database module:
 require("database/Database.php");

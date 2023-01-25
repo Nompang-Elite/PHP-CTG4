@@ -1,4 +1,4 @@
- <nav class="navbar container flex justify-between items-center">
+ <nav class="navbar flex justify-between items-center">
    <ul class="flex items-center">
      <li class="flex pl-4 pr-3"><img src="../../assets/imgs/logo-no-background.png" class="w-22 h-9"></li>
      <li class="flex"><a href="/" class="nav-link p-1 px-3.5 my-2.5 rounded-2xl transition duration-400 active">Home</a></li>
