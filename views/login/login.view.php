@@ -4,7 +4,6 @@ require("views/partials/header.php");
 ?>
 
 <section class="flex h-screen">
-
     <div class="flex w-full items-center justify-center pl-6 bg-slate-700 lg:py-0">
         <div class="flex felx-row shadow-2xl rounded-lg bg-white justify-center h-3/4 w-4/6">
             <div class="p-6 w-3/5 space-y-4 md:space-y-6 sm:p-8">

@@ -10,7 +10,7 @@
      <li class="flex items-center w-full"><input type="text" placeholder="Search..." class="w-full p-1.5 outline-none border-b-2 border-gray-300"><button class="p-2 btn-primary">Search</button></li>
    </ul>
    <ul class="flex text-sm">
-     <li class="flex nav-item"><a href="#" class="p-1.5 px-4 nav-link flex items-center justify-center flex-col"><i class="material-icons text-center -mb-1.5 text-xs">person</i>Login</a></li>
+     <li class="flex nav-item"><a href="/login" class="p-1.5 px-4 nav-link flex items-center justify-center flex-col"><i class="material-icons text-center -mb-1.5 text-xs">person</i>Login</a></li>
      <li class="flex nav-item"><a href="#" class="p-1.5 px-4 nav-link flex items-center justify-center flex-col"><i class="material-icons text-center -mb-1.5 text-xs">app_registration</i>Register</a></li>
    </ul>
  </nav>
