@@ -1,5 +1,5 @@
 <!-- Footer Start -->
-<footer class="flex flex-col items-center w-full p-10 bg-slate-700 text-white ">
+<footer class="flex flex-col items-center w-full p-10 footer-nav">
         <div class="flex justify-between w-3/4">
             <div>
                 <a href="#" class="text-lg font-bold py-1">Contact Us</a>
@@ -22,30 +22,30 @@
                 </div>
             </div>
             <div>
-                <a href="#" class="text-lg font-bold p-2">Company</a>
+                <a href="#" class="text-lg font-bold p-2 foot-link">Company</a>
                 <ul>
-                    <li class="p-1"><a href="#" class="p-2">About Ticket</a></li>
-                    <li class="p-1"><a href="#" class="p-2">Contact & Support</a></li>
-                    <li class="p-1"><a href="#" class="p-2">Success History</a></li>
-                    <li class="p-1"><a href="#" class="p-2">Setting & Privacy</a></li>
+                    <li class="p-1"><a href="#" class="p-2 foot-link">About Ticket</a></li>
+                    <li class="p-1"><a href="#" class="p-2 foot-link">Contact & Support</a></li>
+                    <li class="p-1"><a href="#" class="p-2 foot-link">Success History</a></li>
+                    <li class="p-1"><a href="#" class="p-2 foot-link">Setting & Privacy</a></li>
                 </ul>
             </div>
             <div>
-                <a href="#" class="text-lg font-bold p-2">Resources</a>
+                <a href="#" class="text-lg font-bold p-2 foot-link">Resources</a>
                 <ul>
-                    <li class="p-1"><a href="#" class="p-2">SaaS Development</a></li>
-                    <li class="p-1"><a href="#" class="p-2">Our Products</a></li>
-                    <li class="p-1"><a href="#" class="p-2">User Flow</a></li>
-                    <li class="p-1"><a href="#" class="p-2">User Strategy</a></li>
+                    <li class="p-1"><a href="#" class="p-2 foot-link">SaaS Development</a></li>
+                    <li class="p-1"><a href="#" class="p-2 foot-link">Our Products</a></li>
+                    <li class="p-1"><a href="#" class="p-2 foot-link">User Flow</a></li>
+                    <li class="p-1"><a href="#" class="p-2 foot-link">User Strategy</a></li>
                 </ul>
             </div>
             <div>
-                <a href="#" class="text-lg font-bold p-2">Quicks Links</a>
+                <a href="#" class="text-lg font-bold p-2 foot-link">Quicks Links</a>
                 <ul>
-                    <li class="p-1"><a href="#" class="p-2">Premium Support</a></li>
-                    <li class="p-1"><a href="#" class="p-2">Our Services</a></li>
-                    <li class="p-1"><a href="#" class="p-2">Know Our Team</a></li>
-                    <li class="p-1"><a href="#" class="p-2">Download App</a></li>
+                    <li class="p-1"><a href="#" class="p-2 foot-link">Premium Support</a></li>
+                    <li class="p-1"><a href="#" class="p-2 foot-link">Our Services</a></li>
+                    <li class="p-1"><a href="#" class="p-2 foot-link">Know Our Team</a></li>
+                    <li class="p-1"><a href="#" class="p-2 foot-link">Download App</a></li>
                 </ul>
             </div>
 

@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .card:hover {
   top: -0.4rem;
 }
@@ -6,4 +11,30 @@
   top: 0;
   position: relative;
   transition: 0.2s;
+}
+
+.navbar {
+  background-color: #0b1320;
+  color: #fef9e6;
+}
+
+.nav-link:hover {
+  background-color: #394d5f;
+}
+
+.btn {
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+.btn-primary {
+  color: #fef9e6;
+  background-color: #394d5f;
+}
+
+.footer-nav {
+  background-color: #0b1320;
+  color: #fef9e6;
+}
+.footer-nav .foot-link {
+  color: inherit;
 }/*# sourceMappingURL=costume.css.map */
