@@ -13,6 +13,6 @@ function routeToPage(string $value, array $routes)
 
 // Variables with the server Info
 $uri = parse_url($_SERVER["REQUEST_URI"])["path"];
-$routes = require("utils/config.php");
+// $routes = require("utils/config.php");
 // Routing the path based on URI
-routeToPage($uri, $routes["route"]);
+routeToPage($uri, $configure["route"]);

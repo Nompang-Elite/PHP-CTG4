@@ -1,9 +1,14 @@
 <?php
-// Function
+// Import configuration file:
+$configure = require("utils/config.php");
+// Import Function:
 require("utils/function.php");
-// Require router
+// Import page router:
 require("router.php");
-// Main php file
-// dump_die($_SERVER["REQUEST_URI"]);
-// Route to home page
-?>
+// Import database module:
+require("database/Database.php");
+
+// Establish database connection:
+$myDatabase = new Database($configure["databaseInfo"], "admin", "Iseeyou1234");
+$users = $myDatabase->query("select * from Users inner join Permissions;");
+$user = $users->fetch();
