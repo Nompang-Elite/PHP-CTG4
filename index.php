@@ -10,5 +10,3 @@ require("database/Database.php");
 
 // Establish database connection:
 $myDatabase = new Database($configure["databaseInfo"], "admin", "Iseeyou1234");
-$users = $myDatabase->query("select * from Users inner join Permissions;");
-$user = $users->fetch();
