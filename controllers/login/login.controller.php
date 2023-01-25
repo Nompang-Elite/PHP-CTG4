@@ -1,44 +1,29 @@
 <?php
 // Get value
-$emialError = "";
-$passwordError = "";
-if ($_SERVER['REQUEST'] == "POST"){
-    // email-----------
-    if (empty($_POST['email'])){
-        // if user don't complete the email-----
-        $emialError = "Please insert your email";
-    }else{
-        // validate input email-----
-        
-        if (isset($_POST['email'])){
-            if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
-             {
-                $email = $_POST['email'];
-             }
-             else{
-                $emialError ="email must contain @. Ex: name@gmail.com" ;
-             }
-        }
+$email = "";
+$password = "";
+function loginValidation(string $email, string $password): bool
+{
+    /*
+    * Function description:
+    * @param type string $email
+    * @param type string $password
+    * @param type 
+    * @return type bool {true, false}
+    */
 
-    }
-    // password-----------
-    if (empty($_POST['password'])){
-        // if user don't complete the password-----
-        $passwordError = "Please insert your email";
-    }else{
-        // validate input password--------
-        if (isset($_POST['email'])){
-            //  passowrd input should have 8 or more than 8 charaters 
-            $passwordParttern = '/[a-zA-Z0-9]{8,}/';
-            if (preg_match_all($passwordParttern, $_POST['password']) == 1){
-                $password = $_POST['password'];
-            }
-            else{
-                $passwordError = "You should complete a strong password";
-            }
+    // Check if the input of email and pass are not empty or null:
+    if ((!empty($email) and $email !== null) and (!empty($password)) and $password !== null) {
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            return true;
+        } else {
+            return false;
         }
-
     }
 }
 
+if ($_SERVER["REQUEST_METHOD"] === "POST"){
+    $loginValid = loginValidation($email, $password);
+}
+echo loginValidation($email, $password);
 

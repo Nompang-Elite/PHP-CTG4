@@ -1,9 +1,8 @@
 <?php
-#---------------Function for destroying sessions -----------------------#
-function logout(){
-    session_start();
+function logout(string $headTo)
+{
+    // Logout by destroying the session.
     session_destroy();
-    header("location:index.php");
+    // Route to the located page after logout
+    header("location:{$headTo}");
 }
-
-
