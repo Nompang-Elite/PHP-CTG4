@@ -19,7 +19,7 @@ function checkLoginValues(string $email, string $password): bool
         return false;
 }
 
-function validateLoginInfo(Database $db, string $email, string $password): void
+function validateLoginInfo(Database $db, string $email, string $password): bool
 {
     /*
     * Function description:
@@ -40,7 +40,9 @@ function validateLoginInfo(Database $db, string $email, string $password): void
         $getEmail = $statement->fetch();
         // Goto user home page If the password and info matched:
         if ($getEmail["Password"] === $sanitizedpasswd) {
-            require("views\Home\home.view.php");
-        }
-    }
+            return true;
+        } else
+            return false;
+    } else
+        return false;
 }

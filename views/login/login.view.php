@@ -22,7 +22,7 @@ require("views/partials/header.php");
                 <h1 class="text-xl font-bold leading-tight text-center">
                     Log in to your account
                 </h1>
-                <form class="space-y-4 md:space-y-6 w-full" action="#">
+                <form class="space-y-4 md:space-y-6 w-full" method="post" action="controllers/login/login.controller.php">
                     <div class="ml-10">
                         <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                             Email</label>
