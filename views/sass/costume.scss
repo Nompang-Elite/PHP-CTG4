@@ -1,10 +1,9 @@
 $primary-color: #0b1320;
 $secondary-color: #394d5f;
 $color-1: #fef9e6;
-$color-2:#101B37;
-$color-3:#E41376;
-$color-4:#01C8EE;
-
+$color-2: #101b37;
+$color-3: #e41376;
+$color-4: #01c8ee;
 
 * {
   padding: 0;
@@ -35,10 +34,10 @@ $color-4:#01C8EE;
     background-color: $secondary-color;
   }
 }
-.footer-nav{
-    background-color: $primary-color;
-    color: $color-1;
-    .foot-link{
-        color: inherit;   
-    }
+.footer-nav {
+  background-color: $primary-color;
+  color: $color-1;
+  .foot-link {
+    color: inherit;
+  }
 }
