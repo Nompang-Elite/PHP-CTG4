@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="views/css/tw-style.css">
     <link rel="stylesheet" href="views/css/costume-style.min.css">
+    <script src="libs/JQuery/jquery-3.6.3.min.js"></script>
     <title><?= $header ?></title>
 </head>
 

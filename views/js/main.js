@@ -1,10 +1,9 @@
-let settingIcons = document.querySelector("#settings-icons");
-let dropMenu = document.querySelector("#drop-menu");
-function toggleDisplay(element, display) {
-  if (element.style.display === "none") {
-    element.style.display = display;
-  } else element.style.display = "none";
+// Main JS files
+
+// FUNCTIONS
+function validateInput(value, pattern) {
+  // Validating the input value by using Regex:
+  if (value.match(pattern)) {
+    return true;
+  } else return false;
 }
-settingIcons.addEventListener("click", (event) => {
-  toggleDisplay(dropMenu, "flex");
-});
