@@ -1,23 +1,27 @@
 <?php
 $header = "Login";
 require("views/partials/header.php");
-
 ?>
 
 <!-- Login page -->
-<main class="flex w-full h-screen">
-    <div class="bg-black w-8/12 max-[1200px]:w-2/4 max-[800px]:hidden">
-        <h1>Left</h1>
-    </div>
-    <div class="login-form-bg flex flex-col w-4/12 justify-center items-center max-[1200px]:w-2/4 max-[800px]:w-full">
-        <form action="/login" method="post" class="login-form flex flex-col gap-8">
-            <legend class="text-2xl">LOGIN</legend>
-            <input type="email" id="email" name="email" placeholder="Email" class="p-1.5 w-80 border-b-2 bg-transparent outline-none <?= $incorrect ?>">
-            <input type="password" id="password" name="password" placeholder="Password" class="p-1.5 w-80 border-b-2 outline-none bg-transparent <?= $incorrect ?>">
-            <button class="btn-primary">Sign In</button>
+<main class="w-full h-screen flex justify-center items-center bg-white">
+    <div class="flex h-full w-full">
+        <div class="w-4/6">
+            <!-- Contents -->
+            <h1>Content</h1>
+        </div>
+        <form action="/" method="post" id="login-form" class="flex flex-col gap-[1rem] shadow-md justify-center border-l-2 items-center w-2/6 ">
+            <legend class="text-3xl font-bold">Login</legend>
+            <span class="text-xs">Welcome to the login page, please input your info.</span>
+            <input type="email" name="email" placeholder="Email address" class="p-2 rounded-md w-80 border-2">
+            <input type="password" name="pass" placeholder="Password" class="p-2 rounded-md w-80 border-2">
+            <a href="#" class="text-[#01c8ee]">Forget password?</a>
+            <button class="btn p-2 rounded-md w-80 border-2 border-[#01c8ee] text-[#01c8ee]">Login</button>
+            <hr class="w-4/12">
+            <span>Don't have account? <a href="#" class="text-[#01c8ee]">Register</a></span>
         </form>
-        <a href="/" class="mt-10">Back to Home</a>
     </div>
+
 </main>
 
 <?php

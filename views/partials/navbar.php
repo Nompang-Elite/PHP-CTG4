@@ -19,7 +19,7 @@
     </div>
     <div class="flex mr-4 max-sm:w-full">
       <ul class="flex max-sm:flex-col max-sm:w-full">
-        <li class="flex"><a href="#" class="nav-link p-2 px-3 max-sm:w-full max-sm:m-0 max-sm:p-4 flex justify-between"><span class="material-icons">person</span>Login</a></li>
+        <li class="flex"><a href="/login" class="nav-link p-2 px-3 max-sm:w-full max-sm:m-0 max-sm:p-4 flex justify-between"><span class="material-icons">person</span>Login</a></li>
         <li class="flex"><a href="#" class="nav-link p-2 px-3 max-sm:w-full max-sm:m-0 max-sm:p-4 flex justify-between">
             <span class="material-icons">app_registration</span> Register
           </a></li>
