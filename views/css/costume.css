@@ -79,6 +79,21 @@ input[type=search]::-ms-reveal {
   background-color: #ffffff;
 }
 
+.drop-menu {
+  top: 3rem;
+  background-color: #ffffff;
+  color: #0b1320;
+  width: 240px;
+  right: 1rem;
+}
+.drop-menu .drop-link {
+  width: 100%;
+  padding: 0.5rem;
+}
+.drop-menu a:hover {
+  background-color: #394d5f;
+}
+
 /* clears the ‘X’ from Chrome */
 input[type=search]::-webkit-search-decoration,
 input[type=search]::-webkit-search-cancel-button,

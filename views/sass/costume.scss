@@ -39,10 +39,10 @@ body {
   border: 1px solid transparent;
   &-primary {
     color: $color-1;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 1.5rem;
     background-color: $primary-color;
-    &:hover{
+    &:hover {
       background-color: $secondary-color;
     }
   }
@@ -71,8 +71,23 @@ input[type="search"]::-ms-reveal {
   width: 0;
   height: 0;
 }
-.login-form-bg{
+.login-form-bg {
   background-color: $color-0;
+}
+
+.drop-menu {
+  top: 3rem;
+  background-color: $color-0;
+  color: #0b1320;
+  width: 240px;
+  right: 1rem;
+  .drop-link {
+    width: 100%;
+    padding: 0.5rem;
+  }
+  a:hover {
+    background-color: $secondary-color;
+  }
 }
 /* clears the ‘X’ from Chrome */
 input[type="search"]::-webkit-search-decoration,

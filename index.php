@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Import configuration file:
 $configure = require("utils/config.php");
 // Import database module:

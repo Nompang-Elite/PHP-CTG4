@@ -1,6 +1,17 @@
 <?php
 
-function login($db, $email, $pass): bool
+function validateUserLogin($db, string $email, string $pass): bool
 {
-    
+    $sanitizedEmail = htmlspecialchars($email);
+    $sanitizedPass = htmlspecialchars($pass);
+    $query = "SELECT Email, Users.Password FROM Users WHERE Email = :email AND Users.Password = :pass";
+    $statement = $db->query($query, [":email" => $sanitizedEmail, ":pass" => $sanitizedPass]);
+    $users = $statement->fetch();
+    if ($users) {
+        $statement = $db->query("SELECT * FROM Users;");
+        $_SESSION = $statement->fetch();
+        $_SESSION["LoggedIn"] = true;
+        return true;
+    } else
+        return false;
 }

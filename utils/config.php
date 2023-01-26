@@ -6,8 +6,12 @@ return [
         "/login" => "controllers/login/login.controller.php",
     ],
     "databaseInfo" => [
-        "host" => "php-database.c9wmosguks3w.ap-southeast-1.rds.amazonaws.com",
-        "dbname" => "concert_ticket",
-        "port" => "3306"
+        "dsn" => [
+            "host" => "php-database.c9wmosguks3w.ap-southeast-1.rds.amazonaws.com",
+            "dbname" => "concert_ticket",
+            "port" => "3306",
+        ],
+        "user" => "admin",
+        "password" => "Iseeyou1234"
     ]
 ];

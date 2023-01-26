@@ -11,10 +11,10 @@ class Database
     *
     */
     private $connection;
-    public function __construct(array $config, string $user, string $pass)
+    public function __construct(array $config)
     {
-        $dsn = "mysql:" . http_build_query($config, "", ";");
-        $this->connection = new PDO($dsn, $user, $pass, [
+        $dsn = "mysql:" . http_build_query($config["dsn"], "", ";");
+        $this->connection = new PDO($dsn, $config["user"], $config["password"] ,options: [
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
         ]);
     }
@@ -25,6 +25,3 @@ class Database
         return $statement;
     }
 }
-
-// Establish database connection:
-$myDatabase = new Database($configure["databaseInfo"], "admin", "Iseeyou1234");
