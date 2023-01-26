@@ -1,5 +1,5 @@
 <?php
-
+require_once("models/validation.model.php");
 class Users
 {
     // Users
@@ -9,12 +9,12 @@ class Users
     {
         $this->db = $database;
     }
-    public function login(string $email, string $password): void
+    public function login(string $email, string $password): bool
     {
         /* Method : Login method use to log the user in
         * @param type string $email
         * @param type string $password
-        * @return void;
+        * @return bool;
         */
 
         // Sanitize the input values: 
@@ -29,13 +29,14 @@ class Users
             $statement = $this->db->query("SELECT First_name, Last_name, Email, Member FROM  Users INNER JOIN Permissions on Permissions.ID = Users.ID");
             // Set data to session:
             $_SESSION["user"] = $statement->fetch();
-            $_SESSION["user"]["loggedIn"] = true;
-            // Relocate logged user to home page:
-            header("Location: /");
-        }
+            $_SESSION["user"]["logged"] = true;
+            return true;
+        } else return false;
     }
     public function logout()
     {
+        // Unset and destroy sessoin:
+        unset($_SESSION["user"]);
         session_destroy();
     }
 }

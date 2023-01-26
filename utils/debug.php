@@ -3,7 +3,7 @@
 function dump_die($value = null)
 {
     echo "<pre>";
-    var_dump($value);
+    print_r($value);
     echo "</pre>";
     die();
 }

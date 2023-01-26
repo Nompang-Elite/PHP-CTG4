@@ -8,6 +8,7 @@ require("views/partials/navbar.php");
 <main class="h-screen">
     <!-- Home -->
     <h1>Home</h1>
+    
 </main>
 
 <?php
