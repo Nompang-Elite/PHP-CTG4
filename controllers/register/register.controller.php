@@ -29,24 +29,9 @@ function validateEmail($email)
 
 #Variable
 
-$firstName="";
-$lastName = "";
-$password = "";
-$phoneNumber = "";
-$city = "";
-$date = "";
-$password = "";
-$gender = "";
-$genderError = "";
-$confirmPassword = "";
-$confirmPasswordError = "";
-$dateError = "";
-$firstNameError ="";
-$lastNameError ="";
-$emailError ="";
-$passwordError ="";
-$phoneNumberError = "";
-$cityError = "";
+$firstName = $lastName = $password = $phoneNumber = $city = $date = $gender = $email = $confirmPassword = "";
+$firstNameError = $lastNameError = $passwordError = $phoneNumberError = $phoneNumberError = "";
+$cityError = $dateError = $genderError = $emailError = $confirmPasswordError = "";
 $completed=0;
 $valid = false;
 
@@ -102,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     #Please enter confirm password
     if (empty($_POST["confirmPassword"])){
-        $confirmPassword = "Please enter your confirmation password";
+        $confirmPasswordError = "Please enter confirm password";
     }else{
         if (isset($_POST["confirmPassword"])){
             if ($_POST["confirmPassword"]== $_POST["password"]){
