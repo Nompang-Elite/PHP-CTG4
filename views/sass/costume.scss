@@ -81,6 +81,10 @@ input[type="search"]::-ms-reveal {
   color: #0b1320;
   width: 240px;
   right: 1rem;
+  .username{
+    background-color: $primary-color;
+    color: $color-0;
+  }
   .drop-link {
     width: 100%;
     padding: 0.5rem;

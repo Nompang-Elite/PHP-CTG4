@@ -4,6 +4,7 @@ return [
         "/" => "controllers/home/home.controller.php",
         "/search" => "controllers/search/search.controller.php",
         "/login" => "controllers/login/login.controller.php",
+        "/logout" => "controllers/login/login.controller.php",
     ],
     "databaseInfo" => [
         "dsn" => [

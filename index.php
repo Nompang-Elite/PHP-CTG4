@@ -3,10 +3,10 @@ session_start();
 // Import configuration file:
 $configure = require("utils/config.php");
 // Import database module:
-require("database/Database.php");
+require_once("database/Database.php");
 // Import Function:
-require("utils/function.php");
+require_once("utils/function.php");
 // Import page router:
-require("router.php");
+require_once("router.php");
 // Route to page:
 routeToPage($uri, $configure["route"]);

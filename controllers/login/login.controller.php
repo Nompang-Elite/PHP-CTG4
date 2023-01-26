@@ -1,5 +1,8 @@
 <?php
-
+if ($_SERVER["REQUEST_URI"] === "/logout") {
+    session_destroy();
+    header("Location: /");
+}
 // Import User login model:
 require("models/login.model.php");
 
@@ -13,10 +16,12 @@ $mydb = new Database($config["databaseInfo"]);
 if ($_SERVER["REQUEST_METHOD"] === "POST" and (isset($_POST["email"]) and isset($_POST["password"]))) {
     if (!empty($_POST["email"]) and !empty($_POST["password"])) {
         if (validateUserLogin($mydb, $_POST["email"], $_POST["password"]) !== false) {
-            // dump_die($_SESSION);
-            routeToPage("/", $config["route"]);
+            header("Location: /");
         }
-    } else
+    } else {
+        $incorrect = "border-b-red-400";
+        $notValid = true;
         require("views/html/login/login.view.php");
+    }
 } else
     require("views/html/login/login.view.php");
