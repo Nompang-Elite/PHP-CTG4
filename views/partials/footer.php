@@ -1,56 +1,27 @@
 <!-- Footer Start -->
-<footer class="flex flex-col items-center w-full p-10 footer-nav">
-        <div class="flex justify-between w-3/4">
-            <div>
-                <a href="#" class="text-lg font-bold py-1">Contact Us</a>
-                <ul>
-                    <li class="p-1">
-                        <p>Email: myfakeemail@gmail.com</p>
-                    </li>
-                    <li class="p-1">
-                        <p>Phone: +855 123 456 789</p>
-                    </li>
-                    <li class="p-1">
-                        <span class="material-icons pr-2">discord</span>
-                        <span class="material-icons pr-2">facebook</span>
-                        <span class="material-icons pr-2">telegram</span>
-                        <span class="material-icons pr-2">phone</span>
-                    </li>
-                </ul>
-                <div class="text-sm">
-                    <p>Copyrights&copy;Reserved By Team-4</p>
-                </div>
-            </div>
-            <div>
-                <a href="#" class="text-lg font-bold p-2 foot-link">Company</a>
-                <ul>
-                    <li class="p-1"><a href="#" class="p-2 foot-link">About Ticket</a></li>
-                    <li class="p-1"><a href="#" class="p-2 foot-link">Contact & Support</a></li>
-                    <li class="p-1"><a href="#" class="p-2 foot-link">Success History</a></li>
-                    <li class="p-1"><a href="#" class="p-2 foot-link">Setting & Privacy</a></li>
-                </ul>
-            </div>
-            <div>
-                <a href="#" class="text-lg font-bold p-2 foot-link">Resources</a>
-                <ul>
-                    <li class="p-1"><a href="#" class="p-2 foot-link">SaaS Development</a></li>
-                    <li class="p-1"><a href="#" class="p-2 foot-link">Our Products</a></li>
-                    <li class="p-1"><a href="#" class="p-2 foot-link">User Flow</a></li>
-                    <li class="p-1"><a href="#" class="p-2 foot-link">User Strategy</a></li>
-                </ul>
-            </div>
-            <div>
-                <a href="#" class="text-lg font-bold p-2 foot-link">Quicks Links</a>
-                <ul>
-                    <li class="p-1"><a href="#" class="p-2 foot-link">Premium Support</a></li>
-                    <li class="p-1"><a href="#" class="p-2 foot-link">Our Services</a></li>
-                    <li class="p-1"><a href="#" class="p-2 foot-link">Know Our Team</a></li>
-                    <li class="p-1"><a href="#" class="p-2 foot-link">Download App</a></li>
-                </ul>
-            </div>
-
+<footer class="pb-16 flex flex-col items-center justify-center w-full max-sm:p-4 text-center">
+    <nav class="navbar flex justify-between max-sm:flex-col mt-10">
+        <div class="container flex items-center max-sm:flex-col">
+            <ul class="flex max-sm:flex-col max-sm:w-full">
+                <li class="flex"><a href="#" class="nav-link p-2 px-3 max-sm:w-full max-sm:m-0 max-sm:p-4">Home</a>
+                </li>
+                <li class="flex"><a href="#" class="nav-link p-2 px-3 max-sm:w-full max-sm:m-0 max-sm:p-4">Explores</a>
+                </li>
+                <li class="flex"><a href="#" class="nav-link p-2 px-3 max-sm:w-full max-sm:m-0 max-sm:p-4">Trending</a>
+                </li>
+            </ul>
         </div>
-    </footer>
-    <!-- Footer End -->
+    </nav>
+    <img src="../../assets/imgs/logo-no-background.png" alt="logo" class="px-4 w-26 h-14 my-10">
+    <p class="text-xs">
+        Address: BP 511, Phum Tropeang Chhuk (Borey Sorla) Sangtak, Street 371, Phnom Penh
+    </p>
+    <p class="text-xs mt-4">Email: khid.pagna@student.passerellesnumeriques.org</p>
+    <p class="m-4">Copyrights&copy;Reserved by Team-4</p>
+
+</footer>
+<!-- Footer End  -->
+
 </body>
+
 </html>
