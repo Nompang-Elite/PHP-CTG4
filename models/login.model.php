@@ -15,3 +15,18 @@ function validateUserLogin($db, string $email, string $pass): bool
     } else
         return false;
 }
+
+class Users
+{
+    // Users
+    public function __construct()
+    {
+        
+    }
+    public function login(){
+        // Login method use to log the user in
+    }
+    public function logout(){
+        
+    }
+}
