@@ -5,4 +5,4 @@ if (isset($_SESSION)) {
         $username = "{$_SESSION["First_name"]} {$_SESSION["Last_name"]}";
     }
 }
-require("views/html/home/home.view.php");
+require("views/pages/home/home.view.php");

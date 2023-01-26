@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" and (isset($_POST["email"]) and isset(
         header("Location: /");
     } else {
         $incorrect = "border-b-red-400";
-        require("views/html/login/login.view.php");
+        require("views/pages/login/login.view.php");
     }
 } else
-    require("views/html/login/login.view.php");
+    require("views/pages/login/login.view.php");
