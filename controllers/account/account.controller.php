@@ -2,7 +2,7 @@
 // Import config files:
 $config = require("utils/config.php");
 // Establish database connection:
-$db = new Database($config["databaseInfo"]);
+$db = new Database($config["databaseInfoOnline"]);
 // Get session data:
 $user = ["info" => $_SESSION["user"], "active" => $_SESSION["user"]["logged"]];
 

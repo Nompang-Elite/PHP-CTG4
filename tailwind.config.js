@@ -6,21 +6,22 @@ module.exports = {
     "views\\partials\\navbar.php",
     "views\\pages\\home\\home.view.php",
     "views\\pages\\login\\login.view.php",
-    "views\\pages\\account\\account.view.php"
+    "views\\pages\\account\\account.view.php",
+    "views\\pages\\register\\register.view.php",
   ],
   theme: {
     extend: {},
     container: {
       screens: {
-        sm: '600px',
-        md: '728px',
-        lg: '984px',
-        xl: '1240px',
-        '2xl': '1496px',
+        sm: "600px",
+        md: "728px",
+        lg: "984px",
+        xl: "1240px",
+        "2xl": "1496px",
       },
     },
-    maxWidth:{
-      "8/10":"80%",
+    maxWidth: {
+      "8/10": "80%",
     },
   },
   plugins: [],
