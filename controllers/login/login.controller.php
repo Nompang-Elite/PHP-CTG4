@@ -2,7 +2,8 @@
 // Import config files:
 $config = require("utils/config.php");
 // Establish database connection:
-$db = new Database($config["databaseInfoOnline"]);
+$db = new Database($config["databaseInfoLocal"]);
+// $db = new Database($config["databaseInfoOnline"]);
 // Create a user object:
 $user = new Users($db);
 // Validate the login:

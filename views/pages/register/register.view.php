@@ -1,93 +1,64 @@
 <!-- // -->
 <?php
-$header = "Home";
+$header = "Register";
 require("views/partials/header.php");
 ?>
 
 <!-- Home contents -->
 <main class="h-screen">
-    <section class="flex h-screen">
-        <div class="flex w-full items-center justify-center lg:py-0 ">
-            <div class="flex felx-row rounded-lg justify-center h-full w-full">
-                <div class="flex items-center bg-black justify-center flex-col w-5/6  md:space-y-6 sm:p-8 max-[640px]:hidden">
-                    <div class="flex items-center justify-center">
-                        <img src="image/image_2023-01-26_19-59-35.png" alt="" class="w-1/4">
+    <div class="flex h-screen w-full items-center justify-center lg:py-0 ">
+        <div class="flex felx-row rounded-lg justify-center h-full w-full">
+            <!-- Left side -->
+            <div class="flex justify-center items-center bg-[#0b1320] w-full max-sm:hidden">
+                <!-- Contents -->
+                <img src="../../assets/imgs/logo-no-background.png" alt="logo" class="px-4 w-26 h-14 my-10">
+
+            </div>
+            <!-- Register Form -->
+            <div class="flex bg-white items-center justify-center flex-col shadow-md border-l-2 w-[36rem] min-w-[20rem] max-sm:w-full">
+                <form action="/register" method="post" id="login-form" class="w-full flex flex-col items-center gap-[1rem]">
+                    <legend class="text-3xl font-bold">Register</legend>
+                    <!-- Name Input -->
+                    <div class="flex gap-[1rem] max-w-8/10 ">
+                        <input type="text" name="firstName" id="firstName" class="rounded-md p-2 text-center border-2 w-full" placeholder="First Name ">
+                        <input type="text" name="lastName" id="lastName" class="rounded-md p-2 text-center border-2 w-full" placeholder=" last name ">
                     </div>
-                </div>
-                <div class="flex bg-white items-center justify-center flex-col p-6 w-1/2 space-y-4 md:space-y-6 sm:p-8  max-[640px]:w-full">
-                    <h1 class="text-xl font-bold leading-tight text-center">
-                        Please Register Here!
-                    </h1>
-                    <form class="space-y-4 md:space-y-6 w-full" action="#">
-                        <div class="flex mb-6">
-                            <div class=" w-full md:w-1/2 px-2 mb-6 md:mb-0">
-                                <label for="countries" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">First Name</label>
-                                <input type="text" name="firstName" id="countries" class="bg-gray-50 border border-red-800 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 " placeholder="first name " required="">
-                                <small><?php echo $firstNameError; ?></small>
-                            </div>
-                            <div class=" w-full md:w-1/2 px-2 mb-6 md:mb-0">
-                                <label for="countries" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Last Name</label>
-                                <input type="text" name="lastName" id="countries" class="bg-gray-50 border border-red-800 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 " placeholder=" last name " required="">
-                                <small><?php echo $lastNameError; ?></small>
-                            </div>
-                        </div>
-                        <div class=" md:w-1/1 px-2" style="margin-top: -1rem;">
-                            <label for="gender" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Gender</label>
-                            <select id="gender" name="gender" class="bg-gray-50 border border-red-800 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ">
-                                <option selected disabled>Choose your gender</option>
-                                <option value="US">Male</option>
-                                <option value="CA">Female</option>
-                            </select>
-                            <small><?php echo $genderError; ?></small>
-                        </div>
-                        <div class="flex mb-6" style="margin-top: 10px;">
-                            <div class="w-full md:w-1/2 px-2 mb-6 md:mb-0">
-                                <label for="date" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Date of birth</label>
-                                <input type="date" name="date" id="countries" class="bg-gray-50 border border-red-800 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 " placeholder="date " required="">
-                                <small><?php echo $dateError; ?></small>
-                            </div>
-                            <div class="  w-full md:w-1/2 px-2 mb-6 md:mb-0">
-                                <label for="countries" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">country</label>
-                                <select id="countries" name="city" class="bg-gray-50 border border-red-800 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ">
-                                    <option selected disabled>Choose a country</option>
-                                    <option value="US">Cambodia</option>
-                                    <option value="CA">Canada</option>
-                                    <option value="FR">France</option>
-                                    <option value="DE">Germany</option>
-                                </select>
-                                <small><?php echo $cityError; ?></small>
-                            </div>
-                        </div>
-                        <div class=" md:w-1/1 px-2" style="margin-top: 10px;">
-                            <label for="number" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Number</label>
-                            <input type="text" name="phoneNumber" id="countries" class="bg-gray-50 border border-red-800 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 " placeholder="phone number " required="">
-                            <small><?php echo $phoneNumberError; ?></small>
-                        </div>
-                        <div class=" md:w-1/1 px-2" style="margin-top: 10px;">
-                            <label for="countries" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Email</label>
-                            <input type="email" name="email" id="countries" class="bg-gray-50 border border-red-800 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 " placeholder="Input your email " required="">
-                            <small><?php echo $emailError; ?></small>
-                        </div>
-                        <div class="flex mb-6" style="margin-top: 10px;">
-                            <div class=" w-full md:w-1/2 px-2 mb-6 md:mb-0">
-                                <label for="countries" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-                                <input type="password" name="password" id="countries" class="bg-gray-50 border border-red-800 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 " placeholder="password " required="">
-                                <small><?php echo $passwordError; ?></small>
-                            </div>
-                            <div class="  w-full md:w-1/2 px-2 mb-6 md:mb-0">
-                                <label for="countries" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Confirm Password</label>
-                                <input type="password" name="comfirmPassword" id="countries" class="bg-gray-50 border border-red-800 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 " placeholder="Confirm password " required="">
-                                <small><?php echo $confirmPasswordError; ?></small>
-                            </div>
-                        </div>
-                        <button type="submit" class="w-full rounded-lg text-sm p-1.5 text-center bg-blue-500">Register
-                        </button>
-                    </form>
-                </div>
+                    <!-- Username Input -->
+                    <input type="text" name="username" id="username" class="max-w-8/10  rounded-md p-2 text-center border-2 w-full" placeholder="Phone Number">
+                    <!-- Email Input -->
+                    <input type="email" name="email" id="email" class="max-w-8/10  rounded-md p-2 text-center border-2 w-full" placeholder="Email Address">
+                    <!-- Password Input -->
+                    <input type="password" name="createPass" id="createPass" class="max-w-8/10  rounded-md p-2 text-center border-2 w-full" placeholder="Create Password">
+                    <input type="password" name="comfirmPass" id="comfirmPass" class="max-w-8/10  rounded-md p-2 text-center border-2 w-full" placeholder="Confirm Password ">
+                    <!-- Gender Input -->
+                    <select id="gender" name="gender" class="max-w-8/10 rounded-md p-2 text-center border-2 w-full">
+                        <option selected disabled>Gender</option>
+                        <option value="US">Male</option>
+                        <option value="CA">Female</option>
+                    </select>
+                    <!-- Date Input -->
+                    <div class="flex gap-[1rem] w-full max-w-8/10">
+                        <input type="date" name="birthDate" id="birthDate" class="w-full rounded-md p-2 text-center border-2">
+                        <!-- Country Input -->
+                        <select id="" name="city" class="w-full rounded-md p-2 text-center border-2">
+                            <option selected disabled>Country</option>
+                            <option value="KH">Cambodia</option>
+                            <option value="CA">Canada</option>
+                            <option value="FR">France</option>
+                            <option value="DE">Germany</option>
+                        </select>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="max-w-8/10 rounded-md p-2 text-center border-2 border-[#01c8ee] w-full text-[#01c8ee] hover:bg-[#01c8ee] hover:text-white transition duration-400">Register
+                    </button>
+                    <hr class="w-4/12">
+
+                    <span>Already have account? <a href="/login" class="text-[#01c8ee]">Login</a></span>
+                    <a href="/" class="text-[#01c8ee]">Back to Home</a>
+
+                </form>
             </div>
         </div>
-    </section>
+    </div>
 </main>
-<?php
-require("views/partials/footer.php");
-?>
