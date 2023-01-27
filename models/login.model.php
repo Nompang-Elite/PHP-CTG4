@@ -2,7 +2,7 @@
 require_once("models/validation.model.php");
 class Users
 {
-    // Users
+    // Users object:
     private $user;
     private $db;
     public function __construct(Database $database)
@@ -20,8 +20,8 @@ class Users
         // Sanitize the input values: 
         $sanitizedValues = sanitizeValue([$email, $password]);
         // Query and validate the user info:
-        $query = "SELECT * FROM Users WHERE Users.email = :email";
-        $preMatch = [":email" => $sanitizedValues[0]];
+        $query = "SELECT Users.email, Passwords.passwd_hash FROM Users INNER JOIN Passwords WHERE (Users.email = :email AND Passwords.passwd_hash = :pass) ";
+        $preMatch = [":email" => $sanitizedValues[0], ":pass" => $sanitizedValues[1]];
         $statement = $this->db->query($query, $preMatch);
         $result = $statement->fetch();
         if ($result and $result !== null) {
