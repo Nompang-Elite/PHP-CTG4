@@ -8,6 +8,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="views/css/tw-style.css">
     <link rel="stylesheet" href="views/css/costume-style.min.css">
+    <link rel="icon" href="assets/favicon/favicon-16x16.png">
+    <script src="libs/JQuery/jquery-3.6.3.min.js"></script>
+    <script src="views/js/main.js" defer></script>
     <title><?= $header ?></title>
 </head>
 

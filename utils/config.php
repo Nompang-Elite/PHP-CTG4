@@ -5,11 +5,13 @@ return [
         "/search" => "controllers/search/search.controller.php",
         "/login" => "controllers/login/login.controller.php",
         "/logout" => "controllers/login/login.controller.php",
+        "/account" => "controllers\account\account.controller.php",
+        "/404"=> "views/pages/error/404.php"
     ],
     "databaseInfo" => [
         "dsn" => [
             "host" => "php-database.c9wmosguks3w.ap-southeast-1.rds.amazonaws.com",
-            "dbname" => "concert_ticket",
+            "dbname" => "ticket_app",
             "port" => "3306",
         ],
         "user" => "admin",

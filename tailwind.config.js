@@ -5,7 +5,8 @@ module.exports = {
     "views\\partials\\header.php",
     "views\\partials\\navbar.php",
     "views\\pages\\home\\home.view.php",
-    "views\\pages\\login\\login.view.php"
+    "views\\pages\\login\\login.view.php",
+    "views\\pages\\account\\account.view.php"
   ],
   theme: {
     extend: {},
