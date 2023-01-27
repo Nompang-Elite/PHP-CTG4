@@ -9,6 +9,7 @@ $user = checkUserLogin($db);
 if (isset($_SESSION["user"])) {
     $userInfo = $_SESSION["user"];
     $username = "{$userInfo["username"]}";
+    // Use this when to check if data transfer correctly:
     // dump_die($userInfo);
 }
 

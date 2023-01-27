@@ -26,7 +26,7 @@ class Users
         $result = $statement->fetch();
         if ($result and $result !== null) {
             // Get user info from database:
-            $statement = $this->db->query("SELECT Users, Permissions.type FROM  Users INNER JOIN Permissions on Permissions.ID = Users.ID");
+            $statement = $this->db->query("SELECT Users.* , Permissions.type FROM  Users INNER JOIN Permissions on Permissions.ID = Users.ID");
             // Set data to session:
             $_SESSION["user"] = $statement->fetch();
             $_SESSION["user"]["logged"] = true;
