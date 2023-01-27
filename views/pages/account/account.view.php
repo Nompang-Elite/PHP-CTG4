@@ -9,7 +9,7 @@ require("views/partials/navbar.php");
     <main class="h-screen flex justify-center items-center">
         <div class="flex justify-center items-center">
             <divc class="p-8 border-2 w-[30rem] rounded-[1rem] shadow-lg relative -top-20">
-                <h1 class="text-[2rem] font-bold">Account</h1>
+                <h1 class="text-[2rem] font-bold">Account Info</h1>
                 <ul class="text-md">
                     <li class="font-semibold">Username: <span class="text-[#01c8ee]"><?=$username?></span></li>
                     <li class="font-semibold">First Name: <span class="text-[#01c8ee]"><?=$firstName?></span></li>
