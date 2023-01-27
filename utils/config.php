@@ -1,14 +1,20 @@
 <?php
-
 return [
     "route" => [
-        "/" => "views/home/home.view.php",
-        "/search" => "views/search/search.view.php",
-        "/login" => "views\login\login.view.php",
+        "/" => "controllers/home/home.controller.php",
+        "/search" => "controllers/search/search.controller.php",
+        "/login" => "controllers/login/login.controller.php",
+        "/logout" => "controllers/login/login.controller.php",
+        "/account" => "controllers\account\account.controller.php",
+        "/404"=> "views/pages/error/404.php"
     ],
     "databaseInfo" => [
-        "host" => "php-database.c9wmosguks3w.ap-southeast-1.rds.amazonaws.com",
-        "dbname" => "concert_ticket",
-        "port" => "3306"
+        "dsn" => [
+            "host" => "php-database.c9wmosguks3w.ap-southeast-1.rds.amazonaws.com",
+            "dbname" => "ticket_app",
+            "port" => "3306",
+        ],
+        "user" => "admin",
+        "password" => "Iseeyou1234"
     ]
 ];

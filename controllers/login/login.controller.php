@@ -1,29 +1,21 @@
 <?php
-// Get value
-$email = "";
-$password = "";
-function loginValidation(string $email, string $password): bool
-{
-    /*
-    * Function description:
-    * @param type string $email
-    * @param type string $password
-    * @param type 
-    * @return type bool {true, false}
-    */
-
-    // Check if the input of email and pass are not empty or null:
-    if ((!empty($email) and $email !== null) and (!empty($password)) and $password !== null) {
-        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            return true;
-        } 
-    } else {
-        return false;
+// Import config files:
+$config = require("utils/config.php");
+// Establish database connection:
+$db = new Database($config["databaseInfo"]);
+// Create a user object:
+$user = new Users($db);
+// Validate the login:
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if (!empty($_POST["email"]) and !empty($_POST["pass"])) {
+        if ($user->login($_POST["email"], $_POST["pass"])) {
+            header("Location: /");
+        }
     }
 }
 
-if ($_SERVER["REQUEST_METHOD"] === "POST"){
-    $loginValid = loginValidation($email, $password);
-}
-echo loginValidation($email, $password);
-
+if (parse_url($_SERVER["REQUEST_URI"])["path"] === "/logout") {
+    $user->logout();
+    routeToPage("/", $config["route"]);
+} else
+    require("views/pages/login/login.view.php");
