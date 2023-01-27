@@ -20,13 +20,13 @@ class Users
         // Sanitize the input values: 
         $sanitizedValues = sanitizeValue([$email, $password]);
         // Query and validate the user info:
-        $query = "SELECT Users.Email, Users.Password FROM  Users WHERE Users.Email = :email AND Users.Password = :pass";
-        $preMatch = [":email" => $sanitizedValues[0], ":pass" => $sanitizedValues[1]];
+        $query = "SELECT * FROM Users WHERE Users.email = :email";
+        $preMatch = [":email" => $sanitizedValues[0]];
         $statement = $this->db->query($query, $preMatch);
         $result = $statement->fetch();
         if ($result and $result !== null) {
             // Get user info from database:
-            $statement = $this->db->query("SELECT First_name, Last_name, Email, Member FROM  Users INNER JOIN Permissions on Permissions.ID = Users.ID");
+            $statement = $this->db->query("SELECT Users, Permissions.type FROM  Users INNER JOIN Permissions on Permissions.ID = Users.ID");
             // Set data to session:
             $_SESSION["user"] = $statement->fetch();
             $_SESSION["user"]["logged"] = true;
@@ -39,4 +39,13 @@ class Users
         unset($_SESSION["user"]);
         session_destroy();
     }
+}
+function checkUserLogin(Database $db): array
+{
+    if (isset($_SESSION["user"]["logged"]) and $_SESSION["user"]["logged"] === true) {
+        $userActivate = $_SESSION["user"]["logged"];
+        $user = new Users($db);
+        return ["control" => $user, "active" => $userActivate];
+    } else
+        return [];
 }

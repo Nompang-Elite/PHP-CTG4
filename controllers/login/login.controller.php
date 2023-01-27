@@ -17,6 +17,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 if (parse_url($_SERVER["REQUEST_URI"])["path"] === "/logout") {
     $user->logout();
     routeToPage("/", $config["route"]);
-}
-
-require("views/pages/login/login.view.php");
+} else
+    require("views/pages/login/login.view.php");

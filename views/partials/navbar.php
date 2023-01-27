@@ -19,8 +19,8 @@
     </div>
     <div class="flex mr-4 max-sm:w-full">
       <ul class="flex max-sm:flex-col max-sm:w-full">
-        <?php if (isset($userActivate) and $userActivate === true) : ?>
-          <li id="user-icon" class="flex"><a href="#" class="nav-link p-2 px-3 max-sm:w-full max-sm:m-0 max-sm:p-4 flex justify-center"><span class="material-icons">person</span></a></li>
+        <?php if (isset($user["active"]) and $user["active"] === true) : ?>
+          <li id="user-icon" class="flex"><a href="/account" class="nav-link p-2 px-3 max-sm:w-full max-sm:m-0 max-sm:p-4 flex justify-center"><span class="material-icons">person</span></a></li>
           <li id="cart-icon" class="flex"><a href="#" class="nav-link p-2 px-3 max-sm:w-full max-sm:m-0 max-sm:p-4 flex justify-center"><span class="material-icons">shopping_cart</span></a></li>
           <li class="flex"><a href="/logout" class="nav-link p-2 px-3 max-sm:w-full max-sm:m-0 max-sm:p-4 flex justify-center"><span class="material-icons">logout</span></a></li>
         <?php else : ?>
