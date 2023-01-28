@@ -154,51 +154,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $valid = true;
     }
 }
-?>
 
-    <!-- Form for test -->
-    <form action="" method="post">
-        <input type="text" name="firstName" placeholder="Enter your first name"><br>
-        <small class="text-red-500"> <?php echo $firstNameError; ?></small>
-        <input type="text" name="lastName" placeholder="Enter your last name"><br>
-        <small class="text-red-500"> <?php echo $lastNameError; ?></small>
-        <input type="password" name="password" placeholder="Enter password"><br>
-        <small class="text-red-500"> <?php echo $passwordError; ?></small>
-        <input type="password" name="confirmPassword" placeholder="Confirm password"><br>
-        <small class="text-red-500"> <?php echo $confirmPasswordError; ?></small>
-        <input type="email" name="email" placeholder="Enter your email"><br>
-        <small class="text-red-500"> <?php echo $emailError; ?></small>
-        <input type="number" name="phoneNumber" placeholder="Enter your phone number"><br>
-        <div>
-            <label>
-                <input type="radio" value="female" name="gender" checked />Female
-            </label>
-            <label>
-                <input type="radio" value="male" name="gender" />Male
-            </label>
-            <small class="text-red-500"> <?php echo $genderError; ?></small>
-        </div>
-        <input type="text" name="city" placeholder="Enter your city"><br>
-        <small class="text-red-500"> <?php echo $cityError; ?></small>
-        <input type="date" name="date" placeholder="Enter your birthday">
-        <small class=" text-red-500"> <?php echo $dateError; ?></small>
-        <button type="submit">submit</button>
-    </form>
-
-
-
-
-<?php
-if ($valid):
-?>
-<p><?php echo $firstName ;?></p>
-<p><?php echo $lastName ;?></p>
-<p><?php echo $email ;?></p>
-<p><?php echo $password ;?></p>
-<p><?php echo $confirmPassword ;?></p>
-<p><?php echo $city ;?></p>
-<p><?php echo $date ;?></p>
-<p><?php echo $gender ;?></p>
-
-<?php endif;
-?>
+require("views/pages/register/register.view.php");

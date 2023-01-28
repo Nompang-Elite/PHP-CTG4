@@ -20,14 +20,16 @@ class Users
         // Sanitize the input values: 
         $sanitizedValues = sanitizeValue([$email, $password]);
         // Query and validate the user info:
-        $query = "SELECT Users.email, Passwords.passwd_hash FROM Users INNER JOIN Passwords WHERE (Users.email = :email AND Passwords.passwd_hash = :pass) ";
+        $query = "SELECT Users.ID, Users.email, Passwords.passwd_hash FROM Users INNER JOIN Passwords WHERE (Users.email = :email AND Passwords.passwd_hash = :pass) ";
         $preMatch = [":email" => $sanitizedValues[0], ":pass" => $sanitizedValues[1]];
         $statement = $this->db->query($query, $preMatch);
         $result = $statement->fetch();
-        if ($result and $result !== null) {
+        if (!empty($result) and $result !== null) {
             // Get user info from database:
-            $statement = $this->db->query("SELECT Users.* , Permissions.type FROM  Users INNER JOIN Permissions on Permissions.ID = Users.ID");
+            // dump_die($result["ID"]); // Use this to debug
+            $statement = $this->db->query("SELECT Users.*, Permissions.type FROM Users JOIN Permissions ON Permissions.ID = Users.permission_id AND Users.ID = :id", [":id" => $result["ID"]]);
             // Set data to session:
+            // dump_die($statement->fetch()); // Use this to debug
             $_SESSION["user"] = $statement->fetch();
             $_SESSION["user"]["logged"] = true;
             return true;

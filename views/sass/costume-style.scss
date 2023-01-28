@@ -30,7 +30,14 @@ $color-4: #01c8ee;
 .active-menu {
   display: flex;
 }
-
+.correct {
+  transition: 0.4s;
+  border-color: #00e4005b;
+}
+.wrong {
+  transition: 0.4s;
+  border-color: rgba(255, 0, 0, 0.545);
+}
 // Footer
 footer {
   background-color: $primary-color;

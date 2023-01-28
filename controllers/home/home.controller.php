@@ -2,7 +2,8 @@
 // Import config files:
 $config = require("utils/config.php");
 // Establish database connection:
-$db = new Database($config["databaseInfo"]);
+// $db = new Database($config["databaseInfoLocal"]);
+$db = new Database($config["databaseInfoOnline"]);
 // Check if the user is logged in:
 $user = checkUserLogin($db);
 
@@ -16,5 +17,5 @@ if (isset($_SESSION["user"])) {
 // require("models/list_show.model.php");
 // $show_list = getTheAvailableShow($db);
 // dump_die($show_list);
-
+$shows = getTheAvailableShow($db);
 require("views/pages/home/home.view.php");
