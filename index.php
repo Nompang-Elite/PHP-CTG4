@@ -8,7 +8,7 @@ $config = require("utils/config.php");
 require_once("database/Database.php");
 // Import page router:
 require_once("router.php");
-require_once("models/login.model.php");
+require_once("models/users.model.php");
 require_once("models/list_show.model.php");
 // Route to page:
 routeToPage($uri, $config["route"]);
