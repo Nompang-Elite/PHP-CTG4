@@ -4,6 +4,7 @@ module.exports = {
     "views\\partials\\footer.php",
     "views\\partials\\header.php",
     "views\\partials\\navbar.php",
+    "views\\partials\\carousel.php",
     "views\\pages\\home\\home.view.php",
     "views\\pages\\login\\login.view.php",
     "views\\pages\\account\\account.view.php",
