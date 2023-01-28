@@ -24,6 +24,16 @@
   display: flex;
 }
 
+.correct {
+  transition: 0.4s;
+  border-color: rgba(0, 228, 0, 0.3568627451);
+}
+
+.wrong {
+  transition: 0.4s;
+  border-color: rgba(255, 0, 0, 0.545);
+}
+
 footer {
   background-color: #0b1320;
   color: #ffffff;
