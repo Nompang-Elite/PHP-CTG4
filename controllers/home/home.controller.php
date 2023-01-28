@@ -2,8 +2,8 @@
 // Import config files:
 $config = require("utils/config.php");
 // Establish database connection:
-$db = new Database($config["databaseInfoLocal"]);
-// $db = new Database($config["databaseInfoOnline"]);
+// $db = new Database($config["databaseInfoLocal"]);
+$db = new Database($config["databaseInfoOnline"]);
 // Check if the user is logged in:
 $user = checkUserLogin($db);
 
