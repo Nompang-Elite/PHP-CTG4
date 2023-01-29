@@ -54,8 +54,8 @@ class Users
         // Query for the insertion:
         $query =
             "INSERT INTO Passwords VALUES(:email, :pass);
-        INSERT INTO Users(first_name, last_name,username, email )
-        VALUES(:firstName, :lastName, :username, :email);
+        INSERT INTO Users(first_name, last_name,username, email, birth_date, gender )
+        VALUES(:firstName, :lastName, :username, :email, :birthDate, :gender);
         ";
         // Run and execute the query:
         $this->db->query($query, [
@@ -63,7 +63,9 @@ class Users
             ":lastName" => $array["lastName"],
             ":username" => $array["username"],
             ":email" => $array["email"],
-            ":pass" => $array["pass"]
+            ":pass" => $array["password"],
+            ":birthDate" => $array["birthDate"],
+            ":gender" => $array["gender"],
         ]);
     }
 }

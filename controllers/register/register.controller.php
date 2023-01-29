@@ -21,11 +21,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && (isset($_POST) && ($_POST !== "" &&
         preg_match($namePattern, $userInfo["username"]) &&
         preg_match($passPattern, $userInfo["password"])
     ) {
-        dump_die($userInfo);
+        // dump_die($userInfo);
         $config = require("utils/config.php");
         $db = new Database($config["databaseInfoOnline"]);
         $user = new Users($db);
         $user->register($userInfo);
+        routeToPage("/", $config["route"]);
     } else {
         echo "Wrong!!!";
     }
