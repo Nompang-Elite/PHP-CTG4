@@ -1,8 +1,4 @@
 // Main JS files
-const namePattern =
-  /^[><?@+'`~^%&\*\[\]\{\}!#|\\\"$';,:;=/\(\),\-\w\s+]{4,30}$/;
-const passPattern = /^[><?@+'`~^%&\*\[\]\{\}!#|\\\"$';,:;=/\(\),\-\w\s+]{8,}$/;
-const emailPattern = /^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$/;
 // FUNCTIONS
 function validate(value, pattern) {
   // Check and return if match:
