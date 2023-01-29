@@ -15,46 +15,52 @@ require("views/partials/header.php");
 
             </div>
             <!-- Register Form -->
-            <div class="flex bg-white items-center justify-center flex-col shadow-md border-l-2 w-[36rem] min-w-[20rem] max-sm:w-full">
-                <form action="/register" method="post" id="register-form" class="w-full flex flex-col items-center gap-[1rem]">
-                    <legend class="text-3xl font-bold">Register</legend>
-                    <!-- Name Input -->
-                    <div class="flex gap-[1rem] max-w-8/10 ">
-                        <input type="text" name="firstName" id="firstName" class="outline-none rounded-md p-2 text-center border-2 w-full" placeholder="First Name ">
-                        <input type="text" name="lastName" id="lastName" class="outline-none rounded-md p-2 text-center border-2 w-full" placeholder=" last name ">
+            <div class="flex h-screen bg-white items-center justify-center flex-col shadow-md border-l-2 w-[36rem] min-w-[20rem] max-sm:w-full">
+                <form action="/register" method="post" class="flex flex-col items-center gap-[0.6rem] w-9/12">
+                    <legend class="text-2xl font-bold">Register</legend>
+                    <!-- Name-->
+                    <div class="flex w-full gap-[0.6rem]">
+                        <input type="text" name="firstName" max="40" min="4" class="border-2 p-1.5 rounded-md w-full" placeholder="First Name" required>
+                        <input type="text" name="lastName" max="40" min="4" class="border-2 p-1.5 rounded-md w-full" placeholder="Last Name" required>
                     </div>
-                    <!-- Username Input -->
-                    <input type="text" name="username" id="username" class="outline-none max-w-8/10 rounded-md p-2 text-center border-2 w-full" placeholder="Username">
-                    <!-- Email Input -->
-                    <input type="email" name="email" id="email" class="outline-none max-w-8/10  rounded-md p-2 text-center border-2 w-full" placeholder="Email Address">
-                    <!-- Password Input -->
-                    <input type="password" name="createPass" id="createPass" class="outline-none max-w-8/10  rounded-md p-2 text-center border-2 w-full" placeholder="Create Password">
-                    <input type="password" name="comfirmPass" id="comfirmPass" class="outline-none max-w-8/10  rounded-md p-2 text-center border-2 w-full" placeholder="Confirm Password ">
-                    <!-- Gender Input -->
-                    <select id="gender" name="gender" class="outline-none max-w-8/10 rounded-md p-2 text-center border-2 w-full">
-                        <option selected disabled>Gender</option>
-                        <option value="US">Male</option>
-                        <option value="CA">Female</option>
-                    </select>
-                    <!-- Date Input -->
-                    <div class="flex gap-[1rem] w-full max-w-8/10">
-                        <input type="date" name="birthDate" id="birthDate" class="outline-none w-full rounded-md p-2 text-center border-2">
-                        <!-- Country Input -->
-                        <select id="" name="city" class="w-full rounded-md p-2 text-center border-2">
-                            <option selected disabled>Country</option>
+                    <!-- Username -->
+                    <div class="flex w-full gap-[0.6rem]">
+
+                        <input type="text" name="username" max="40" min="4" class="border-2 p-1.5 rounded-md w-full" placeholder="Username" required>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="flex w-full gap-[0.6rem]">
+                        <input type="text" name="email" max="40" min="4" class="border-2 p-1.5 rounded-md w-full" placeholder="Email Address" required>
+                    </div>
+                    <!-- Password -->
+                    <div class="flex flex-col w-full gap-[0.6rem]">
+                        <input type="password" name="passwordCreate" max="40" min="4" class="border-2 p-1.5 rounded-md w-full" placeholder="Create Password" required>
+                        <input type="password" name="passwordConfirm" max="40" min="4" class="border-2 p-1.5 rounded-md w-full" placeholder="Confirms Password" required>
+                    </div>
+                    <!-- Gender and Country -->
+                    <div class="flex w-full gap-[0.6rem]">
+                        <select name="gender" class="border-2 p-1.5 rounded-md w-full" placeholder="First Name" required>
+                            <option value="" disabled selected>Gender</option>
+                            <option value="m">Male</option>
+                            <option value="f">Female</option>
+                        </select>
+                        <select name="country" class="border-2 p-1.5 rounded-md w-full" placeholder="Last Name" required>
+                            <option value="" disabled selected>Country</option>
                             <option value="KH">Cambodia</option>
-                            <option value="CA">Canada</option>
-                            <option value="FR">France</option>
-                            <option value="DE">Germany</option>
+                            <option value="US">United State</option>
+                            <option value="UK">United Kingdom</option>
                         </select>
                     </div>
+                    <!-- Birth Date -->
+                    <div class="flex w-full">
+                        <input type="date" name="birthDate" class="border-2 p-1.5 rounded-md w-full" required>
+                    </div>
+                    <!-- Link -->
+                    <p>Already have account? <a href="/login" class="text-[#01c8ee]">Login</a> </p>
+                    <button class="btn p-2 rounded-md w-full border-2 border-[#01c8ee] text-[#01c8ee] hover:bg-[#01c8ee] hover:text-white transition duration-400">Register</button>
 
-                    <!-- Submit Button -->
-                    <button type="submit" class="max-w-8/10 rounded-md p-2 text-center border-2 border-[#01c8ee] w-full text-[#01c8ee] hover:bg-[#01c8ee] hover:text-white transition duration-400">Register
-                    </button>
                     <hr class="w-4/12">
-
-                    <span>Already have account? <a href="/login" class="text-[#01c8ee]">Login</a></span>
                     <a href="/" class="text-[#01c8ee]">Back to Home</a>
 
                 </form>
