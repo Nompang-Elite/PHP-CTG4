@@ -17,5 +17,5 @@ if (isset($_SESSION["user"])) {
 // require("models/list_show.model.php");
 // $show_list = getTheAvailableShow($db);
 // dump_die($show_list);
-$shows = getTheAvailableShow($db);
+$showsList = getTheAvailableShow($db);
 require("views/pages/home/home.view.php");

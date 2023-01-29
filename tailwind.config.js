@@ -5,6 +5,7 @@ module.exports = {
     "views\\partials\\header.php",
     "views\\partials\\navbar.php",
     "views\\partials\\carousel.php",
+    "views\\partials\\card.php",
     "views\\pages\\home\\home.view.php",
     "views\\pages\\login\\login.view.php",
     "views\\pages\\account\\account.view.php",
@@ -17,7 +18,7 @@ module.exports = {
       screens: {
         sm: "600px",
         md: "728px",
-        lg: "984px",
+        lg: "1024px",
         xl: "1240px",
         "2xl": "1496px",
       },
@@ -25,6 +26,9 @@ module.exports = {
     maxWidth: {
       "8/10": "80%",
     },
+    colors:{
+      "primary":": #01c8ee"
+    }
   },
   plugins: [],
 };
