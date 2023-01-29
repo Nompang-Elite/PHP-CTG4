@@ -9,6 +9,7 @@ module.exports = {
     "views\\pages\\login\\login.view.php",
     "views\\pages\\account\\account.view.php",
     "views\\pages\\register\\register.view.php",
+    "views\\pages\\search\\search.view.php",
   ],
   theme: {
     extend: {},

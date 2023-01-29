@@ -15,7 +15,7 @@
       </ul>
     </div>
     <div class="flex items-center max-sm:w-full">
-      <form action="/">
+      <form action="/search">
         <input type="search" id="nav-search" placeholder="Search" class="p-1.5 rounded-md px-4 outline-none mx-4 w-70 text-black w-[20rem] max-lg:w-[10rem]">
       </form>
     </div>
