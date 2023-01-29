@@ -15,11 +15,6 @@
   background-color: #394d5f;
 }
 
-#nav-search {
-  border-radius: 1.5rem;
-  padding: auto 2rem;
-}
-
 .active-menu {
   display: flex;
 }

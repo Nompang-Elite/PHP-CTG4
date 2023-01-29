@@ -15,7 +15,9 @@
       </ul>
     </div>
     <div class="flex items-center max-sm:w-full">
-      <input type="search" id="nav-search" placeholder="Search" class="p-1.5 px-4 outline-none mx-4 w-70 text-black w-[20rem] max-lg:w-[10rem]">
+      <form action="/">
+        <input type="search" id="nav-search" placeholder="Search" class="p-1.5 rounded-md px-4 outline-none mx-4 w-70 text-black w-[20rem] max-lg:w-[10rem]">
+      </form>
     </div>
     <div class="flex mr-4 max-sm:w-full">
       <ul class="flex max-sm:flex-col max-sm:w-full">

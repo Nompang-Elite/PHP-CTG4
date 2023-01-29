@@ -10,6 +10,7 @@ require_once("database/Database.php");
 require_once("router.php");
 require_once("models/users.model.php");
 require_once("models/list_show.model.php");
+require_once("models/validation.model.php");
 // Route to page:
 routeToPage($uri, $config["route"]);
 // Establish Database:

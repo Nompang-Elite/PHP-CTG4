@@ -2,8 +2,8 @@
 function sanitizeValue(array $array): array
 {
     $sanitized = [];
-    foreach ($array as $value) {
-        array_push($sanitized, $value);
+    foreach ($array as $key => $value) {
+        $sanitized[$key] = htmlspecialchars($value);
     };
     return $sanitized;
 }
