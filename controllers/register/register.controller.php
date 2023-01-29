@@ -11,8 +11,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && (isset($_POST) && ($_POST !== "" &&
         "username" => $_POST["username"],
         "email" => $_POST["email"],
         "password" => $_POST["passwordCreate"],
-        "gender" => $_POST["gender"],
-        "birthDate" => $_POST["birthDate"],
     ]);
     // dump_die(preg_match($passPattern, $userInfo["password"]));
     if (

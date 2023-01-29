@@ -8,8 +8,9 @@ $db = new Database($config["databaseInfoOnline"]);
 $user = new Users($db);
 // Validate the login:
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    if (!empty($_POST["email"]) and !empty($_POST["pass"])) {
-        if ($user->login($_POST["email"], $_POST["pass"])) {
+    if (!empty($_POST["email"]) and !empty($_POST["password"])) {
+        if ($user->login($_POST["email"], $_POST["password"])) {
+            // dump_die($user);
             header("Location: /");
         }
     }

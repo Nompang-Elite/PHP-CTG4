@@ -7,7 +7,7 @@
    <!-- Navigation Link  -->
    <div class="flex max-lg:m-2">
      <div class="flex items-center gap-2 mx-2">
-       <a href="#" class="flex gap-2 items-center p-2 px-4 rounded-lg text-lg transition duration-200 hover:bg-[#394d5f]">
+       <a href="/" class="flex gap-2 items-center p-2 px-4 rounded-lg text-lg transition duration-200 hover:bg-[#394d5f]">
          <span class="material-icons">home</span>
          <span class="max-lg:hidden">Home</span>
        </a>
@@ -21,14 +21,25 @@
        </a>
      </div>
      <!-- Login Navigation Link -->
-     <div class="flex items-center gap-2 mr-2">
-       <a href="#" class="flex items-center rounded-lg p-2 text-lg transition duration-200 hover:bg-[#394d5f]">
-         <span class="material-icons">person</span>
-       </a>
-       <a href="#" class="flex items-center rounded-lg p-2 text-lg transition duration-200 hover:bg-[#394d5f]">
-         <span class="material-icons">app_registration</span>
-       </a>
-     </div>
+     <?php if (isset($_SESSION["user"]) && $_SESSION["user"]["logged"]) : ?>
+       <div class="flex items-center gap-2 mr-2">
+         <a href="/account" class="flex items-center rounded-lg p-2 text-lg transition duration-200 hover:bg-[#394d5f]">
+           <span class="material-icons">person</span>
+         </a>
+         <a href="/logout" class="flex items-center rounded-lg p-2 text-lg transition duration-200 hover:bg-[#394d5f]">
+           <span class="material-icons">logout</span>
+         </a>
+       </div>
+     <?php else : ?>
+       <div class="flex items-center gap-2 mr-2">
+         <a href="/login" class="flex items-center rounded-lg p-2 text-lg transition duration-200 hover:bg-[#394d5f]">
+           <span class="material-icons">person</span>
+         </a>
+         <a href="/register" class="flex items-center rounded-lg p-2 text-lg transition duration-200 hover:bg-[#394d5f]">
+           <span class="material-icons">app_registration</span>
+         </a>
+       </div>
+     <?php endif ?>
    </div>
  </nav>
  <!-- Navigation Start  -->

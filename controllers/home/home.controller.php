@@ -13,9 +13,5 @@ if (isset($_SESSION["user"])) {
     // Use this when to check if data transfer correctly:
     // dump_die($userInfo);
 }
-
-// require("models/list_show.model.php");
-// $show_list = getTheAvailableShow($db);
-// dump_die($show_list);
 $showsList = getTheAvailableShow($db);
 require("views/pages/home/home.view.php");

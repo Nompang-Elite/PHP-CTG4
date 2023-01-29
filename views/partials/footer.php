@@ -4,7 +4,7 @@
         <!-- Footer Brand Logo -->
         <div class="mb-6 md:mb-0">
             <a href="#" class="flex items-center">
-                <img src="/assets/imgs/logo-no-background.png" class="h-20 mr-3" alt="Tiketo Logo" />
+                <img src="/assets/imgs/logo-no-background.png" class="h-14 mr-3" alt="Tiketo Logo" />
             </a>
         </div>
         <!-- Footer Navigation -->

@@ -2,70 +2,55 @@
 <?php
 $header = "Register";
 require("views/partials/header.php");
+require("views/partials/navbar.php")
 ?>
 
 <!-- Home contents -->
-<main class="h-screen">
-    <div class="flex h-screen w-full items-center justify-center lg:py-0 ">
-        <div class="flex felx-row rounded-lg justify-center h-full w-full">
-            <!-- Left side -->
-            <div class="flex justify-center items-center bg-[#0b1320] w-full max-sm:hidden">
-                <!-- Contents -->
-                <img src="../../assets/imgs/logo-no-background.png" alt="logo" class="px-4 w-26 h-14 my-10">
-
+<main class="w-full h-screen">
+    <div class="h-full flex justify-center items-center">
+        <div class="flex w-fit shadow-lg rounded-lg">
+            <div class="w-[20rem] flex items-center rounded-l-lg px-4 justify-center p-3 bg-[#0b1320] transition-display duration-500 max-md:-translate-x-80 max-md:absolute">
+                <img src="/assets/imgs/logo-no-background.png" alt="" width="140">
             </div>
-            <!-- Register Form -->
-            <div class="flex h-screen bg-white items-center justify-center flex-col shadow-md border-l-2 w-[36rem] min-w-[20rem] max-sm:w-full">
-                <form action="/register" method="post" class="flex flex-col items-center gap-[0.6rem] w-9/12">
-                    <legend class="text-2xl font-bold">Register</legend>
-                    <!-- Name-->
-                    <div class="flex w-full gap-[0.6rem]">
-                        <input type="text" name="firstName" max="40" min="4" class="border-2 p-1.5 rounded-md w-full" placeholder="First Name" required>
-                        <input type="text" name="lastName" max="40" min="4" class="border-2 p-1.5 rounded-md w-full" placeholder="Last Name" required>
+            <div class="flex w-[24rem] p-10 rounded-r-lg">
+                <form class="space-y-4 w-full" action="/register">
+                    <h5 class="text-xl font-medium text-gray-900 dark:text-white">Register</h5>
+                    <div class="flex space-x-4">
+                        <div>
+                            <label for="firstName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First Name</label>
+                            <input type="text" name="firstName" id="firstName" placeholder="First Name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                        </div>
+                        <div>
+                            <label for="lastName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last Name</label>
+                            <input type="text" name="lastName" id="lastName" placeholder="Last Name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                        </div>
                     </div>
-                    <!-- Username -->
-                    <div class="flex w-full gap-[0.6rem]">
-
-                        <input type="text" name="username" max="40" min="4" class="border-2 p-1.5 rounded-md w-full" placeholder="Username" required>
+                    <div>
+                        <label for="username" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Username</label>
+                        <input type="email" name="username" id="username" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Username" required>
                     </div>
-
-                    <!-- Email -->
-                    <div class="flex w-full gap-[0.6rem]">
-                        <input type="text" name="email" max="40" min="4" class="border-2 p-1.5 rounded-md w-full" placeholder="Email Address" required>
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+                        <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Email Address" required>
                     </div>
-                    <!-- Password -->
-                    <div class="flex flex-col w-full gap-[0.6rem]">
-                        <input type="password" name="passwordCreate" max="40" min="4" class="border-2 p-1.5 rounded-md w-full" placeholder="Create Password" required>
-                        <input type="password" name="passwordConfirm" max="40" min="4" class="border-2 p-1.5 rounded-md w-full" placeholder="Confirms Password" required>
+                    <div class="flex space-x-4">
+                        <div>
+                            <label for="createPass" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Create password</label>
+                            <input type="password" name="createPass" id="createPass" placeholder="Create Password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                        </div>
+                        <div>
+                            <label for="confirmPass" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirms password</label>
+                            <input type="password" name="confirmPass" id="confirmPass" placeholder="Confirms Password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                        </div>
                     </div>
-                    <!-- Gender and Country -->
-                    <div class="flex w-full gap-[0.6rem]">
-                        <select name="gender" class="border-2 p-1.5 rounded-md w-full" placeholder="First Name" required>
-                            <option value="" disabled selected>Gender</option>
-                            <option value="m">Male</option>
-                            <option value="f">Female</option>
-                        </select>
-                        <select name="country" class="border-2 p-1.5 rounded-md w-full" placeholder="Last Name" required>
-                            <option value="" disabled selected>Country</option>
-                            <option value="KH">Cambodia</option>
-                            <option value="US">United State</option>
-                            <option value="UK">United Kingdom</option>
-                        </select>
+                    <button type="submit" class="w-full font-medium rounded-lg px-5 py-2.5 text-center bg-[#01c8ee] text-[#ffffff]">Create Account</button>
+                    <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
+                        Already has account? <a href="/login" class=" hover:underline">Sign In</a>
                     </div>
-                    <!-- Birth Date -->
-                    <div class="flex w-full">
-                        <input type="date" name="birthDate" class="border-2 p-1.5 rounded-md w-full" required>
-                    </div>
-                    <!-- Link -->
-                    <p>Already have account? <a href="/login" class="text-[#01c8ee]">Login</a> </p>
-                    <button class="btn p-2 rounded-md w-full border-2 border-[#01c8ee] text-[#01c8ee] hover:bg-[#01c8ee] hover:text-white transition duration-400">Register</button>
-
-                    <hr class="w-4/12">
-                    <a href="/" class="text-[#01c8ee]">Back to Home</a>
-
                 </form>
             </div>
         </div>
     </div>
 </main>
 <script src="/views/js//controllers/register.js"></script>
+<?php require("views/partials/footer.php") ?>
