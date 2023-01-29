@@ -13,7 +13,7 @@ require("views/partials/navbar.php")
                 <img src="/assets/imgs/logo-no-background.png" alt="" width="140">
             </div>
             <div class="flex w-[24rem] p-10 rounded-r-lg">
-                <form class="space-y-4 w-full" action="/register">
+                <form class="space-y-4 w-full" action="/register" method="post">
                     <h5 class="text-xl font-medium text-gray-900 dark:text-white">Register</h5>
                     <div class="flex space-x-4">
                         <div>
@@ -27,7 +27,7 @@ require("views/partials/navbar.php")
                     </div>
                     <div>
                         <label for="username" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Username</label>
-                        <input type="email" name="username" id="username" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Username" required>
+                        <input type="text" name="username" id="username" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Username" required>
                     </div>
                     <div>
                         <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
