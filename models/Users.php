@@ -9,15 +9,20 @@ class User
     }
     public function login(string $email, string $pass)
     {
-        $sanitizeValues = sanitizeValue([$email, $pass]);
-        $q = "SELECT Users.email, Passwords.passwd_hash FROM Users JOIN Passwords ON Users.Email = :email AND Passwords.passwd_hash = :pass";
+        $sanitized = sanitizeValue([$email, $pass]);
+        $q = "SELECT Users.ID FROM Users JOIN Passwords ON (Users.email = :email AND (Passwords.email = Users.email AND Passwords.passwd_hash = :pass))";
         $state = $this->db->query($q, [
-            "email" => $email,
-            "pass" => $pass
+            ":email" => $sanitized[0],
+            ":pass" => $sanitized[1]
         ]);
-        $info = $state->fetch();
-        // if ($info[])
-        dum_die($info);
+        $result = $state->fetch();
+        if (!empty($result) && !isset($result) && $result !== null) {
+            // dum_die($result);
+            $_SESSION["user"] = $result;
+            $_SESSION["user"]["logged"] = true;
+            header("Location: /");
+        }
+        return $state->fetch();
     }
     public function register()
     {
