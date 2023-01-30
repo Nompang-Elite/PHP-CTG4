@@ -2,6 +2,10 @@
 return [
     "route" => [
         "/" => "controllers/home/home.controller.php",
+        "/login" => "controllers/login/login.controller.php",
+        "/register" => "controllers/register/register.controller.php",
+        "/logout" => "controllers/login/login.controller.php",
+        "/account" => "controllers\account\account.controller.php",
         "" => "",
     ],
     "database" => [

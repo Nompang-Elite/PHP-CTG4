@@ -12,7 +12,7 @@ require("views/partials/navbar.php")
                 <img src="/assets/imgs/logo-no-background.png" alt="" width="140">
             </div>
             <div class="flex w-[24rem] p-10 rounded-r-lg">
-                <form class="space-y-6 w-full" action="/login" method="post">
+                <form class="space-y-6 w-full" action="/login"  method="post">
                     <h5 class="text-xl font-medium text-gray-900 dark:text-white">Sign in</h5>
                     <div>
                         <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>

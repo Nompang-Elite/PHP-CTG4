@@ -5,6 +5,10 @@ $config = require_once("utils/config.php");
 require_once("utils/debug.php");
 // Import Database:
 require_once("database/Database.php");
+// Import Users:
+require_once("models/Users.php");
+// Import validation:
+require_once("models/validation.model.php");
 // Import router:
 require_once("router.php");
 // Getting URI path from server
