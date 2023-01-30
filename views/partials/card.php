@@ -4,26 +4,23 @@ if (isset($showsList)) {
         $cardTitle = $show["name"];
         $cardDescription = $show["descriptions"];
 ?>
+        <div class="shadow-lg w-[28rem] h-[12rem] flex rounded-lg transition duration-300 hover:-translate-y-4">
+            <!-- <div>
+                <img src="https://picsum.photos/400/200" alt="" class="relative w-full rounded-l-lg h-full z-0">
+            </div> -->
+            <div class="z-10 flex flex-col justify-between h-full w-[20rem]">
+                <h5 class="py-2 px-6 font-semibold text-lg uppercase"><?= $cardTitle ?></h5>
+                <div class="p-6 -mt-4 overflow-hidden">
+                    <?= $cardDescription ?>
+                </div>
+                <div class="p-6 flex gap-2">
+                    <a href="/details" class="text-sm border-2 border-[#e41376] text-[#e41376] p-2 rounded-lg">
+                        Details
+                    </a>
+                </div>
 
-        <div class="max-w-sm w-[22rem] bg-white rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 transition duration-300 hover:scale-[105%]">
-            <a href="/details">
-                <img class="rounded-t-lg" src="" alt="">
-            </a>
-            <div class="p-5">
-                <a href="/details">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><?= $cardTitle ?></h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><?= $cardDescription ?></p>
-                <a href="/details" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    Read more
-                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                    </svg>
-                </a>
             </div>
         </div>
-
-
 <?php
     }
 }
