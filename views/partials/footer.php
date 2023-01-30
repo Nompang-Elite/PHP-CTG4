@@ -76,6 +76,7 @@
     </div>
 </footer>
 <!-- Footer End -->
+</div>
 </body>
 
 </html>
