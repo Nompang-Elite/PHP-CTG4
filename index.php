@@ -1,3 +1,6 @@
 <?php
-require("router.php");
-require("database/Database.php");
+
+require_once("utils/debug.php");
+require_once("router.php");
+require_once("");
+routeToPage($uri, $config["route"]);

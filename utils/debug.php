@@ -12,3 +12,7 @@ function dum_die(mixed $value = null): void
     echo "</pre>";
     die();
 }
+function abort($code = 404)
+{
+    return http_response_code($code);
+}
