@@ -11,6 +11,8 @@ require_once("models/Users.php");
 require_once("models/validation.model.php");
 // Import router:
 require_once("router.php");
+// Import ListShow:
+require_once("models/list_show.model.php");
 // Getting URI path from server
 $uri = $_SERVER["REQUEST_URI"];
 // Routing Page to based on URI
