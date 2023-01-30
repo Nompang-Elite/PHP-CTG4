@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Import config:
 $config = require_once("utils/config.php");
 // Import debug:

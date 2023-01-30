@@ -1,2 +1,3 @@
 <?php
-require("views/pages/login/login.view.php");
+$header = "Home";
+require("views/pages/home/home.view.php");
