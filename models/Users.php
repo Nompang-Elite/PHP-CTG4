@@ -93,7 +93,7 @@ class User
                 try {
                     $state = $this->db->query($q, $sanitizedList);
                 } catch (Exception $e) {
-                    $e->getMessage();
+                    // $e->getMessage();
                 }
                 $this->login($sanitizedList[":email"], $sanitizedList[":password"]);
             }
