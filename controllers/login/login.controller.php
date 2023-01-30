@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Check user for login
     if (isset($_POST["password"]) && isset($_POST["email"])) {
         $login = $user->login($_POST["email"], $_POST["password"]);
-        // $username = $_SESSION["user"]["username"];
+        $username = $_SESSION["user"]["username"];
         if (empty($login)) {
             $notFound = true;
         }

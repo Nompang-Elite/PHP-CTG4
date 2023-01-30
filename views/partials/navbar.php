@@ -27,7 +27,7 @@
                      <span class="material-icons">shopping_cart</span><span>Cart</span>
                  </a>
                  <a href="/account" class="flex gap-2 items-center rounded-lg p-2 text-lg transition duration-200 hover:bg-[#394d5f]">
-                     <span class="material-icons">person</span><span><?= $_SESSION["user"]["username"] ?></span>
+                     <span class="material-icons">person</span><span><?= $username ?></span>
                  </a>
                  <a href="/logout" class="flex items-center rounded-lg p-2 text-lg transition duration-200 hover:bg-[#394d5f]">
                      <span class="material-icons">logout</span>
