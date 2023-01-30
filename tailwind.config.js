@@ -11,6 +11,7 @@ module.exports = {
     "views\\pages\\account\\account.view.php",
     "views\\pages\\register\\register.view.php",
     "views\\pages\\search\\search.view.php",
+    "views\\pages\\details\\detials.view.php",
   ],
   theme: {
     extend: {},

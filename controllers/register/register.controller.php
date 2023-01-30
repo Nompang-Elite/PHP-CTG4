@@ -24,6 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && (isset($_POST) && ($_POST !== "" &&
         // dump_die($userInfo);
         $config = require("utils/config.php");
         $db = new Database($config["databaseInfoOnline"]);
+        // $db = new Database($config["databaseInfoLocal"]);
         $user = new Users($db);
         $user->register($userInfo);
         routeToPage("/", $config["route"]);

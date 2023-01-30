@@ -7,7 +7,8 @@ return [
         "/register" => "controllers/register/register.controller.php",
         "/logout" => "controllers/login/login.controller.php",
         "/account" => "controllers\account\account.controller.php",
-        "/404" => "views/pages/error/404.php"
+        "/404" => "views/pages/error/404.php",
+        "/details"=>"controllers/details/details.controller.php"
     ],
     "databaseInfoOnline" => [
         "dsn" => [
