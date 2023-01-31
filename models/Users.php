@@ -90,11 +90,7 @@ class User
                     INSERT INTO Users(first_name, last_name, username, email, birth_date, gender)
                     VALUES (:first_name, :last_name, :username, :email, :dirth_date, :gender);";
                 // Execute the query:
-                try {
-                    $state = $this->db->query($q, $sanitizedList);
-                } catch (Exception $e) {
-                    // $e->getMessage();
-                }
+                $state = $this->db->query($q, $sanitizedList);
                 $this->login($sanitizedList[":email"], $sanitizedList[":password"]);
             }
         }
