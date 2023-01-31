@@ -584,10 +584,6 @@ video {
   height: 1.25rem;
 }
 
-.h-80 {
-  height: 20rem;
-}
-
 .h-auto {
   height: auto;
 }
@@ -605,10 +601,6 @@ video {
   width: 1.25rem;
 }
 
-.w-60 {
-  width: 15rem;
-}
-
 .w-full {
   width: 100%;
 }
@@ -621,8 +613,8 @@ video {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -639,10 +631,6 @@ video {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.justify-items-center {
-  justify-items: center;
 }
 
 .gap-2 {
@@ -694,6 +682,11 @@ video {
 }
 
 .bg-\[\#0b1320\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(11 19 32 / var(--tw-bg-opacity));
+}
+
+.bg-color1 {
   --tw-bg-opacity: 1;
   background-color: rgb(11 19 32 / var(--tw-bg-opacity));
 }
@@ -761,6 +754,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .shadow-xl {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
@@ -793,6 +791,12 @@ video {
   transition-duration: 300ms;
 }
 
+.hover\:scale-105:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:border-primary:hover {
   --tw-border-opacity: 1;
   border-color: rgb(1 200 238 / var(--tw-border-opacity));
@@ -816,6 +820,18 @@ video {
   text-decoration-line: underline;
 }
 
+@media (prefers-color-scheme: dark) {
+  .dark\:text-white {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .dark\:hover\:text-white:hover {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+}
+
 @media not all and (min-width: 1024px) {
   .max-lg\:m-2 {
     margin: 0.5rem;
@@ -823,6 +839,10 @@ video {
 
   .max-lg\:hidden {
     display: none;
+  }
+
+  .max-lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .max-lg\:flex-col {
@@ -841,6 +861,10 @@ video {
 @media not all and (min-width: 768px) {
   .max-md\:flex {
     display: flex;
+  }
+
+  .max-md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .max-md\:flex-col {

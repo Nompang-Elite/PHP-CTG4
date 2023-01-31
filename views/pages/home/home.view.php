@@ -7,7 +7,7 @@ require("./views/partials/navbar.php");
 <main>
 
     <!-- Contents -->
-    <div class="grid grid-cols-3 justify-items-center m-10 gap-10">
+    <div class="grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1justify-items-center m-10 gap-10">
         <?php
         require("views/partials/card.php");
         ?>

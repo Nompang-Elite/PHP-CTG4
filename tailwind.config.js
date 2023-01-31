@@ -11,11 +11,14 @@ module.exports = {
   ],
   theme: {
     extend: {},
-    colors:{
-      "primary": "#01c8ee",
-      "boxgrey": "#C0C0C010",
-      "transparent": "transparent",
-    }
+    colors: {
+      primary: "#01c8ee",
+      boxgrey: "#C0C0C010",
+      white: "#ffffff",
+      color1: "#0b1320",
+      color2: "#e41376",
+      transparent: "transparent",
+    },
   },
   plugins: [],
 };
