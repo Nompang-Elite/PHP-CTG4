@@ -42,7 +42,6 @@ require("./views/partials/navbar.php");
                 </div>
             </form>
 
-
         </div>
     </div>
 
