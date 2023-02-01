@@ -91,7 +91,14 @@ class User
                     VALUES (:first_name, :last_name, :username, :email, :dirth_date, :gender);";
                 // Execute the query:
                 $state = $this->db->query($q, $sanitizedList);
-                $this->login($sanitizedList[":email"], $sanitizedList[":password"]);
+                $q = "SELECT Users.* , Permissions.type FROM Users JOIN Permissions WHERE Users.permission_id = Permissions.ID";
+                $state = $database->query($q);
+                // Set user data into session:
+                $_SESSION["user"] = $state->fetch();
+                // Declare that user is logged in:
+                $_SESSION["user"]["logged"] = true;
+                // Head to home after logged in:
+                header("Location: /");
             }
         }
     }
