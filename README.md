@@ -33,3 +33,7 @@ The contents folder contains the assets and theme style of the web site. Inside 
     content/asset/icons
     content/asset/imgs
     content/themes
+## Tailwindcss
+To run and compile the Tailwindcss use the command below
+    
+    npm run init_tailwindcss
