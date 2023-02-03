@@ -12,7 +12,7 @@
     <!-- Costume Style -->
     <link rel="stylesheet" href="../../contents/themes/css/main.min.css">
     <!-- JQeury -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <!-- JS -->
     <script src="../../scripts/main.js" defer></script>
     <title>Home</title>
