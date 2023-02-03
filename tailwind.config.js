@@ -4,6 +4,9 @@ module.exports = {
     "./views/partials/nav.php",
     "./views/partials/header.php",
     "./views/partials/footer.php",
+    "./controllers/login.controller.php",
+    "controllers/home.controller.php",
+    "controllers/register.controller.php"
   ],
   theme: {
     extend: {
