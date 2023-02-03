@@ -3,7 +3,8 @@
 // This file contains the configuration for the site
 return [
     "route" => [
-        "/" => "./controllers/home.controller.php"
+        "/" => "./controllers/home.controller.php",
+        "/login" => "./controllers/login.controller.php",
     ],
     "database" => [
         // Offline is for the local connection to DB

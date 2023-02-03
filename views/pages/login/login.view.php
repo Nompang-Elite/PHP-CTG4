@@ -1,16 +1,16 @@
 <?php
-require_once("../../partials/header.php");
+require_once("./views/partials/header.php");
 ?>
 <main class="w-full h-screen flex justify-center items-center bg-slate-900 text-white">
         <div class="flex h-full w-full">
             <div class="flex justify-center items-center  w-full max-sm:hidden ">
                 <!-- Contents -->
-                <img src="./images/1.jpg" alt="logo" class="relative h-full box-content opacity-10">
+                <img src="../../../contents/imgs/1.jpg" alt="logo" class="relative h-full box-content opacity-10">
                 <div class="relative h-full w-full">
 
                 </div>
                 <div class="absolute flex items-center flex-col">
-                    <img src="./images/logo.png" alt="" width="60%" class="">
+                    <img src="../../../contents/imgs/logo.png" alt="" width="60%" class="">
                     <div class="p-4 w-[60%]">
                         <h1 class="text-2xl ">Welcome to my website!</h1>
                         <p class="text-xs">The world is so beautiful. Keep your best. <br>Think positive.</p>
