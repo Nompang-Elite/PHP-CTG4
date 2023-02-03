@@ -17,7 +17,7 @@ return [
         // Online is for the online connection to DB
         "online" => [
             "host" => "php-database.c9wmosguks3w.ap-southeast-1.rds.amazonaws.com",
-            "dbname" => "ticket_app",
+            "dbname" => "app_db",
             "port" => "3306",
             "user" => "admin",
             "password" => "Iseeyou1234"

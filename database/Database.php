@@ -36,21 +36,21 @@ class Database
         // Execute the query
         $this->statement->execute($param);
     }
-    public function get(): array
+    public function get(): mixed
     {
         /**
          * getAll use retrieve the data that return from the execution of query
-         * @return array
+         * @return mixed
          **/
         // Get the data once
         return $this->statement->fetch();
     }
 
-    public function getAll(): array
+    public function getAll(): mixed
     {
         /**
          * getAll use retrieve all the data that return from the execution of query
-         * @return array
+         * @return mixed
          **/
         // Get the multiple data
         return $this->statement->fetchAll();
