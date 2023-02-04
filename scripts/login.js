@@ -30,7 +30,6 @@ function validPassoword()
         let form = document.getElementById("login-form");
         let password = document.getElementById("pass").value;
         let textPassword= document.getElementById("textPassword");
-        // let passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
         if(password=="")
         { 
             form.classList.add("valid");

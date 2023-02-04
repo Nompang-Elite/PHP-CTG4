@@ -1,6 +1,7 @@
 <?php
 require_once("./views/partials/header.php");
 ?>
+<!-- Login -->
 <main class="w-full h-screen flex justify-center items-center bg-slate-900 text-white">
         <div class="flex h-full w-full">
             <div class="flex justify-center items-center  w-full max-sm:hidden ">
@@ -18,6 +19,7 @@ require_once("./views/partials/header.php");
 
                 </div>
             </div>
+            <!-- Form login -->
             <form action="/" method="POST" id="login-form" class="flex flex-col gap-[1rem] shadow-md justify-center items-center w-[36rem] min-w-[20rem] max-sm:w-full">
                 <div class="flex flex-col items-center">
                     <h1 class="text-3xl">LOGIN</h1>
@@ -35,6 +37,7 @@ require_once("./views/partials/header.php");
                 <hr class="w-4/12">
                 <span>Don't have account? <a href="#" class="text-[#01c8ee]">Register</a></span>
             </form>
+            <!-- End form login -->
             <script src="../../../scripts/login.js"></script>
         </div>
     </main>
