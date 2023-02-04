@@ -15,8 +15,9 @@ class Users
         /** Login to the account
          * @param string $email
          * @param string $password
-         * @return void
+         * @return null
          */
+
         // Sanitize Input values
         $cleaned = sanitizeVlues(["email" => $email, "password" => $password]);
         // Query statments to check for the user:
@@ -43,14 +44,16 @@ class Users
                 $_SESSION["activeUser"] = $this->db->get();
                 // Set session logged variable to true:
                 $_SESSION["logged"] = true;
+                header("Location: /");
             } else {
                 // Return false if not valid:
-                return false;
+                return null;
             }
         } else {
             $_GET["login"] = "no account";
         }
     }
+
     public function logout(): void
     {
         /**
@@ -63,7 +66,9 @@ class Users
         $_SESSION["logged"] = false;
         // Destroy the session:
         session_destroy();
+        header("Location: /");
     }
+
     public function register(array $infoList)
     {
         /**
@@ -71,6 +76,7 @@ class Users
          * @return void
          */
         $cleaned = sanitizeVlues($infoList);
+        // Check all the required condition:
         if (
             (isset($cleaned["firstName"]) &&
                 isset($cleaned["lastName"]) &&
@@ -85,18 +91,20 @@ class Users
                 validatePattern($cleaned["lastName"], $this->namePattern) &&
                 validatePattern($cleaned["username"], $this->namePattern) &&
                 validatePattern($cleaned["password"], $this->passPattern) &&
-                filter_var($cleaned["gender"], FILTER_VALIDATE_EMAIL)
+                filter_var($cleaned["email"], FILTER_VALIDATE_EMAIL)
             )
         ) {
             // Query for the usr check:
-            $q = "SELECT passwords.email FROM passowrds WHERE passwords.email = :email";
+            $q = "SELECT passwords.email FROM passwords WHERE passwords.email = :email";
             // Execute the query:
             $this->db->query($q, [":email" => $cleaned["email"]]);
             // Get the respone data:
             $response = $this->db->getAll();
             if (isset($response) && empty($response)) {
-                $q = "INSERT INTO passwords.email VALUES (:email, :pass);
-                        INSERT INTO users VALUES (:firstName, :lastName, :username, :email, :gender, :birthDate)";
+                // User register query, insert data to db:
+                $q = "INSERT INTO passwords VALUES (:email, :password)
+                        INSERT INTO users(first_name, last_name, username, email, birth_date, gender) VALUES (:firstName, :lastName, :username, :email, :birthDate, :gender)";
+                // Execute the query:
                 $this->db->query($q, [
                     ":firstName" => $cleaned["firstName"],
                     ":lastName" => $cleaned["lastName"],
@@ -106,9 +114,12 @@ class Users
                     ":birthDate" => $cleaned["birthDate"],
                     ":gender" => $cleaned["gender"],
                 ]);
-            }
-        }
+            } else
+                echo "Existed";
+        } else
+            echo "Fails";
     }
+
     public function updateInfo()
     {
         /**

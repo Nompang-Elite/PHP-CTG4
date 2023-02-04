@@ -3,8 +3,11 @@
 // This file contains the configuration for the site
 return [
     "route" => [
+        // Router Path
         "/" => "./controllers/home.controller.php",
         "/login" => "./controllers/login.controller.php",
+        "/logout" => "./controllers/login.controller.php",
+        "/register" => "./controllers/register.controller.php"
     ],
     "database" => [
         // Offline is for the local connection to DB
