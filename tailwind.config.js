@@ -8,6 +8,7 @@ module.exports = {
     "./views/pages/login/login.view.php",
     "./views/pages/register/register.view.php",
     "./views/partials/card.php",
+    "./views/pages/account/account.view.php"
   ],
   theme: {
     extend: {
