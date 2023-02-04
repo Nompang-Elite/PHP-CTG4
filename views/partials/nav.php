@@ -10,14 +10,14 @@
         </form>
         <ul class="flex">
             <li class="flex">
-                <a href="#" class="flex items-center justify-center transition-all text-gray-400  p-4 w-12 h-12 border-2 border-transparent hover:border-gray-400 rounded-full">
+                <a href="/login" class="flex items-center justify-center transition-all text-gray-400  p-4 w-12 h-12 border-2 border-transparent hover:border-gray-400 rounded-full">
                     <span class="material-symbols-rounded text-3xl">
                         person
                     </span>
                 </a>
-                <a href="#" class="">
+                <a href="/register" class="">
                     <span class="material-symbols-rounded">
-                        <!-- register -->
+                        register
                     </span>
                 </a>
             </li>
