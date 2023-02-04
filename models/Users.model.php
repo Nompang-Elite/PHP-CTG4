@@ -44,6 +44,7 @@ class Users
                 $_SESSION["activeUser"] = $this->db->get();
                 // Set session logged variable to true:
                 $_SESSION["logged"] = true;
+                header("Location: /");
             } else {
                 // Return false if not valid:
                 return null;
@@ -65,6 +66,7 @@ class Users
         $_SESSION["logged"] = false;
         // Destroy the session:
         session_destroy();
+        header("Location: /");
     }
 
     public function register(array $infoList)

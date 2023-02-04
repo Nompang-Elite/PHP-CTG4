@@ -10,16 +10,46 @@
         </form>
         <ul class="flex">
             <li class="flex">
-                <a href="/login" class="flex items-center justify-center transition-all text-gray-400  p-4 w-12 h-12 border-2 border-transparent hover:border-gray-400 rounded-full">
-                    <span class="material-symbols-rounded text-3xl">
-                        person
-                    </span>
-                </a>
-                <a href="/register" class="flex items-center justify-center transition-all text-gray-400  p-4 w-12 h-12 border-2 border-transparent hover:border-gray-400 rounded-full">
-                    <span class="material-symbols-rounded">
-                        app_registration
-                    </span>
-                </a>
+
+                <?php
+                if (isset($_SESSION["logged"]) && isset($_SESSION["activeUser"])) :
+                ?>
+
+                    <a href="/account" class="flex items-center justify-center transition-all text-gray-400  p-4 w-12 h-12 border-2 border-transparent hover:border-gray-400 rounded-full">
+                        <span class="material-symbols-rounded text-3xl">
+                            person
+                        </span>
+                    </a>
+                    <a href="/cart" class="flex items-center justify-center transition-all text-gray-400  p-4 w-12 h-12 border-2 border-transparent hover:border-gray-400 rounded-full">
+                        <span class="material-symbols-rounded">
+                            shopping_cart
+                        </span>
+                    </a>
+                    <a href="/logout" class="flex items-center justify-center transition-all text-gray-400  p-4 w-12 h-12 border-2 border-transparent hover:border-gray-400 rounded-full">
+                        <span class="material-symbols-rounded">
+                            logout
+                        </span>
+                    </a>
+
+                <?php
+                else :
+                ?>
+
+                    <a href="/login" class="flex items-center justify-center transition-all text-gray-400  p-4 w-12 h-12 border-2 border-transparent hover:border-gray-400 rounded-full">
+                        <span class="material-symbols-rounded text-3xl">
+                            person
+                        </span>
+                    </a>
+                    <a href="/register" class="flex items-center justify-center transition-all text-gray-400  p-4 w-12 h-12 border-2 border-transparent hover:border-gray-400 rounded-full">
+                        <span class="material-symbols-rounded">
+                            app_registration
+                        </span>
+                    </a>
+
+                <?php
+                endif;
+                ?>
+
             </li>
         </ul>
     </div>

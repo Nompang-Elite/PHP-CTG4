@@ -1,4 +1,5 @@
 <?php
+session_start();
 // THIS IS THE MAIN FILE
 // Import Debug Function:
 require("./utils/debug.php");
