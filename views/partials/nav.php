@@ -15,9 +15,9 @@
                         person
                     </span>
                 </a>
-                <a href="/register" class="">
+                <a href="/register" class="flex items-center justify-center transition-all text-gray-400  p-4 w-12 h-12 border-2 border-transparent hover:border-gray-400 rounded-full">
                     <span class="material-symbols-rounded">
-                        register
+                        app_registration
                     </span>
                 </a>
             </li>
