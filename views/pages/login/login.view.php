@@ -22,13 +22,19 @@ require_once("./views/partials/header.php");
                 <div class="flex flex-col items-center">
                     <h1 class="text-3xl">LOGIN</h1>
                 </div>
-                <!-- <span class="text-xs m-1">Welcome to the login page, please input your info.</span> -->
-                <input type="email" name="email" placeholder="Email address" class="p-2 rounded-md max-w-8/10 w-10/12 bg-transparent outline-none bg-gray-800">
-                <input type="password" name="pass" placeholder="Password" class="p-2 rounded-md max-w-8/10 w-10/12  bg-transparent outline-none bg-gray-800 ">
+                <label class="flex w-full flex-col">
+                    <input type="email" name="email" onkeyup="validateEmail()" id="email" placeholder="Email address" class="p-2 rounded-md max-w-8/10 ml-9 w-10/12 bg-transparent outline-none bg-gray-800">
+                    <span id="text" class="ml-9 text-sm"></span>
+                </label>
+                <label class="w-full flex flex-col">
+                    <input type="password" name="pass" onkeyup="validPassoword()"  id="pass" placeholder="Password" class="p-2 rounded-md max-w-8/10 w-10/12 ml-9 bg-transparent outline-none bg-gray-800 ">
+                    <span id="textPassword" class="ml-9 text-sm"></span>
+                </label>
                 <a href="#" class="text-[#01c8ee] ml-52">Forget password?</a>
                 <button class="btn p-2 rounded-md max-w-8/10 w-10/12 border-2 border-[#01c8ee] text-[#01c8ee] ">Login</button>
                 <hr class="w-4/12">
                 <span>Don't have account? <a href="#" class="text-[#01c8ee]">Register</a></span>
             </form>
+            <script src="../../../scripts/login.js"></script>
         </div>
     </main>
