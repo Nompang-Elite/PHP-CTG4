@@ -102,8 +102,8 @@ class Users
             $response = $this->db->getAll();
             if (isset($response) && empty($response)) {
                 // User register query, insert data to db:
-                $q = "INSERT INTO passwords VALUES (:email, :password)
-                        INSERT INTO users(first_name, last_name, username, email, birth_date, gender) VALUES (:firstName, :lastName, :username, :email, :birthDate, :gender)";
+                $q = "INSERT INTO passwords VALUES (:email, :password);
+                        INSERT INTO users (first_name, last_name, username, email, birth_date, gender) VALUES (:firstName, :lastName, :username, :email, :birthDate, :gender)";
                 // Execute the query:
                 $this->db->query($q, [
                     ":firstName" => $cleaned["firstName"],
@@ -114,6 +114,7 @@ class Users
                     ":birthDate" => $cleaned["birthDate"],
                     ":gender" => $cleaned["gender"],
                 ]);
+                header("Location: /");
             } else
                 echo "Existed";
         } else
