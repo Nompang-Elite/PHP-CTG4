@@ -74,6 +74,7 @@ require './views/partials/header.php';
                 </label>
             </label>
             <button  class="btn p-2 mt-4 rounded-md max-w-8/10 w-10/12 border-2 border-[#01c8ee] text-[#01c8ee] " onkeyup="checkform()" >Register</button>
+            <span><a href="/" class="underline text-[#01c8ee]">Back</a></span>
         </form>
     </div>
 </main>
