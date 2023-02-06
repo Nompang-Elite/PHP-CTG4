@@ -91,7 +91,7 @@ function checkform(){
         btn.setAttribute("disabled", "");
     }
     else{
-        if(password.value !== confirmPassword.value){
+        if(confirmPassword.value !==  password.value){
             btn.setAttribute("disabled", "");
         }
     }
