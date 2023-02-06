@@ -90,4 +90,9 @@ function checkform(){
     {
         btn.setAttribute("disabled", "");
     }
+    else{
+        if(password.value != confirmPassword.value){
+            btn.setAttribute("disabled", "");
+        }
+    }
 }
