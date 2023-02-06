@@ -13,9 +13,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST)) {
         isset($_POST["username"]) &&
         isset($_POST["email"]) &&
         isset($_POST["password"]) &&
+        isset($_POST["confirmpassword"]) &&
         isset($_POST["birthDate"]) &&
         isset($_POST["gender"])
-    
+
     ) {
         $registerInfo = [
             "firstName" => $_POST["firstName"],
@@ -23,6 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST)) {
             "username" => $_POST["username"],
             "email" => $_POST["email"],
             "password" => $_POST["password"],
+            "confirmpassword" => $_POST["confirmpassword"],
             "gender" => $_POST["gender"],
             "birthDate" => $_POST["birthDate"],
         ];
