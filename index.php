@@ -13,6 +13,8 @@ require("./routers/router.php");
 require("./database/Database.php");
 // Import Users model:
 require("./models/Users.model.php");
+// Import List Show model:
+require("./models/list.show.model.php");
 // Init Router:
 $uri = parse_url($_SERVER["REQUEST_URI"])["path"]; // Get the URI path.
 routeToPage($uri, $config["route"]);
