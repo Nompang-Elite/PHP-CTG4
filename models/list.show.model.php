@@ -1,9 +1,5 @@
 <?php
-$config = require("./utils/config.php");
-require("./database/Database.php");
 
-// Create new database
-$db = new Database($config['database']['online']);
 
 // function to get data of show and return : array
 function getShowData(Database $db): array

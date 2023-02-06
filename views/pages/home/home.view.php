@@ -10,9 +10,14 @@ require("./views/partials/nav.php");
     require("./views/partials/side_menu.php");
     ?>
 
-
-    <div class="w-full p-4">
+    <div class="w-full h-full p-4">
         <!-- Contents goes here!!! -->
+        <div class="grid grid-cols-5 h-full gap-4">
+            <?php
+            require("./views/partials/card.php");
+            ?>
+
+        </div>
     </div>
 
 
