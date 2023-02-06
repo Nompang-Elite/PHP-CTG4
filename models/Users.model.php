@@ -99,8 +99,8 @@ class Users
             // Execute the query:
             $this->db->query($q, [":email" => $cleaned["email"]]);
             // Get the respone data:
-            $response = $this->db->getAll();
-            if (isset($response) && empty($response)) {
+            $response = $this->db->get();
+            if (!isset($response) && empty($response)) {
                 // User register query, insert data to db:
                 $q = "INSERT INTO passwords VALUES (:email, :password);
                         INSERT INTO users (first_name, last_name, username, email, birth_date, gender) VALUES (:firstName, :lastName, :username, :email, :birthDate, :gender)";
