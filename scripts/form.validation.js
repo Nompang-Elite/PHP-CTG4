@@ -41,7 +41,7 @@ function validatePassword()
     if (password.value == "") 
     {
         textPassword.innerHTML = "";
-        // password.style.border = "";
+        password.style.border = "";
     }
 }
 
