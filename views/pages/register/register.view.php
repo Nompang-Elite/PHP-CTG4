@@ -10,7 +10,7 @@ require './views/partials/header.php';
 
             </div>
             <div class="absolute flex items-center flex-col">
-                <img src="./images/logo.png" alt="" width="60%" class="">
+                <img src="../../../contents/assets/imgs/logo.png" alt="" width="60%" class="">
                 <div class="p-4">
                     <h1 class="text-2xl ">Welcome to my website!</h1>
                     <p class="text-xs">The world is so beautiful. Keep your best. Think positive.</p>
@@ -73,8 +73,11 @@ require './views/partials/header.php';
                     <span id="textconfirmpassword" class="ml-9 text-sm"></span>
                 </label>
             </label>
-            <button class="btn p-2 mt-4 rounded-md max-w-8/10 w-10/12 border-2 border-[#01c8ee] text-[#01c8ee] ">Login</button>
+            <button  class="btn p-2 mt-4 rounded-md max-w-8/10 w-10/12 border-2 border-[#01c8ee] text-[#01c8ee] " onkeyup="checkform()" >Register</button>
         </form>
     </div>
 </main>
 <script src="../../../scripts/form.validation.js"></script>
+</body>
+
+</html>

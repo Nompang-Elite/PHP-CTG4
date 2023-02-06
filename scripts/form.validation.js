@@ -65,9 +65,25 @@ function validateConfirmPassword()
     }
     if (confirmPassword.value == "") 
     {
-        textconfirmPassword.innerHTML = "Valid Confirm_Password";
+        textconfirmPassword.innerHTML = "";
         textconfirmPassword.style.color = "green"
         password.style.border = "2px solid green";
         confirmPassword.style.border = "2px solid green";
+    }
+}
+function checkform(){
+    let password = document.getElementById("password");
+    let confirmPassword = document.getElementById("confirmpassword");
+    let firstName = document.getElementById("firstname");
+    let btn = document.querySelector("button");
+    let lastName = document.getElementById("lastname");
+    let userName = document.getElementById("username");
+    let date = document.getElementById("date");
+    let gender = document.getElementById("gender");
+    let country = document.getElementById("country");
+    let email = document.getElementById("email");
+    if (password.value == "" || confirmPassword.value == "" || firstName.value == "" || lastName.value == "" || userName.value == "" || date.value == "" || gender.value == "" || country.value == "" || email.value == "")
+    {
+        btn.setAttribute("disabled", "");
     }
 }
