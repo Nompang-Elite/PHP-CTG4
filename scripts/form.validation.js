@@ -78,7 +78,17 @@ function validateConfirmPassword()
 }
 
 function checkform(){
-    if (password.value == "" || confirmPassword.value == "" || firstName.value == "" || lastName.value == "" || userName.value == "" || date.value == "" || gender.value == "" || country.value == "" || email.value == "")
+    if (    
+            password.value == "" || 
+            confirmPassword.value == "" || 
+            firstName.value == "" || 
+            lastName.value == "" || 
+            userName.value == "" || 
+            date.value == "" || 
+            gender.value == "" || 
+            country.value == "" || 
+            email.value == ""
+        )
     {
         btn.setAttribute("disabled", "");
     }
