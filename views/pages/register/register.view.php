@@ -69,7 +69,7 @@ require './views/partials/header.php';
                 </label>
                 <label class="flex w-full flex-col">
                     <label class="ml-5">Confirm_Password</label>
-                    <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password" class="p-2 rounded-md max-w-8/10 ml-5 w-9/12 bg-transparent outline-none bg-gray-800">
+                    <input type="password" name="confirmpassword" onkeyup="validateConfirmPassword()" id="confirmpassword" placeholder="Confirm Password" class="p-2 rounded-md max-w-8/10 ml-5 w-9/12 bg-transparent outline-none bg-gray-800">
                     <span id="textconfirmpassword" class="ml-9 text-sm"></span>
                 </label>
             </label>
