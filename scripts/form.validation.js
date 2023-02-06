@@ -77,21 +77,21 @@ function validateConfirmPassword()
 
 function checkform(){
     if (    
-            password.value == "" || 
-            confirmPassword.value == "" || 
-            firstName.value == "" || 
-            lastName.value == "" || 
-            userName.value == "" || 
-            date.value == "" ||
-            gender.value == "" ||
-            country.value == "" ||
-            email.value == ""
+            password.value === "" || 
+            confirmPassword.value === "" || 
+            firstName.value === "" || 
+            lastName.value === "" || 
+            userName.value === "" || 
+            date.value === "" ||
+            gender.value === "" ||
+            country.value === "" ||
+            email.value === ""
         )
     {
         btn.setAttribute("disabled", "");
     }
     else{
-        if(password.value != confirmPassword.value){
+        if(password.value !== confirmPassword.value){
             btn.setAttribute("disabled", "");
         }
     }
