@@ -84,9 +84,9 @@ function checkform(){
             firstName.value == "" || 
             lastName.value == "" || 
             userName.value == "" || 
-            date.value == "" || 
-            gender.value == "" || 
-            country.value == "" || 
+            date.value == "" ||
+            gender.value == "" ||
+            country.value == "" ||
             email.value == ""
         )
     {
