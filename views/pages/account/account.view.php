@@ -17,18 +17,21 @@ require("./views/partials/nav.php");
                             <div class="flex items-center ml-12">
                                 <img src="../../../contents/assets/logo/son.jpg" alt="" class="w-1/6 rounded-full">
                                 <div class="ml-10">
-                                    <p>Villa Nhea</p>
-                                    <p>Hello</p>
+                                    <div class="flex">
+                                        <p><?=$first_name; ?></p>
+                                        <p><?=$last_name; ?></p>
+                                    </div>
+                                    <p><?=$username?></p>
                                 </div>
                             </div>
                             <div class="ml-12 mt-7">
                                 <div class="flex space-x-3">
                                     <img src="../../../contents/assets/logo/email.png" alt="" class="w-7">
-                                    <p><a href="">villa.nhea@student.passerellesnumeriques.org</a> </p>
+                                    <p><a href=""><?=$email?></a> </p>
                                 </div>
                                 <div class="flex space-x-3 mt-4">
                                     <img src="../../../contents/assets/logo/date.png" alt="" class="w-7">
-                                    <p>02/02/2023</p>
+                                    <p><?=$birth_date?></p>
                                 </div>
                                 <div class="flex space-x-3 mt-4">
                                     <img src="../../../contents/assets/logo/position.png" alt="" class="w-7">
