@@ -71,9 +71,7 @@ function validateConfirmPassword()
     if (confirmPassword.value == "") 
     {
         textconfirmPassword.innerHTML = "";
-        textconfirmPassword.style.color = "green"
-        password.style.border = "2px solid green";
-        confirmPassword.style.border = "2px solid green";
+        confirmPassword.style.border = "";
     }
 }
 
