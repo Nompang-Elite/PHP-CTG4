@@ -36,6 +36,7 @@ require_once("./views/partials/header.php");
             <button class="btn p-2 rounded-md max-w-8/10 w-10/12 border-2 border-[#01c8ee] text-[#01c8ee] ">Login</button>
             <hr class="w-4/12">
             <span>Don't have account? <a href="/register" class="text-[#01c8ee]" >Register</a></span>
+            <span><a href="/" class="underline text-[#01c8ee]">Back</a></span>   
         </form>
         <!-- End form login -->
         <script src="../../../scripts/login.js"></script>
