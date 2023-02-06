@@ -100,7 +100,7 @@ class Users
             $this->db->query($q, [":email" => $cleaned["email"]]);
             // Get the respone data:
             $response = $this->db->get();
-            if (empty($response)) {
+            if (empty($response) && ($cleaned["password"] === $cleaned["confirmpassword"])) {
                 // User register query, insert data to db:
                 $q = "INSERT INTO passwords VALUES (:email, :password);
                         INSERT INTO users (first_name, last_name, username, email, birth_date, gender) VALUES (:firstName, :lastName, :username, :email, :birthDate, :gender)";
