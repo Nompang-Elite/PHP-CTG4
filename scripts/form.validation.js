@@ -64,7 +64,7 @@ function validateConfirmPassword()
     }
     else
     {
-        textconfirmPassword.innerHTML = "Invalid Password!";
+        textconfirmPassword.innerHTML = "Not match Password!";
         textconfirmPassword.style.color = "red";
         confirmPassword.style.border = "2px solid red";
     }
