@@ -13,6 +13,25 @@ body {
   main {
     height: 100%;
     width: 100%;
+    overflow:hidden;
   }
 }
 @import "./components/_side_nav.scss";
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ebebeb;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  background: $color-2; 
+}
