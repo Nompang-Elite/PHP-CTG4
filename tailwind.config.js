@@ -8,15 +8,15 @@ module.exports = {
     "./views/pages/login/login.view.php",
     "./views/pages/register/register.view.php",
     "./views/partials/card.php",
-    "./views/pages/account/account.view.php"
+    "./views/pages/account/account.view.php",
+    "./views/partials/side_menu.php"
   ],
   theme: {
     extend: {
       colors: {
-        primary: "",
-        secondary: "",
-        danger: "",
-        info: "",
+        primary: "#101b37",
+        secondary: "#01c8ee",
+        danger: "#e41376",
       },
     },
   },

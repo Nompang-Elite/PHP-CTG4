@@ -4,45 +4,30 @@
 }
 
 body {
+  background: rgba(19, 30, 58, 0.9647058824);
+  height: 100vh;
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-body nav {
-  background: #ffffff;
-}
 body main {
   height: 100%;
+  width: 100%;
 }
 
 #side-menu {
-  left: 0;
-  text-align: center;
-  border-radius: 0 0.6rem 0.6rem 0;
-  padding: 0.6rem;
-  position: relative;
-  width: 5.5rem;
-  height: 100%;
-  background: white;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  width: 4rem;
   transition: 0.3s;
 }
-#side-menu .side-link {
-  gap: 1rem;
-  display: flex;
-  flex-direction: column;
-}
 
-.menu-link-text {
+.side-link-text {
   display: none;
-  padding: 0 1rem;
-  transition: 1s;
 }
 
-.active-menu {
-  display: block !important;
+.show-side-menu {
+  width: 16rem !important;
 }
-
-.close-menu {
-  width: 24rem !important;
+.show-side-menu .side-link-text {
+  display: flex;
 }/*# sourceMappingURL=main.css.map */
