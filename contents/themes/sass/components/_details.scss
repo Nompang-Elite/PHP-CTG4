@@ -1,0 +1,14 @@
+#details-dialog{
+    position: relative;
+    width: 0;
+    margin-right: -100% ;
+    right: -100%;
+    transition: 0.3s all;
+    // display: none;
+}
+.show-details-dialog{
+    width: 40rem !important;
+    right: 0 !important;
+    margin-right: 0  !important ;
+    // display: flex !important;
+}

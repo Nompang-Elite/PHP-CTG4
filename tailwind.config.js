@@ -9,7 +9,8 @@ module.exports = {
     "./views/pages/register/register.view.php",
     "./views/partials/card.php",
     "./views/pages/account/account.view.php",
-    "./views/partials/side_menu.php"
+    "./views/partials/side_menu.php",
+    "./views/partials/detail.php"
   ],
   theme: {
     extend: {

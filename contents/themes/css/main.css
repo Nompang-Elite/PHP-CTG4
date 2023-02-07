@@ -33,6 +33,20 @@ body main {
   display: flex;
 }
 
+#details-dialog {
+  position: relative;
+  width: 0;
+  margin-right: -100%;
+  right: -100%;
+  transition: 0.3s all;
+}
+
+.show-details-dialog {
+  width: 40rem !important;
+  right: 0 !important;
+  margin-right: 0 !important;
+}
+
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 10px;
