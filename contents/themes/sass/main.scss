@@ -4,7 +4,7 @@
   margin: 0;
 }
 body {
-  background: #131e3af6;
+  background: rgb(75 85 99);
   height: 100vh;
   position: relative;
   width: 100%;
@@ -13,7 +13,7 @@ body {
   main {
     height: 100%;
     width: 100%;
-    overflow:hidden;
+    overflow: hidden;
   }
 }
 @import "./components/_side_nav.scss";
@@ -33,5 +33,5 @@ body {
   -webkit-border-radius: 10px;
   border-radius: 10px;
   border: 1px solid #ffffff;
-  background: $color-2; 
+  background: $color-2;
 }

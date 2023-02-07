@@ -6,13 +6,15 @@ $shows = getShowData($db);
 <?php
 foreach ($shows as $show) :
 ?>
-    <div class="card w-64 pb-5 bg-gray-500 rounded-lg overflow-hidden flex flex-col p-2">
-        <img src="https://picsum.photos/300/200" alt="" class="rounded-lg">
-        <div class="title p-5 ">
+    <div class="card w-64 bg-primary text-white rounded-lg overflow-hidden flex flex-col p-1 justify-between transition-all duration-200 hover:scale-105">
+        <div>
+            <img src="https://picsum.photos/300/200" alt="" class="rounded-lg w-[300px] h-[200px]">
             <!-- ___card-title___ -->
-            <div class="flex">
-                <span class="font-semibold text-2xl"><?=$show["name"]?></span><br>
+            <div class="flex p-2">
+                <span class="font-semibold text-xl uppercase overflow-hidden"><?= $show["name"] ?></span><br>
             </div>
+        </div>
+        <div class="title p-2 ">
             <!-- card-location -->
             <div class="flex">
                 <span class="font-semibold text-sm"> Address: PNC</span>
@@ -22,9 +24,11 @@ foreach ($shows as $show) :
                 <span class="font-semibold text-sm">Price: 500$</span><br>
             </div>
 
+            <!-- button details -->
+            <div class="flex space-x-2">
+                <button class="mt-4 border-2 border-secondary text-secondary p-2 rounded-lg w-full self-center ">View Detail</button>
+            </div>
         </div>
-        <!-- button details -->
-        <button class="bg-blue-500 p-3 rounded-lg w-52 self-center ">View Detail</button>
     </div>
 
 <?php

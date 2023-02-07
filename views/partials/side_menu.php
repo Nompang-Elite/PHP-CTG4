@@ -1,4 +1,4 @@
-<div id="side-menu" class="p-3 relative h-full bg-primary text-secondary shadow-sm shadow-white z-20">
+<div id="side-menu" class="p-3 relative h-full bg-primary text-white shadow-sm shadow-white z-20">
     <div class="flex flex-col w-full space-y-4">
         <!-- Home -->
         <a href="/" class="flex items-center space-x-6 hover:bg-secondary hover:text-white transition-all duration-200 p-2 rounded-lg">
