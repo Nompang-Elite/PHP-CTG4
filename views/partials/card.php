@@ -26,7 +26,7 @@ foreach ($shows as $show) :
 
             <!-- button details -->
             <div class="flex space-x-2">
-                <span class="mt-4 border-2 border-secondary text-secondary p-2 rounded-lg w-full text-center" id="<?=$show["id"]?>" onclick="showDetails();">View Detail</span>
+                <span class="mt-4 border-2 border-secondary text-secondary p-2 rounded-lg w-full text-center" id="<?=$show["id"]?>" onclick="showDetails(this);">View Detail</span>
             </div>
         </div>
     </div>
