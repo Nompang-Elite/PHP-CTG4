@@ -8,7 +8,8 @@ return [
         "/login" => "./controllers/login.controller.php",
         "/logout" => "./controllers/login.controller.php",
         "/register" => "./controllers/register.controller.php",
-        "/account" => "./controllers/account.controller.php"
+        "/account" => "./controllers/account.controller.php",
+        "/details" => "./controllers/details.controller.php"
     ],
     "database" => [
         // Offline is for the local connection to DB

@@ -21,7 +21,7 @@ require("./views/partials/nav.php");
     <div id="details-dialog" class="card-container flex flex-wrap justify-center w-full h-full overflow-scroll overflow-x-hidden gap-8 p-4">
 
         <?php
-        require("./views/partials/detail.php");
+        require("./controllers/details.controller.php");
         ?>
 
     </div>
