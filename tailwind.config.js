@@ -10,7 +10,7 @@ module.exports = {
     "./views/partials/card.php",
     "./views/pages/account/account.view.php",
     "./views/partials/side_menu.php",
-    "./views/partials/detail.php"
+    "./controllers/details.controller.php"
   ],
   theme: {
     extend: {
