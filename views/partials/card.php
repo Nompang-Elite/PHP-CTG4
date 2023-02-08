@@ -32,8 +32,5 @@ foreach ($shows as $show) :
     </div>
 
 <?php
-// $showId = 152;
-// $showsdetail = getShowDetail($db, $showid);
-// dump_die($showsdetail);
 endforeach;
 ?>
