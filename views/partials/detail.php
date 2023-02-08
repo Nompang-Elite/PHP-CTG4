@@ -1,5 +1,9 @@
 <div class="detail-container flex flex-col p-5 rounded-lg">
-        <span class="material-symbols-outlined self-end">more_horiz close</span>
+    <div class="detail-icon self-end">
+        <span class="material-symbols-outlined">more_horiz </span>
+        <span class="material-symbols-outlined">close</span>
+
+    </div>
         <img src="../../contents/assets/imgs/love.jpg" alt="" class="rounded-lg mb-5 " >
         <div class="detail-information font-sans font-light text-lg">
             <span class="text-2xl font-bold font-sans">AMAZING CONCERT</span><br>
