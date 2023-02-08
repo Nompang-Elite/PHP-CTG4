@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-function getShowDetail(Database $db, int $showId): array
+function getShowDetail(Database $db, string $showId): array
 {
     $q = "SELECT app_db.schedules.date, app_db.shows.name, app_db.venues.address, app_db.tickets.price, app_db.shows.descriptions 
     FROM app_db.schedules 
@@ -11,6 +11,6 @@ function getShowDetail(Database $db, int $showId): array
     AND  (app_db.shows.id = app_db.tickets.show_id )
     AND (app_db.venues.id  = app_db.tickets.venue_id) AND app_db.shows.id = :id ;";
 
-    $db->query($q , [":id" => $showId]);
+    $db->query($q, [":id" => $showId]);
     return $db->getAll();
 }

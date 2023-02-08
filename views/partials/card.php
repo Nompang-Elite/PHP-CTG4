@@ -26,7 +26,7 @@ foreach ($shows as $show) :
 
             <!-- button details -->
             <div class="flex space-x-2">
-                <a href="/details" class="mt-4 border-2 border-secondary text-secondary p-2 rounded-lg w-full text-center">View Detail</a>
+                <a href="/details?showId=<?= $show['id'] ?>" name="id" class="mt-4 border-2 border-secondary text-secondary p-2 rounded-lg w-full text-center">View Detail</a>
             </div>
         </div>
     </div>

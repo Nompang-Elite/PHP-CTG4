@@ -12,13 +12,13 @@ require("./views/partials/nav.php");
     <!-- Cartd Container -->
     <div class="card-container flex flex-wrap justify-center w-full h-full overflow-scroll overflow-x-hidden gap-8 p-4">
 
-        <div class="flex max-sm:flex-col max-sm:items-center w-fit text-md font-normal text-white p-4 rounded-lg bg-primary border-2">
-            <div class="flex flex-col h-full w-2/5 max-sm:w-full">
+        <div class="flex max-sm:flex-col max-sm:items-center w-full text-md font-normal text-white p-4 rounded-lg bg-primary border-2">
+            <div class="flex flex-col justify-between h-full w-2/5 max-sm:w-full">
                 <img src="https://picsum.photos/300/200" class="rounded-lg w-[340px] h-[200px] overflow-hidden max-sm:w-full">
                 <ul class="my-4 flex flex-col space-y-2">
-                    <li class="flex items-center space-x-2 text-lg font-semibold uppercase"><span>Titles</span></li>
-                    <li class="flex items-center space-x-2"><span class="material-symbols-rounded font-light">sell</span><span>Price :</span></li>
-                    <li class="flex items-center space-x-2"><span class="material-symbols-rounded font-light">location_on</span><span>Address :</span></li>
+                    <li class="flex items-center space-x-2 text-lg font-semibold uppercase"><span><?= $title ?></span></li>
+                    <li class="flex items-center space-x-2"><span class="material-symbols-rounded font-light">sell</span><span>Price :</span><span><?= $price ?> $</span></li>
+                    <li class="flex items-center space-x-2"><span class="material-symbols-rounded font-light">location_on</span><span>Address :</span><span><?= $address ?></span></li>
                 </ul>
                 <div class="flex flex-col space-y-4 text-black w-full">
                     <div class="flex w-full space-x-2">
@@ -43,10 +43,7 @@ require("./views/partials/nav.php");
             <div class="h-full px-4 w-full max-sm:my-4">
                 <header class="text-lg font-semibold mb-6">Descriptions</header>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Ipsam, ex fuga, delectus officiis et nam rem aut provident
-                    recusandae distinctio nulla voluptatibus numquam quae natus
-                    quod esse velit saepe? Facilis?
+                    <?= $descriptions ?>
                 </p>
             </div>
         </div>

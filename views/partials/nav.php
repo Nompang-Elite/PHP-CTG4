@@ -1,8 +1,8 @@
 <nav class="flex items-center justify-between w-full px-4 bg-primary shadow-sm border-b-2 border-gray-100">
     <div class="w-4/12 flex p-3">
-        <a href="#" onclick="toggleMenu();">
+        <span onclick="toggleMenu();">
             <img src="../../contents/assets/logo/5.png" alt="" class="w-28">
-        </a>
+        </span>
     </div>
     <div class="flex items-center justify-between w-full text-white">
         <form action="/search" class="flex w-full">
