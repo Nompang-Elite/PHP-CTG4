@@ -17,6 +17,10 @@ require("./views/partials/nav.php");
         ?>
 
     </div>
+    <div id="show-details" class="card-container border-2 rounded-lg absolute right-0 flex flex-wrap justify-center w-details-box h-details-box  overflow-scroll overflow-x-hidden gap-8">
+
+
+    </div>
 
 </main>
 

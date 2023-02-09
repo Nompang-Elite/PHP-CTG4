@@ -33,6 +33,16 @@ body main {
   display: flex;
 }
 
+#show-details {
+  width: 0;
+  background: #000;
+  transition: 0.3s;
+}
+
+.open-detail {
+  width: 28rem !important;
+}
+
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 10px;
@@ -48,5 +58,5 @@ body main {
   -webkit-border-radius: 10px;
   border-radius: 10px;
   border: 1px solid #ffffff;
-  background: #01c8ee;
+  background: #F0A500;
 }/*# sourceMappingURL=main.css.map */
