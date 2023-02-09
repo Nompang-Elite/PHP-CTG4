@@ -2,7 +2,7 @@
 
 function getShowDetail(Database $db, string $showId): array
 {
-    $q = "SELECT app_db.schedules.date, app_db.shows.name, app_db.venues.address, app_db.tickets.price, app_db.shows.descriptions 
+    $q = "SELECT app_db.schedules.date, app_db.shows.name, app_db.shows.image, app_db.venues.address, app_db.tickets.price, app_db.shows.descriptions 
     FROM app_db.schedules 
     JOIN app_db.tickets 
     JOIN app_db.shows 

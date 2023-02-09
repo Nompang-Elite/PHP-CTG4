@@ -10,5 +10,6 @@ if (isset($_GET['showId'])) {
     $address = $showData[0]['address'];
     $price = $showData[0]['price'];
     $descriptions = $showData[0]['descriptions'];
+    $imageData = $showData[0]['image'];
     require("./views/pages/details/details.view.php");
 }

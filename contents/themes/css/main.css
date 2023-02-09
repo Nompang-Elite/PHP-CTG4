@@ -41,6 +41,7 @@ body main {
 
 .open-detail {
   width: 24.5rem !important;
+  right: 0.5rem;
 }
 
 /* Scrollbar Styling */

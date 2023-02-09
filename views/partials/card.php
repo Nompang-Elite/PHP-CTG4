@@ -6,28 +6,16 @@ $shows = getShowData($db);
 <?php
 foreach ($shows as $show) :
 ?>
-    <div class="card w-64 bg-primary text-white rounded-lg overflow-hidden flex flex-col p-1 justify-between transition-all duration-200 hover:scale-105">
-        <div>
-            <img src="https://picsum.photos/300/200" alt="" class="rounded-lg w-[300px] h-[140px]">
+    <div id="<?= $show['id'] ?>" class="card w-60 bg-primary text-white rounded-lg overflow-hidden flex flex-col p-1 justify-between transition-all duration-200 hover:scale-105 hover:cursor-pointer" onclick="getShowDetail(this)">
+        <div class="p-1 w-full overflow-hidden">
+            <img src="data:image/jpeg;base64,<?= base64_encode($show['image']) ?>" alt="" class="rounded-lg w-[300px] h-[140px]">
             <!-- ___card-title___ -->
             <div class="flex p-2">
-                <span class="font-semibold text-xl uppercase overflow-hidden"><?= $show["name"] ?></span><br>
+                <span class="font-normal uppercase overflow-hidden"><?= $show["name"] ?></span><br>
             </div>
         </div>
-        <div class="title p-2 ">
-            <!-- card-location -->
-            <div class="flex">
-                <span class="font-semibold text-sm">Address: <?= $show['address'] ?></span>
-            </div>
-            <!-- ___card-price___ -->
-            <div class="flex">
-                <span class="font-semibold text-sm">Price: <span class="text-green-400"><?= $show['price'] ?> $</span></span></span><br>
-            </div>
-
-            <!-- button details -->
-            <div class="flex space-x-2">
-                <span id="<?= $show['id'] ?>" class="mt-4 border-2 border-secondary text-secondary p-2 rounded-lg w-full text-center" onclick="getShowDetail(this)">View Detail</span>
-            </div>
+        <div class="title p-2 pb-4 w-full">
+            <span class="bg-secondary p-1.5 px-3 rounded-lg w-full"><?= $show['price'] ?> $</span>
         </div>
     </div>
 

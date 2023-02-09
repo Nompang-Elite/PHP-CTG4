@@ -3,7 +3,7 @@
         <div class="flex items-center">
             <span class="underline hover:cursor-pointer py-4 -mt-4" onclick="closeShowDetail()">Close</span>
         </div>
-        <img src="https://picsum.photos/300/200" class="rounded-lg w-full h-[200px] overflow-hidden">
+        <img src="data:image/jpeg;base64, <?=base64_encode($imageData)?>" class="rounded-lg w-full h-[200px] overflow-hidden">
         <ul class="my-4 flex flex-col space-y-2">
             <li class="flex items-center space-x-2 text-lg font-semibold uppercase"><span><?= $title ?></span></li>
             <li class="flex items-center space-x-2"><span class="material-symbols-rounded font-light">sell</span><span>Price :</span><span><?= $price ?> $</span></li>
