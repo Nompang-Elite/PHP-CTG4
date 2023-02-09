@@ -8,7 +8,7 @@ foreach ($shows as $show) :
 ?>
     <div class="card w-64 bg-primary text-white rounded-lg overflow-hidden flex flex-col p-1 justify-between transition-all duration-200 hover:scale-105">
         <div>
-            <img src="https://picsum.photos/300/200" alt="" class="rounded-lg w-[300px] h-[200px]">
+            <img src="https://picsum.photos/300/200" alt="" class="rounded-lg w-[300px] h-[140px]">
             <!-- ___card-title___ -->
             <div class="flex p-2">
                 <span class="font-semibold text-xl uppercase overflow-hidden"><?= $show["name"] ?></span><br>
