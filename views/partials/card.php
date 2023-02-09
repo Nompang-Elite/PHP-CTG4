@@ -17,11 +17,11 @@ foreach ($shows as $show) :
         <div class="title p-2 ">
             <!-- card-location -->
             <div class="flex">
-                <span class="font-semibold text-sm"> Address: PNC</span>
+                <span class="font-semibold text-sm">Address: <?= $show['address'] ?></span>
             </div>
             <!-- ___card-price___ -->
             <div class="flex">
-                <span class="font-semibold text-sm">Price: 500$</span><br>
+                <span class="font-semibold text-sm">Price: <span class="text-green-400"><?= $show['price'] ?> $</span></span></span><br>
             </div>
 
             <!-- button details -->
