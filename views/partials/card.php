@@ -6,25 +6,17 @@ $shows = getShowData($db);
 <?php
 foreach ($shows as $show) :
 ?>
-    <div class="card w-64 pb-5 bg-gray-500 rounded-lg overflow-hidden flex flex-col p-2">
-        <img src="https://picsum.photos/300/200" alt="" class="rounded-lg">
-        <div class="title p-5 ">
+    <div id="<?= $show['id'] ?>" class="card w-60 bg-primary text-white rounded-lg overflow-hidden flex flex-col p-1 justify-between transition-all duration-200 hover:scale-105 hover:cursor-pointer shadow-lg" onclick="showDetail(this)">
+        <div class="p-1 w-full overflow-hidden">
+            <img src="data:image/jpeg;base64,<?= base64_encode($show['image']) ?>" alt="" class="rounded-lg w-[300px] h-[140px]">
             <!-- ___card-title___ -->
-            <div class="flex">
-                <span class="font-semibold text-2xl"><?=$show["name"]?></span><br>
+            <div class="flex p-2">
+                <span class="font-normal uppercase overflow-hidden"><?= $show["name"] ?></span><br>
             </div>
-            <!-- card-location -->
-            <div class="flex">
-                <span class="font-semibold text-sm"> Address: PNC</span>
-            </div>
-            <!-- ___card-price___ -->
-            <div class="flex">
-                <span class="font-semibold text-sm">Price: 500$</span><br>
-            </div>
-
         </div>
-        <!-- button details -->
-        <button class="bg-blue-500 p-3 rounded-lg w-52 self-center ">View Detail</button>
+        <div class="title p-2 pb-4 w-full">
+            <span class="bg-secondary p-1.5 px-3 rounded-lg w-full"><?= $show['price'] ?> $</span>
+        </div>
     </div>
 
 <?php

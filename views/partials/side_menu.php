@@ -1,37 +1,19 @@
-<div id="side-menu" class="flex flex-col justify-between">
-    <div class="side-link">
-        <a href="#" class="flex py-2 px-4 items-center  transition-all text-gray-400 border-2 border-transparent hover:border-gray-400 rounded-full">
-            <span class="material-symbols-rounded text-3xl">
-                home
-            </span>
-            <span class="menu-link-text">Home</span>
+<div id="side-menu" class="p-3 relative h-full bg-primary text-white shadow-sm shadow-white z-30">
+    <div class="flex flex-col w-full space-y-4 text-secondary">
+        <!-- Home -->
+        <a href="/" class="flex items-center space-x-6 hover:bg-secondary hover:text-white transition-all duration-200 p-2 rounded-lg">
+            <span class="material-symbols-rounded">home</span>
+            <span class="side-link-text">Home</span>
         </a>
-        <a href="#" class="flex py-2 px-4 items-center  transition-all text-gray-400 border-2 border-transparent hover:border-gray-400 rounded-full">
-            <span class="material-symbols-rounded text-3xl">
-                dashboard
-            </span>
-            <span class="menu-link-text">Board</span>
-
+        <!-- Cart -->
+        <a href="#" class="flex items-center space-x-6 hover:bg-secondary hover:text-white transition-all duration-200 p-2 rounded-lg">
+            <span class="material-symbols-rounded">explore</span>
+            <span class="side-link-text">Explores</span>
         </a>
-        <a href="#" class="flex py-2 px-4 items-center  transition-all text-gray-400 border-2 border-transparent hover:border-gray-400 rounded-full">
-            <span class="material-symbols-rounded text-3xl">
-                explore
-            </span>
-            <span class="menu-link-text">Explores</span>
-
-        </a>
-        <a href="#" class="flex py-2 px-4 items-center  transition-all text-gray-400 border-2 border-transparent hover:border-gray-400 rounded-full">
-            <span class="material-symbols-rounded text-3xl">
-                person
-            </span>
-            <span class="menu-link-text">Account</span>
+        <!-- Settings -->
+        <a href="#" class="flex items-center space-x-6 hover:bg-secondary hover:text-white transition-all duration-200 p-2 rounded-lg">
+            <span class="material-symbols-rounded">trending_up</span>
+            <span class="side-link-text">Trending</span>
         </a>
     </div>
-    <a href="#" class="flex py-2 px-4 items-center  transition-all text-gray-400 border-2 border-transparent hover:border-gray-400 rounded-full">
-        <span class="material-symbols-rounded text-3xl">
-            person
-        </span>
-        <span class="menu-link-text">Account</span>
-    </a>
-
 </div>

@@ -1,0 +1,14 @@
+#details-dialog {
+  width: 0rem;
+  transition: 0.3s all;
+  right: 0;
+  margin-left: auto;
+  transform: translateX(100%);
+  height: 88%;
+  background: #000;
+}
+
+.show-details-dialog {
+  width: 26rem !important;
+  transform: translateX(0%) !important;
+}

@@ -11,12 +11,14 @@
     <!-- Tailwindcss -->
     <link rel="stylesheet" href="../../contents/themes/css/tw-style.css">
     <!-- Costume Style -->
-    <link rel="stylesheet" href="../../contents/themes/css/main.min.css">
+    <link rel="stylesheet" href="../../contents/themes/css//custom.min.css">
     <!-- JQeury -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <!-- JS -->
     <script src="../../scripts/main.js" defer></script>
-    <title>Home</title>
+    <title><?= isset($header) ? $header : 'Not Found' ?></title>
 </head>
 
 <body>
+    <!-- Start Main -->
+    <main class="flex flex-col w-full h-full">

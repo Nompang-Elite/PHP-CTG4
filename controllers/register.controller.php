@@ -1,4 +1,6 @@
 <?php
+// Site Header
+$header = 'Register';
 // Import config file:
 $config = require("./utils/config.php");
 // Import and declare database:
@@ -31,5 +33,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST)) {
         $user->register($registerInfo);
     }
 }
-
-require './views/pages/register/register.view.php';
+require('./views/pages/register.views.php');

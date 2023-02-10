@@ -1,5 +1,5 @@
 {
-  "name": "ticket_app",
+  "name": "ticketo",
   "version": "1.0.0",
   "description": "Team-4 Ticket App Projects.",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/CTG-4/PHP-CTG4.git"
   },
-  "author": "",
+  "author": "P.KHID",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/CTG-4/PHP-CTG4/issues"

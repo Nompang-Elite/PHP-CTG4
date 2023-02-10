@@ -1,4 +1,6 @@
 <?php
+// Site Header
+$header = 'Login';
 // Import config file:
 $config = require("./utils/config.php");
 // Import and declare database:
@@ -16,4 +18,4 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 // Check for the user logout:
 parse_url($_SERVER["REQUEST_URI"])["path"] === "/logout" ? $user->logout() : null;
 
-require './views/pages/login/login.view.php';
+require('./views/pages/login.views.php');
