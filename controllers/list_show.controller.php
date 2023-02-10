@@ -1,6 +1,4 @@
 <?php
-// Site Header:
-$header = 'Ticketo';
 // Import coniguration:
 $config = require("./utils/config.php");
 // Create new database:

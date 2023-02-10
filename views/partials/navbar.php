@@ -11,42 +11,42 @@
                 <?php
                 if (isset($_SESSION["logged"]) && isset($_SESSION["activeUser"])) :
                 ?>
-                    <span onclick="goToAccount()" class="flex items-center justify-center transition-all hover:bg-secondary hover:text-white p-4 w-10 h-10 border-2 border-transparent rounded-lg">
+                    <div onclick="goToAccount()" class="flex items-center justify-center hover:cursor-pointer transition-all hover:bg-secondary hover:text-white p-4 w-10 h-10 border-2 border-transparent rounded-lg">
                         <span class="material-symbols-rounded text-3xl">
                             person
                         </span>
-                    </span>
-                    <a href="/cart" class="flex items-center justify-center transition-all hover:bg-secondary hover:text-white p-4 w-10 h-10 border-2 border-transparent rounded-lg">
+                    </div>
+                    <div class="flex items-center justify-center hover:cursor-pointer transition-all hover:bg-secondary hover:text-white p-4 w-10 h-10 border-2 border-transparent rounded-lg">
                         <span class="material-symbols-rounded">
                             shopping_cart
                         </span>
-                    </a>
-                    <a href="/logout" class="flex items-center justify-center transition-all hover:bg-secondary hover:text-white p-4 w-10 h-10 border-2 border-transparent rounded-lg">
+                    </div>
+                    <span class="flex items-center justify-center hover:cursor-pointer transition-all hover:bg-secondary hover:text-white p-4 w-10 h-10 border-2 border-transparent rounded-lg">
                         <span class="material-symbols-rounded">
                             logout
                         </span>
-                    </a>
-
-                <?php
-                else :
-                ?>
-
-                    <a href="/login" class="flex items-center justify-center transition-all hover:bg-secondary hover:text-white p-4 w-10 h-10 border-2 border-transparent rounded-lg">
-                        <span class="material-symbols-rounded text-3xl">
-                            person
-                        </span>
-                    </a>
-                    <a href="/register" class="flex items-center justify-center transition-all hover:bg-secondary hover:text-white p-4 w-10 h-10 border-2 border-transparent rounded-lg">
-                        <span class="material-symbols-rounded">
-                            app_registration
-                        </span>
-                    </a>
-
-                <?php
-                endif;
-                ?>
-
-            </li>
-        </ul>
     </div>
+
+<?php
+                else :
+?>
+
+    <a href="/login" class="flex items-center justify-center hover:cursor-pointer transition-all hover:bg-secondary hover:text-white p-4 w-10 h-10 border-2 border-transparent rounded-lg">
+        <span class="material-symbols-rounded text-3xl">
+            person
+        </span>
+    </a>
+    <a href="/register" class="flex items-center justify-center hover:cursor-pointer transition-all hover:bg-secondary hover:text-white p-4 w-10 h-10 border-2 border-transparent rounded-lg">
+        <span class="material-symbols-rounded">
+            app_registration
+        </span>
+    </a>
+
+<?php
+                endif;
+?>
+
+</li>
+</ul>
+</div>
 </nav>
