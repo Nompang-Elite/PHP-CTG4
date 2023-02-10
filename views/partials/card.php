@@ -1,6 +1,6 @@
 <!-- require header -->
 <?php
-$shows = getShowData($db);
+$shows = getShowData($db);  
 ?>
 
 <?php
