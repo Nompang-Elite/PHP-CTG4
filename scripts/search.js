@@ -1,14 +1,14 @@
 $(document).ready(function () {
-    $("#myInput").keyup(function () {
+    $("#searchBar").keyup(function () {
         // get value from input
-        var resultInput = $(this).val();
+        var searchValue = $(this).val();
 
 
-        if (resultInput != "") {
+        if (searchValue != "") {
             $.ajax({
                 url: "search.model.php", // page should load to require data
                 method: "POST",
-                data: { value: resultInput }, 
+                data: { value: searchValue }, 
                 success: function (data) {
                     // #searchResult is an id to display in html
                     $("#searchResult").css("display", "block");
