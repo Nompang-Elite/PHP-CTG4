@@ -11,11 +11,11 @@
                 <?php
                 if (isset($_SESSION["logged"]) && isset($_SESSION["activeUser"])) :
                 ?>
-                    <a href="/account" class="flex items-center justify-center transition-all hover:bg-secondary hover:text-white p-4 w-10 h-10 border-2 border-transparent rounded-lg">
+                    <span onclick="goToAccount()" class="flex items-center justify-center transition-all hover:bg-secondary hover:text-white p-4 w-10 h-10 border-2 border-transparent rounded-lg">
                         <span class="material-symbols-rounded text-3xl">
                             person
                         </span>
-                    </a>
+                    </span>
                     <a href="/cart" class="flex items-center justify-center transition-all hover:bg-secondary hover:text-white p-4 w-10 h-10 border-2 border-transparent rounded-lg">
                         <span class="material-symbols-rounded">
                             shopping_cart
