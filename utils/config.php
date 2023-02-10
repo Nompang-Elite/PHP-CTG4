@@ -15,20 +15,28 @@ return [
     ],
     "database" => [
         // Offline is for the local connection to DB
-        "offline" => [
-            "host" => "z",
-            "dbname" => "",
-            "port" => "3306",
-            "user" => "",
-            "password" => "",
+        "online_" => [
+            "dsn" => [
+                "host" => "localhost",
+                "dbname" => "app_db",
+                "port" => "3306",
+            ],
+            "user" => [
+                "name" => "root",
+                "password" => "1234!@#$",
+            ]
         ],
         // Online is for the online connection to DB
         "online" => [
-            "host" => "php-database.c9wmosguks3w.ap-southeast-1.rds.amazonaws.com",
-            "dbname" => "app_db",
-            "port" => "3306",
-            "user" => "admin",
-            "password" => "Iseeyou1234"
+            "dsn" => [
+                "host" => "php-database.c9wmosguks3w.ap-southeast-1.rds.amazonaws.com",
+                "dbname" => "app_db",
+                "port" => "3306",
+            ],
+            "user" => [
+                "name" => "admin",
+                "password" => "Iseeyou1234"
+            ]
         ]
     ]
 ];

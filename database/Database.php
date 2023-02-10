@@ -13,10 +13,12 @@ class Database
          */
 
         // Build DSN with data from config
-        $dsn = "mysql:" . http_build_query($dbConfig, "", ";");
+        $dsn = "mysql:" . http_build_query($dbConfig['dsn'], "", ";");
         // Init the PDO Object
         $this->connection = new PDO(
             $dsn,
+            $dbConfig['user']['name'],
+            $dbConfig['user']['password'],
             options: [
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
             ]
