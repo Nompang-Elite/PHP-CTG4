@@ -19,13 +19,9 @@
                 </select>
                 <select name="Time" id="date" class="w-full p-1 text-secondary bg-transparent rounded-lg border-2 border-secondary">
                     <option disabled selected>Date</option>
-                    <?php
-                    foreach ($showData as $show) {
-                    ?>
+                    <?php foreach ($showData as $show) : ?>
                         <option value="<?= $show['date'] ?>"><?= $show['date'] ?></option>
-                    <?
-                    }
-                    ?>
+                    <?php endforeach; ?>
                 </select>
             </div>
             <button class="w-full border-2 border-secondary text-secondary hover:cursor-pointer bg-transparent p-1 rounded-lg">
