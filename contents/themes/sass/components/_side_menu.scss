@@ -1,0 +1,13 @@
+#side-menu{
+    width: 4rem;
+    transition: 0.2s width;
+}
+.showSideMenu{
+    width: 18rem !important;
+}
+.showLinkText{
+    display: block !important;
+}
+.side-link-text{
+    display: none;
+}
