@@ -13,9 +13,13 @@
             <div class="flex w-full space-x-2">
                 <select name="date" id="date" class="w-full p-1 text-secondary bg-transparent rounded-lg border-2 border-secondary">
                     <option disabled selected>Time</option>
-                    <option value="">Opt1</option>
-                    <option value="">Opt2</option>
-                    <option value="">Opt3</option>
+                    <?php
+                    foreach ($showData as $show) :
+                    ?>
+                        <option value="<?= $show['time'] ?>"><?= $show['time'] ?></option>
+                    <?php
+                    endforeach;
+                    ?>
                 </select>
                 <select name="Time" id="date" class="w-full p-1 text-secondary bg-transparent rounded-lg border-2 border-secondary">
                     <option disabled selected>Date</option>
