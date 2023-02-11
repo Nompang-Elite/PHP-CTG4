@@ -1,8 +1,8 @@
 <?php
-function createShow(Database $db, string $title, string $description, mixed $image): int
+function createShow(Database $db, string $title, string $description, string $imageTmpLocation): int
 {
     // Add image and return the ID:
-    $imageId = addImage($db, $image);
+    $imageId = addImage($db, $imageTmpLocation);
     // Insert show query:
     $q = "INSERT INTO shows(title, description, image_id)
         VALUES (:title, :description, :imageId)";
@@ -17,10 +17,14 @@ function createShow(Database $db, string $title, string $description, mixed $ima
     // Resturn the last added show ID:
     return ($db->get())['id'];
 }
-function addImage(Database $db, $image): int
+
+function addImage(Database $db, string $imageTmpLocation): int
 {
+    // Get Image tmp location of uploaded img:
+    // REQUIRED: $_FILE['image']['tmp_name']
+    $imageBlob = file_get_contents($imageTmpLocation);
     // Insert image into database:
-    $db->query("INSERT INTO images (image) VALUES (:image);", [':image' => $image]);
+    $db->query("INSERT INTO images (image) VALUES (:image);", [':image' => $imageBlob]);
     // Get Image ID:
     $db->query("SELECT id FROM images ORDER BY id DESC LIMIT 1");
     // Return image ID:
@@ -37,7 +41,8 @@ function createVenue(Database $db, string $name, string $address): int
     // Return ID:
     return ($db->get())['id'];
 }
-function createTicket(Database $db, $info): void
+
+function createTicket(Database $db, $info): int
 {
     /*
     
@@ -46,7 +51,7 @@ function createTicket(Database $db, $info): void
     $info = [
     'title' => '',
     'description' => '',
-    'image' => null,
+    'imageTmpLocation' => null,
     'venueName' => '',
     'address' => '',
     'price' => '',
@@ -55,7 +60,7 @@ function createTicket(Database $db, $info): void
     */
 
     // Create show on shows table in database:
-    $shows = createShow($db, $info['title'], $info['description'], $info['image']);
+    $shows = createShow($db, $info['title'], $info['description'], $info['imageTmpLocation']);
     // Create venue on venues table in database:
     $venue = createVenue($db, $info['venueName'], $info['address']);
     // Create ticket for the show:
@@ -64,5 +69,18 @@ function createTicket(Database $db, $info): void
         ':venueId' => $venue,
         ':price' => $info['price'],
         ':code' => uniqid() // Generate UID
+    ]);
+    // Get Ticket ID:
+    $db->query("SELECT id FROM images ORDER BY id DESC LIMIT 1");
+    // Return Ticket ID:
+    return ($db->get())['id'];
+}
+
+function createSchedule(Database $db, int $ticketId, string $datetime)
+{
+    // Execute and Insert data into schedules table:
+    $db->query("INSERT INTO schedules(ticket_id, datetime) VALUES (:ticketId, :datetime)", [
+        ':ticketId' => $ticketId,
+        ':datetime' => $datetime,
     ]);
 }

@@ -11,7 +11,8 @@ return [
         "/account" => "./controllers/account.controller.php",
         "/details" => "./controllers/detail.controller.php",
         "/search" => "./controllers/search.controller.php",
-        "/home" => "./controllers/list_show.controller.php"
+        "/home" => "./controllers/list_show.controller.php",
+        "/addShow" => "./controllers/add_show.controller.php"
     ],
     "database" => [
         // Offline is for the local connection to DB
