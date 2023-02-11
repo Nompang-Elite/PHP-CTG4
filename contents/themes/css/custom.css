@@ -45,7 +45,7 @@ body main #app-container {
   margin-left: auto;
   transform: translateX(100%);
   height: 88%;
-  background: #000;
+  background: #ffffff;
 }
 
 .show-details-dialog {

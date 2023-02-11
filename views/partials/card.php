@@ -11,7 +11,7 @@ foreach ($shows as $show) :
             <img src="data:image/jpeg;base64,<?= base64_encode($show['image']) ?>" alt="" class="rounded-lg w-[300px] h-[140px]">
             <!-- ___card-title___ -->
             <div class="flex p-2">
-                <span class="font-normal uppercase overflow-hidden"><?= $show["name"] ?></span><br>
+                <span class="font-normal uppercase overflow-hidden"><?= $show["title"] ?></span><br>
             </div>
         </div>
         <div class="title p-2 pb-4 w-full">
