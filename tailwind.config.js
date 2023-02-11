@@ -11,6 +11,8 @@ module.exports = {
     "./views/pages/register.views.php",
     "./views/pages/detail.views.php",
     "./views/pages/account.views.php",
+    "./views/pages/search.view.php",
+    "./views/pages/list_show.views.php",
   ],
   theme: {
     extend: {
@@ -27,4 +29,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};

@@ -1,15 +1,9 @@
-<?php
-// Import Header and Navbar:
-require('./views/partials/header.php');
-?>
-
-<div class=" flex flex-col items-center mt-36">
-        <img src="../../contents/assets/imgs/png1.png" alt="">
-        <h1 class="text-4xl -mt-5">Not found result !</h1>
-        <p>We couldn't find what you researchd for.</p>
-        <p>Try something again.</p>
+<div class="w-full flex flex-col items-center justify-center p-10 px-20">
+        <!-- Search Bar -->
+        <h2 class="text-xl font-semibold m-10">Search Ticket</h2>
+        <input type="text" placeholder="Search" onkeyup="searchBar(this)" class="p-2 rounded-lg border-2 w-full">
 </div>
-<?php
-// Import Footer:
-require('./views/partials/footer.php');
-?>
+
+<div id="search-result" class="w-full h-full">
+        <!-- Search Result -->
+</div>

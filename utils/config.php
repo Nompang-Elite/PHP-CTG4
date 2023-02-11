@@ -10,7 +10,7 @@ return [
         "/register" => "./controllers/register.controller.php",
         "/account" => "./controllers/account.controller.php",
         "/details" => "./controllers/detail.controller.php",
-        "/search" => "",
+        "/search" => "./controllers/search.controller.php",
         "/home" => "./controllers/list_show.controller.php"
     ],
     "database" => [

@@ -15,5 +15,9 @@
             <span class="material-symbols-rounded">trending_up</span>
             <span class="side-link-text">Trending</span>
         </span>
+        <span onclick="goToSearch()" class="flex items-center space-x-6 hover:bg-secondary hover:cursor-pointer hover:text-white transition-all duration-200 p-2 rounded-lg">
+            <span class="material-symbols-rounded">search</span>
+            <span class="side-link-text">Search</span>
+        </span>
     </div>
 </div>
