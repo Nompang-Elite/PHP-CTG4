@@ -32,9 +32,9 @@ class Users
         // Check for the retrieved user data:
         if (!empty($response) && isset($response) && $response !== null) {
             // Check if the password matched with the retrieved password:
-            if (isset($response["password"]) && ($response["password"] === $cleaned["password"])) {
+            if (isset($response["password"]) && password_verify($cleaned["password"], $response["password"])) {
                 // Query to get all the user info from database:
-                $q = "SELECT users.* FROM users WHERE users.id = :id AND users.email = :email";
+                $q = "SELECT users.* , images.image FROM users JOIN images WHERE (users.id = :id AND users.email = :email) OR images.id = users.profile_pic";
                 // Execute query:
                 $this->db->query($q, [
                     ":id" => $response["id"],
@@ -66,7 +66,7 @@ class Users
         $_SESSION["logged"] = false;
         // Destroy the session:
         session_destroy();
-        header("Location: /");
+        header("Location: /home");
     }
 
     public function register(array $infoList)
@@ -110,7 +110,7 @@ class Users
                     ":lastName" => $cleaned["lastName"],
                     ":username" => $cleaned["username"],
                     ":email" => $cleaned["email"],
-                    ":password" => $cleaned["password"],
+                    ":password" => password_hash($cleaned["password"], PASSWORD_DEFAULT),
                     ":birthDate" => $cleaned["birthDate"],
                     ":gender" => $cleaned["gender"],
                 ]);
@@ -129,5 +129,3 @@ class Users
          */
     }
 }
-
-

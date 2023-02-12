@@ -42,6 +42,11 @@ function goToSearch() {
   loadData("GET", "/search", "#app-content");
 }
 
+function logout() {
+  loadData("GET", "/logout", "#app-content");
+  window.location.reload();
+}
+
 function uploadImg() {
   // FormData for the image upload:
   const formData = new FormData();

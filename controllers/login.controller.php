@@ -16,6 +16,4 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     }
 }
 // Check for the user logout:
-parse_url($_SERVER["REQUEST_URI"])["path"] === "/logout" ? $user->logout() : null;
-
-require('./views/pages/login.views.php');
+parse_url($_SERVER["REQUEST_URI"])["path"] === "/logout" ? $user->logout() : require('./views/pages/login.views.php');;
