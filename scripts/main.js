@@ -47,6 +47,10 @@ function logout() {
   window.location.reload();
 }
 
+function goToDashboard() {
+  loadData("GET", "/dashboard", "#app-content");
+}
+
 function uploadImg() {
   // FormData for the image upload:
   const formData = new FormData();
