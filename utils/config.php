@@ -13,7 +13,9 @@ return [
         "/search" => "./controllers/search.controller.php",
         "/home" => "./controllers/list_show.controller.php",
         "/addShow" => "./controllers/add_show.controller.php",
-        "/dashboard" => "./controllers/seller_dashbaord.controller.php"
+        "/dashboard" => "./controllers/seller_dashbaord.controller.php",
+        "/edit" => "./controllers/seller_edit.controller.php"
+
     ],
     "database" => [
         // Offline is for the local connection to DB
