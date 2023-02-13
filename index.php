@@ -19,6 +19,8 @@ require("./models/list_show.model.php");
 require("./models/detail.models.php");
 // Import Add Show model:
 require("./models/add_show.model.php");
+// Import Add Search model:
+require("./models/search.model.php");
 // Init Router:
 $uri = parse_url($_SERVER["REQUEST_URI"])["path"]; // Get the URI path.
 routeToPage($uri, $config["route"]);

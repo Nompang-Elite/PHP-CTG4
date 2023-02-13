@@ -1,7 +1,10 @@
 <?php
-// get data from input
-$input = $_POST['value'];
-// select data from database
-$db->query("SELECT * FROM shows JOIN tickets WHERE shows.id = tickets.show_id AND shows.name LIKE :names ", [":names" =>   "{$input}" . "%"]);
-// get data from database
-$shows = $db->getAll();
+function search(Database $db, $input)
+{
+    // select data from database
+    $db->query("SELECT  app_db.shows.id, app_db.shows.title, app_db.images.image, app_db.tickets.price, app_db.shows.description 
+    
+    FROM shows JOIN tickets JOIN images WHERE shows.id = tickets.show_id AND shows.image_id = images.id AND shows.title LIKE :names ", [":names" =>   "{$input}" . "%"]);
+    // get data from database
+    return $db->getAll();
+}

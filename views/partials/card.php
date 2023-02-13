@@ -1,7 +1,5 @@
 <!-- require header -->
-<?php
-$shows = getShowData($db);  
-?>
+
 
 <?php
 foreach ($shows as $show) :
