@@ -1,23 +1,28 @@
 <!-- require header -->
 <?php
-$shows = getShowData($db);  
+$shows = getShowData($db);
 ?>
 
 <?php
 foreach ($shows as $show) :
 ?>
-    <div id="<?= $show['id'] ?>" class="card w-60 bg-primary text-white rounded-lg overflow-hidden flex flex-col p-1 justify-between transition-all duration-200 hover:scale-105 hover:cursor-pointer shadow-lg" onclick="showDetail(this)">
-        <div class="p-1 w-full overflow-hidden">
-            <img src="data:image/jpeg;base64,<?= base64_encode($show['image']) ?>" alt="" class="rounded-lg w-[300px] h-[140px]">
-            <!-- ___card-title___ -->
-            <div class="flex p-2">
-                <span class="font-normal uppercase overflow-hidden"><?= $show["title"] ?></span><br>
-            </div>
-        </div>
-        <div class="title p-2 pb-4 w-full">
-            <span class="bg-secondary p-1.5 px-3 rounded-lg w-full"><?= $show['price'] ?> $</span>
+    <div class="hover:scale-105 transition duration-300 flex flex-col justify-between w-80 h-[24rem] bg-white border border-gray-200 rounded-lg shadow dark:bg-primary dark:border-gray-700 overflow-hidden">
+        <span href="#">
+            <img class="rounded-t-lg" src="data:image/jpeg;base64,<?= base64_encode($show['image']) ?>" alt="" />
+        </span>
+        <div class="p-5 overflow-hidden">
+            <span>
+                <h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white"><?= $show['title'] ?></h5>
+            </span>
+            <p class="mb-1 font-normal text-gray-700 dark:text-gray-400 overflow-hidden flex items-center space-x-2"><span class="material-symbols-outlined">location_on</span> <span><?= $show['address'] ?></span> </p>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 overflow-hidden flex items-center space-x-2"><span class="material-symbols-outlined">paid</span> <span><?= $show['price'] ?></span> </p>
+            <span onclick="showDetail(this)" id="<?= $show['id'] ?>" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-secondary bg-transparent border-2 border-secondary rounded-lg hover:bg-secondary hover:text-white hover:cursor-pointer transition duration-300">
+                Details
+            </span>
         </div>
     </div>
+
+
 
 <?php
 endforeach;
