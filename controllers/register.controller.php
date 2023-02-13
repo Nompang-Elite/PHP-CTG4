@@ -17,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST)) {
         isset($_POST["password"]) &&
         isset($_POST["confirmpassword"]) &&
         isset($_POST["birthDate"]) &&
+        isset($_POST["account_type"]) &&
         isset($_POST["gender"])
 
     ) {
@@ -29,6 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST)) {
             "confirmpassword" => $_POST["confirmpassword"],
             "gender" => $_POST["gender"],
             "birthDate" => $_POST["birthDate"],
+            "account_type" => $_POST["account_type"],
         ];
         $user->register($registerInfo);
     }

@@ -103,7 +103,7 @@ class Users
             if (empty($response) && ($cleaned["password"] === $cleaned["confirmpassword"])) {
                 // User register query, insert data to db:
                 $q = "INSERT INTO passwords VALUES (:email, :password);
-                        INSERT INTO users (first_name, last_name, username, email, birth_date, gender) VALUES (:firstName, :lastName, :username, :email, :birthDate, :gender)";
+                        INSERT INTO users (first_name, last_name, username, email, birth_date, gender, account_type) VALUES (:firstName, :lastName, :username, :email, :birthDate, :gender, :accType)";
                 // Execute the query:
                 $this->db->query($q, [
                     ":firstName" => $cleaned["firstName"],
@@ -113,8 +113,9 @@ class Users
                     ":password" => password_hash($cleaned["password"], PASSWORD_DEFAULT),
                     ":birthDate" => $cleaned["birthDate"],
                     ":gender" => $cleaned["gender"],
+                    ":accType" => $cleaned["account_type"],
                 ]);
-                header("Location: /");
+                $this->login($cleaned["email"], $cleaned["password"]);
             } else
                 echo "Existed";
         } else
