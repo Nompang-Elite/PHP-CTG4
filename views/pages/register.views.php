@@ -52,8 +52,8 @@ require('./views/partials/header.php');
                     <label class="ml-5">Gender</label>
                     <select id="gender" name="gender" class="p-2 rounded-md max-w-8/10 ml-5 w-9/12 outline-none border-2 border-white bg-transparent">
                         <option selected disabled>Choose gender</option>
-                        <option value="F">Female</option>
-                        <option value="M">Male</option>
+                        <option value="F" class="text-black">Female</option>
+                        <option value="M" class="text-black">Male</option>
                     </select>
                 </label>
             </label>
