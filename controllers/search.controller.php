@@ -7,6 +7,6 @@ if (isset($_POST) && !empty($_POST)) {
     $db = new Database($config["database"]["online"]);
     // print_r(search($db, $_POST['value']));
     $shows = search($db, $_POST['value']);
-    require('./views/partials/card.php');
+    require('./controllers/list_show.controller.php');
 } else
     require('./views/pages/search.view.php');
