@@ -7,8 +7,8 @@ $shows = getShowData($db);
 foreach ($shows as $show) :
 ?>
     <div class="hover:scale-105 transition duration-300 flex flex-col justify-between w-80 h-[24rem] bg-white border border-gray-200 rounded-lg shadow dark:bg-primary dark:border-gray-700 overflow-hidden">
-        <span href="#">
-            <img class="rounded-t-lg" src="data:image/jpeg;base64,<?= base64_encode($show['image']) ?>" alt="" />
+        <span class="p-2">
+            <img class="rounded-lg" src="data:image/jpeg;base64,<?= base64_encode($show['image']) ?>" alt="" />
         </span>
         <div class="p-5 overflow-hidden">
             <span>
