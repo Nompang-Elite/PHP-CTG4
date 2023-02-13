@@ -1,0 +1,19 @@
+{
+  "name": "ticketo",
+  "version": "1.0.0",
+  "description": "Team-4 Ticket App Projects.",
+  "main": "index.js",
+  "scripts": {
+    "init_tailwindcss": "npx tailwindcss -i ./contents/themes/css/tw-input.css -o ./contents/themes/css/tw-style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CTG-4/PHP-CTG4.git"
+  },
+  "author": "P.KHID",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CTG-4/PHP-CTG4/issues"
+  },
+  "homepage": "https://github.com/CTG-4/PHP-CTG4#readme"
+}
