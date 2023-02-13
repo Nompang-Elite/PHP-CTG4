@@ -18,7 +18,7 @@ return [
     ],
     "database" => [
         // Offline is for the local connection to DB
-        "online" => [
+        "online_" => [
             "dsn" => [
                 "host" => "localhost",
                 "dbname" => "app_db",
@@ -30,7 +30,7 @@ return [
             ]
         ],
         // Online is for the online connection to DB
-        "online_" => [
+        "online" => [
             "dsn" => [
                 "host" => "php-database.c9wmosguks3w.ap-southeast-1.rds.amazonaws.com",
                 "dbname" => "app_db",
