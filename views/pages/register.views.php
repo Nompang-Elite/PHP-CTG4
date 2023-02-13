@@ -57,9 +57,20 @@ require('./views/partials/header.php');
                     </select>
                 </label>
             </label>
-            <label class="flex w-full flex-col">
-                <label class="ml-9">Your Country</label>
-                <input type="text" name="country" id="country" placeholder="Country" class="p-2 rounded-md max-w-8/10 ml-9 w-10/12 outline-none border-2 border-white bg-transparent">
+            <label class="flex w-full flex-row">
+                <label class="flex w-full flex-col">
+                    <label class="ml-9 text-[1rem]">Country</label>
+                    <input type="text" name="country" id="country" placeholder="Country" class="p-2 rounded-md max-w-8/10 ml-9 w-9/12 outline-none border-2 border-white bg-transparent">
+                    <span id="textfirst" class="ml-9 text-sm"></span>
+                </label>
+                <label class="flex w-full flex-col">
+                    <label class="ml-5">Account type</label>
+                    <select id="account_type" name="account_type" class="p-2 rounded-md max-w-8/10 ml-5 w-9/12 outline-none border-2 border-white bg-transparent">
+                        <option selected disabled>Choose account</option>
+                        <option value="2" class="text-black">Seller</option>
+                        <option value="1" class="text-black">Customer</option>
+                    </select>
+                </label>
             </label>
             <label class="flex w-full flex-col">
                 <label class="ml-9">Email</label>
