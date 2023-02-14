@@ -21,6 +21,8 @@ require("./models/detail.models.php");
 require("./models/add_show.model.php");
 // Import Add Search model:
 require("./models/search.model.php");
+// Import list show model for seller:
+require("./models/get_seller_ticket.model.php");
 // Init Router:
 $uri = parse_url($_SERVER["REQUEST_URI"])["path"]; // Get the URI path.
 routeToPage($uri, $config["route"]);

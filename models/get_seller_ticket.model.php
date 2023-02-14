@@ -4,8 +4,8 @@ function getSellerShows(Database $db): array
 {
     // query to select data of show from database
     $db->query(
-        "SELECT * FROM shows JOIN tickets JOIN venues JOIN images
-        WHERE  shows.id = tickets.show_id AND venues.id = tickets.venue_id AND shows.image_id = images.id"
+        "SELECT * FROM schedules JOIN shows JOIN tickets JOIN venues JOIN images
+        WHERE tickets.id = schedules.ticket_id AND shows.id = tickets.show_id AND venues.id = tickets.venue_id AND shows.image_id = images.id"
     );
     // return all data of shows
     return $db->getAll();

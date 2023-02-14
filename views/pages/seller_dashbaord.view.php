@@ -8,14 +8,17 @@
         <button class="bg-yellow-500 rounded-lg p-3 ml-80 mb-4">Add new ticket</button>
     </div>
     <!-- Card -->
+    <?php
+    foreach ($shows as $show) :
+    ?>
     <div >
         <div class="flex justify-between bg-primary w-4/6 m-auto rounded-lg mb-3 ml-80">
             <div class="flex">
                 <img src="../../contents/assets/imgs/1.jpg" alt="" class="p-1.5 w-32 h-32">
                 <div class="m-auto flex gap-20 ml-10 text-white">
-                    <h1 class="font-bold">The World</h1>
-                    <p>$5.00</p>
-                    <p>March 5, 2023</p>
+                    <h1 class="font-bold"><?= $show['title'] ;?></h1>
+                    <p><?= $show['price']; ?></p>
+                    <p><?= $show['datetime']; ?></p>
                 </div>
             </div>
             <div class="flex items-center mr-10">
@@ -25,5 +28,6 @@
             </div>
         </div>
     </div>
+    <?php endforeach ?>
     <!-- End card -->
 </div>
