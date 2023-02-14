@@ -12,16 +12,16 @@
         <div class="flex justify-between bg-primary w-4/6 m-auto rounded-lg mb-3 ml-80">
             <div class="flex">
                 <img src="../../contents/assets/imgs/1.jpg" alt="" class="p-1.5 w-32 h-32">
-                <div class="m-auto flex gap-20 ml-10">
+                <div class="m-auto flex gap-20 ml-10 text-white">
                     <h1 class="font-bold">The World</h1>
                     <p>$5.00</p>
                     <p>March 5, 2023</p>
                 </div>
             </div>
             <div class="flex items-center mr-10">
-                <img src="/images/edit.png" alt="" class="w-9 h-fit ">
-                <p class="font-bold text-3xl mb-2 p-1 ">|</p>
-                <img src="/images/trash.png" alt="" class="w-8 h-fit">
+            <span class="material-symbols-outlined text-blue-500">edit_square</span>
+                <p class="font-bold text-3xl mb-2 p-1 text-white">|</p>
+                <span class="material-symbols-outlined text-red-700 mt-1 text-2xl">delete</span>
             </div>
         </div>
     </div>
