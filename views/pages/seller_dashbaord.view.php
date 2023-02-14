@@ -1,6 +1,6 @@
 <!-- Seller page -->
-<div>
-    <div class="text-center text-4xl m-16">
+<div class="w-full h-full overflow-scroll overflow-x-hidden">
+    <div class="text-center text-4xl m-10">
         <h1>Update here!</h1>
     </div>
     <!-- Button add new ticket -->
@@ -8,16 +8,16 @@
         <button class="bg-yellow-500 rounded-lg p-3 ml-80 mb-4">Add new ticket</button>
     </div>
     <!-- Card -->
+    <div class="overflow-scroll overflow-x-hidden">
     <?php
     foreach ($shows as $show) :
     ?>
-    <div >
-        <div class="flex justify-between bg-primary w-4/6 m-auto rounded-lg mb-3 ml-80">
+        <div class="flex justify-between bg-primary w-2/3 m-auto rounded-lg mb-3 ">
             <div class="flex">
-                <img src="../../contents/assets/imgs/1.jpg" alt="" class="p-1.5 w-32 h-32">
+                <img class="p-1.5 w-54 rounded-lg h-32" src="data:image/jpeg;base64,<?= base64_encode($show['image']) ?>" alt="" />
                 <div class="m-auto flex gap-20 ml-10 text-white">
                     <h1 class="font-bold"><?= $show['title'] ;?></h1>
-                    <p><?= $show['price']; ?></p>
+                    <p><?= $show['price']. " $"; ?></p>
                     <p><?= $show['datetime']; ?></p>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                 <span class="material-symbols-outlined text-red-700 mt-1 text-2xl">delete</span>
             </div>
         </div>
-    </div>
     <?php endforeach ?>
+    </div>
     <!-- End card -->
 </div>
