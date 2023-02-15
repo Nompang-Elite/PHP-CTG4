@@ -43,3 +43,4 @@
         </div>
     </section>
 </dialog>
+<script src="../../scripts/add_ticket.js"></script>
