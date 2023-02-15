@@ -1,7 +1,12 @@
 <nav class="flex items-center justify-between w-full px-4 bg-primary text-secondary z-30">
-    <div class="w-4/12 flex p-3">
+    <div class="w-4/12 flex p-2.5">
         <span onclick="toggleSideMenu();">
-            <img src="../../contents/assets/logo/5.png" alt="" class="w-28">
+            <i class="fa-solid fa-bars"></i>
+        </span>
+    </div>
+    <div class="w-4/12 flex p-3">
+        <span>
+            <img src="../../contents/assets/logo/logo-2.png" alt="" class="w-28">
         </span>
     </div>
     <div class="flex items-center justify-between">
