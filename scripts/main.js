@@ -51,9 +51,14 @@ function goToDashboard() {
   loadData("GET", "/dashboard", "#app-content");
 }
 
-function uploadImg() {
+function uploadTicketInfo(title, description, venueName, address, price) {
   // FormData for the image upload:
   const formData = new FormData();
-  console.log(formData.append("image", $("#img").prop("files")[0]));
+  formData.append("image", $("#img").prop("files")[0]);
+  formData.append("title", title);
+  formData.append("description", description);
+  formData.append("venueName", venueName);
+  formData.append("address", address);
+  formData.append("price", price);
   loadData("POST", "/addShow", "#app-content", formData);
 }

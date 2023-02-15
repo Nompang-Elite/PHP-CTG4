@@ -14,7 +14,8 @@ module.exports = {
     "./views/pages/search.view.php",
     "./views/pages/list_show.views.php",
     "./views/pages/seller_dashbaord.view.php",
-    "./views/pages/search_result.view.php"
+    "./views/pages/search_result.view.php",
+    "./views/pages/form_add_ticket.view.php"
   ],
   theme: {
     extend: {
