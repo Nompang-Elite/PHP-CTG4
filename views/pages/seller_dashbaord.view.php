@@ -23,9 +23,9 @@
                     </div>
                 </div>
                 <div class="flex items-center mr-10">
-                <span class="material-symbols-outlined text-blue-500" onclick="editShow()" id="<?= $show["id"] ?>">edit_square</span>
+                <span class="fa-solid fa-edit text-blue-500" onclick="editShow()" id="<?= $show["id"] ?>"></span>
                     <p class="font-bold text-3xl mb-2 p-1 text-white">|</p>
-                    <span class="material-symbols-outlined text-red-700 mt-1 text-2xl" onclick="deleteShow()" id="<?= $show["id"] ?>">delete</span>
+                    <span class="fa-solid fa-trash text-red-700 mt-1 text-2xl" onclick="deleteShow()" id="<?= $show["id"] ?>"></span>
                 </div>
             </div>
         <?php endforeach ?>
