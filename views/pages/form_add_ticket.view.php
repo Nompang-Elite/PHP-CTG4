@@ -4,7 +4,7 @@
             <div class="w-full bg-red-500 rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                 <div class="bg-gray-200 p-3 rounded-t-lg">
                     <h1 class="text-xl text-center font-bold leading-tight tracking-tight text-gray-800 md:text-2xl dark:text-white">
-                        Add New Ticket
+                        Ticket
                     </h1>
                 </div>
                 <div class="md:space-y-6 sm:p-8 w-full bg-red-500">
