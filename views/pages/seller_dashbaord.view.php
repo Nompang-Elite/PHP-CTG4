@@ -1,5 +1,6 @@
 <!-- Seller page -->
 <div class="w-full h-full overflow-scroll overflow-x-hidden ">
+    <?=require('./views/pages/form_add_ticket.view.php')?>
     <div class="text-center text-4xl m-10">
         <h1>Update here!</h1>
     </div>
