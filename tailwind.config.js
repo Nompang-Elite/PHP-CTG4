@@ -21,6 +21,8 @@ module.exports = {
       colors: {
         primary: "#1B1A17",
         secondary: "#F0A500",
+        // primary: "#2B2E4A",
+        // secondary: "#E84545",
       },
       height: {
         "details-box": "85%",
