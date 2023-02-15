@@ -6,8 +6,8 @@
         <img src="data:image/jpeg;base64, <?= base64_encode($imageData) ?>" class="rounded-lg w-full h-[200px] overflow-hidden">
         <ul class="my-4 flex flex-col space-y-2">
             <li class="flex items-center space-x-2 text-lg font-semibold uppercase"><span><?= $title ?></span></li>
-            <li class="flex items-center space-x-2"><span class="material-symbols-rounded font-light">sell</span><span>Price :</span><span><?= $price ?> $</span></li>
-            <li class="flex items-center space-x-2"><span class="material-symbols-rounded font-light">location_on</span><span>Address :</span><span><?= $address ?></span></li>
+            <li class="flex items-center space-x-2"><span>Price :</span><span><?= $price ?> $</span></li>
+            <li class="flex items-center space-x-2"></span><span>Address :</span><span><?= $address ?></span></li>
         </ul>
         <div class="flex flex-col space-y-4 text-black w-full">
             <div class="flex w-full space-x-2">
