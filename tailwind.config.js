@@ -13,7 +13,8 @@ module.exports = {
     "./views/pages/account.views.php",
     "./views/pages/search.view.php",
     "./views/pages/list_show.views.php",
-    "./views/pages/seller_dashbaord.view.php"
+    "./views/pages/seller_dashbaord.view.php",
+    "./views/pages/search_result.view.php"
   ],
   theme: {
     extend: {
