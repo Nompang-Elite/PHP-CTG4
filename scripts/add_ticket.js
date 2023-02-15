@@ -28,7 +28,7 @@ function createTicket()
     store.date= dateInput.value;
     store.text= textInput.value;
 
-    uploadTicketInfo(titleInput, textInput, );
+    uploadTicketInfo(titleInput, textInput, venue, address, price);
 }
 //--------Function add -------//
 function add()
