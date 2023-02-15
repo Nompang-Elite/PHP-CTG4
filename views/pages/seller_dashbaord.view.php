@@ -6,7 +6,7 @@
     <div >
         <!-- Button add new ticket -->
         <div>
-            <button class="bg-yellow-500 rounded-lg p-3 mb-4 ml-40">Add new ticket</button>
+            <button class="bg-yellow-500 rounded-lg p-3 mb-4 ml-40" id="add-ticket">Add new ticket</button>
         </div>
         <!-- Card -->
         <div class=" overflow-scroll overflow-x-hidden ">
