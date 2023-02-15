@@ -13,6 +13,7 @@ module.exports = {
     "./views/pages/account.views.php",
     "./views/pages/search.view.php",
     "./views/pages/list_show.views.php",
+    "./views/pages/form_add_ticket.view.php",
   ],
   theme: {
     extend: {
