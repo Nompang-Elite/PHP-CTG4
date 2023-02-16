@@ -1,24 +1,12 @@
 <?php
-function getShowEdit(Database $db, string $showId): array
+function getShowEdit(Database $db, string $showId)
 {
-    $q = "SELECT app_db.schedules.datetime, 
-    app_db.shows.title, 
-    app_db.images.image, 
-    app_db.venues.address,
-    app_db.venues.name, 
-    app_db.tickets.price, 
-    app_db.shows.description 
-    FROM app_db.schedules 
-    JOIN app_db.tickets 
-    JOIN app_db.shows 
-    JOIN app_db.venues 
-    JOIN app_db.images
-    ON (app_db.schedules.ticket_id = app_db.tickets.id) 
-    AND  (app_db.shows.id = app_db.tickets.show_id )
-    AND (app_db.images.id = shows.image_id)
-    AND (app_db.venues.id  = app_db.tickets.venue_id) 
-    AND app_db.shows.id = :id ;";
+    $q = "SELECT * FROM tickets JOIN shows JOIN venues JOIN images JOIN schedules
+        WHERE tickets.id = :id AND tickets.show_id = shows.id AND
+        shows.image_id = images.id AND tickets.venue_id = venues.id
+        AND schedules.ticket_id = :id;
+    ";
 
     $db->query($q, [":id" => $showId]);
-    return $db->getAll();
+    return $db->get();
 }

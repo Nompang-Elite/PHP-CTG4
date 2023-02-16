@@ -34,12 +34,12 @@ function createTicket() {
 //--------Function add -------//
 function add() {
   show(dialog);
-  console.log("Hello!");
+  // console.log("Hello!");
 }
 //--------Function cancel -------//
 function cancel() {
   hide(document.querySelector("#dialog"));
-  console.log("Cancel!");
+  // console.log("Cancel!");
 }
 function addTickets() {
   createTicket();
