@@ -9,7 +9,7 @@ foreach ($shows as $show) :
         </span>
         <div class="p-5 overflow-hidden">
             <span>
-                <h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white"><?= $show['title'] ?></h5>
+                <h5 class="mb-2 text-lg font-bold tracking-tight text-white"><?= $show['title'] ?></h5>
             </span>
             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 overflow-hidden flex items-center space-x-2"><span class="fa-solid fa-tag"></span> <span><?= $show['price']. " $" ?></span> </p>
             <p class="mb-1 font-normal text-gray-700 dark:text-gray-400 overflow-hidden flex items-center space-x-2"><span class="fa-solid fa-map"></span> <span><?= $show['address'] ?></span> </p>
