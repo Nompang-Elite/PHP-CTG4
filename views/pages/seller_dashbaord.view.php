@@ -7,14 +7,14 @@
     <div >
         <!-- Button add new ticket -->
         <div>
-            <button class="bg-yellow-500 rounded-lg p-3 mb-4 ml-40" onclick="add()">Add new ticket</button>
+            <button class="bg-yellow-500 rounded-lg p-3 mb-4 ml-40 hover:bg-green-500" onclick="add()">Add new ticket</button>
         </div>
         <!-- Card -->
-        <div class=" overflow-scroll overflow-x-hidden ">
+        <div>
         <?php
         foreach ($shows as $show) :
         ?>
-            <div class="flex justify-between bg-primary w-9/12 m-auto rounded-lg mb-3 ">
+            <div class="flex justify-between bg-primary w-9/12 m-auto rounded-lg mb-3">
                 <div class="flex">
                     <img class="p-1.5 w-54 rounded-lg h-32" src="data:image/jpeg;base64,<?= base64_encode($show['image']) ?>" alt="" />
                     <div class="m-auto flex gap-20 ml-10 text-white">
