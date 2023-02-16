@@ -36,9 +36,9 @@
                         <span class="bg-red-500 p-1.5 rounded-lg w-20" onclick="cancel()">
                             Cancel
                         </span>
-                        <span class="bg-blue-500 p-1.5 rounded-lg w-20" onclick="addTickets()">
+                        <button class="bg-blue-500 p-1.5 rounded-lg w-20" onclick="addTickets()" disabled>
                             Add
-                        </span>
+                        </button>
                     </div>
                 </form>
 
