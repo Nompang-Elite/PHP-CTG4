@@ -64,14 +64,15 @@ function createTicket(Database $db, $info): int
     // Create venue on venues table in database:
     $venue = createVenue($db, $info['venueName'], $info['address']);
     // Create ticket for the show:
-    $db->query('INSERT INTO tickets (show_id, venue_id, price, code) VALUES(:showId, :venueId, :price, :code)', [
+    $db->query('INSERT INTO tickets (show_id, venue_id, price, code, seller_id) VALUES(:showId, :venueId, :price, :code, :id)', [
         ':showId' => $shows,
         ':venueId' => $venue,
         ':price' => $info['price'],
-        ':code' => uniqid() // Generate UID
+        ':code' => uniqid(), // Generate UID
+        ':id' => $info['id']
     ]);
     // Get Ticket ID:
-    $db->query("SELECT id FROM images ORDER BY id DESC LIMIT 1");
+    $db->query("SELECT id FROM tickets ORDER BY id DESC LIMIT 1");
     // Return Ticket ID:
     return ($db->get())['id'];
 }
@@ -79,7 +80,7 @@ function createTicket(Database $db, $info): int
 function createSchedule(Database $db, int $ticketId, string $datetime)
 {
     // Execute and Insert data into schedules table:
-    $db->query("INSERT INTO schedules(ticket_id, datetime) VALUES (:ticketId, :datetime)", [
+    $db->query("SET foreign_key_checks = 0; INSERT INTO schedules(ticket_id, datetime) VALUES (:ticketId, :datetime)", [
         ':ticketId' => $ticketId,
         ':datetime' => $datetime,
     ]);

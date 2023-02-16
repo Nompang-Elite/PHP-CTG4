@@ -49,7 +49,7 @@ body main #app-container #app-content {
   margin-left: auto;
   transform: translateX(100%);
   height: 88%;
-  background: #ffffff;
+  color: white;
 }
 
 .show-details-dialog {

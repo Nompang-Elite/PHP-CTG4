@@ -1,45 +1,46 @@
-let addTicket=document.querySelector("#add-ticket");
-let dialog = document.querySelector("#dialog");
 // --------Function for showing dialog---------//
-function show(event)
-{
-    dialog.style.display="block";
-    addTicket.style.display="none";
+function show() {
+  dialog.style.display = "block";
 }
 //--------Function for hiding dialog---------//
-function hide(event)
-{
-    event.style.display="none";
-    addTicket.style.display="block";
+function hide(event) {
+  event.style.display = "none";
 }
 //--------Function for adding new ticket---------//
-function createTicket()
-{
-    hide(dialog);
-    let store = {};
-    let titleInput = document.querySelector("#title");
-    let priceInput = document.querySelector("#price");
-    let dateInput = document.querySelector("#date");
-    let textInput = document.querySelector("#message");
-    let venue = document.querySelector("#location");
-    let address = document.querySelector("#location");
-    store.title= titleInput.value;
-    store.price= priceInput.value;
-    store.date= dateInput.value;
-    store.text= textInput.value;
+function createTicket() {
+  hide(dialog);
+  let titleInput = document.querySelector("#title");
+  let priceInput = document.querySelector("#price");
+  let dateInput = document.querySelector("#date");
+  let textInput = document.querySelector("#message");
+  let venue = document.querySelector("#venue");
+  let address = document.querySelector("#address");
 
-    uploadTicketInfo(titleInput, textInput, venue, address, price);
+  let titleInputs = titleInput.value;
+  let priceInputs = priceInput.value;
+  let dateInputs = dateInput.value;
+  let textInputs = textInput.value;
+  let venueInput = venue.value;
+  let addressInput = address.value;
+  uploadTicketInfo(
+    titleInputs,
+    textInputs,
+    venueInput,
+    addressInput,
+    priceInputs,
+    dateInputs
+  );
 }
 //--------Function add -------//
-function add()
-{
-    show(dialog);
-    console.log("Hello!");
+function add() {
+  show(dialog);
+  console.log("Hello!");
 }
 //--------Function cancel -------//
-function cancel()
-{
-    hide(dialog);
-    console.log("Cancel!");
+function cancel() {
+  hide(document.querySelector("#dialog"));
+  console.log("Cancel!");
 }
-addTicket.addEventListener("click",add);
+function addTickets() {
+  createTicket();
+}
