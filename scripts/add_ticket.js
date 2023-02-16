@@ -17,18 +17,18 @@ function createTicket()
 {
     hide(dialog);
     let store = {};
-    let imageInput = document.querySelector("#image");
     let titleInput = document.querySelector("#title");
     let priceInput = document.querySelector("#price");
     let dateInput = document.querySelector("#date");
     let textInput = document.querySelector("#message");
-    store.img= imageInput.value;
+    let venue = document.querySelector("#location");
+    let address = document.querySelector("#location");
     store.title= titleInput.value;
     store.price= priceInput.value;
     store.date= dateInput.value;
     store.text= textInput.value;
 
-
+    uploadTicketInfo(titleInput, textInput, venue, address, price);
 }
 //--------Function add -------//
 function add()
