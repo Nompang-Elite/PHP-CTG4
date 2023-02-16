@@ -21,6 +21,10 @@ body main #app-container {
   overflow: auto;
   overflow-x: hidden;
 }
+body main #app-container #app-content {
+  background: #565656;
+}
+
 #side-menu {
   width: 4rem;
   transition: 0.2s width;
