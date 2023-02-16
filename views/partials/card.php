@@ -3,7 +3,7 @@
 <?php
 foreach ($shows as $show) :
 ?>
-    <div class="hover:scale-105 transition duration-300 flex flex-col justify-between w-80 h-[24rem] bg-white border border-gray-200 rounded-lg shadow dark:bg-primary dark:border-gray-700 overflow-hidden">
+    <div class="hover:scale-105 transition duration-300 flex flex-col justify-between w-80 h-[24rem] bg-white border border-gray-200 rounded-xl shadow dark:bg-primary overflow-hidden">
         <span class="p-2">
             <img class="rounded-lg" src="data:image/jpeg;base64,<?= base64_encode($show['image']) ?>" alt="" />
         </span>
