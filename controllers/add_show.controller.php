@@ -24,5 +24,6 @@ if (isset($_POST) && !empty($_POST)) {
         // Execute the ticket creation:
         $ticket = createTicket($db, $info);
         createSchedule($db, $ticket, $_POST['dateTime']);
+        header("Location: /dashboard");
     }
 }
