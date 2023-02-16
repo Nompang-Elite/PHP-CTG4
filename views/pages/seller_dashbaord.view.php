@@ -24,9 +24,9 @@
                     </div>
                 </div>
                 <div class="flex items-center mr-10">
-                <span class="fa-solid fa-edit text-blue-500 text-2xl" onclick="editShow()" id="<?= $show["id"] ?>"></span>
+                <span class="fa-solid fa-edit text-blue-500 text-2xl" onclick="editShow(this)" id="<?= $show["id"] ?>"></span>
                     <p class="font-bold text-3xl mb-2 p-1 text-white">|</p>
-                    <span class="fa-solid fa-trash text-red-700 mt-1 text-2xl" onclick="deleteShow()" id="<?= $show["id"] ?>"></span>
+                    <span class="fa-solid fa-trash text-red-700 mt-1 text-2xl" onclick="deleteShow(this)" id="<?= $show["id"] ?>"></span>
                 </div>
             </div>
         <?php endforeach ?>
@@ -34,3 +34,4 @@
         <!-- End card -->
     </div>
 </div>
+<script src="../../scripts/edit_ticket.js"></script>
