@@ -27,7 +27,7 @@ require('./views/partials/navbar.php');
 
 
     <!-- Details Start -->
-    <div id="details-dialog" class="absolute w-full overflow-scroll overflow-x-hidden rounded-lg z-20">
+    <div id="details-dialog" class="absolute w-full bg-primary overflow-scroll overflow-x-hidden rounded-lg z-20">
         <?php require('./views/pages/detail.views.php'); ?>
     </div>
     <!-- Details End -->
