@@ -537,6 +537,10 @@ video {
   margin: auto;
 }
 
+.m-3 {
+  margin: 0.75rem;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -639,6 +643,10 @@ video {
 
 .ml-64 {
   margin-left: 16rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .box-content {
