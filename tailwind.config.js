@@ -16,15 +16,13 @@ module.exports = {
     "./views/pages/seller_dashbaord.view.php",
     "./views/pages/search_result.view.php",
     "./views/pages/form_add_ticket.view.php",
-    "./views/pages/form_edit_ticket.view.php"
+    "./views/pages/form_edit_ticket.view.php",
   ],
   theme: {
     extend: {
       colors: {
         primary: "#1B1A17",
         secondary: "#F0A500",
-        // primary: "#2B2E4A",
-        // secondary: "#E84545",
       },
       height: {
         "details-box": "85%",
