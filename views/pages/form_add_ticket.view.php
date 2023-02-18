@@ -36,7 +36,7 @@
                         <span class="bg-red-500 p-1.5 rounded-lg w-20" onclick="cancel()">
                             Cancel
                         </span>
-                        <button class="bg-blue-500 p-1.5 rounded-lg w-20" onclick="addTickets()" disabled>
+                        <button id="submitBtn" class="bg-secondary p-1.5 rounded-lg w-20" onclick="addTickets()" disabled>
                             Add
                         </button>
                     </div>
@@ -46,4 +46,17 @@
         </div>
     </section>
 </dialog>
+<script>
+    $('#dialog').on('keyup', (e) => {
+        if (
+            $('#title').val() !== "" && !null &&
+            $('#price').val() !== "" && !null &&
+            $('#venue').val() !== "" && !null &&
+            $('#address').val() !== "" && !null &&
+            $('#message').val() !== "" && !null
+        ) {
+            $('#submitBtn').removeAttr("disabled");
+        }
+    })
+</script>
 <script src="../../scripts/add_ticket.js"></script>
