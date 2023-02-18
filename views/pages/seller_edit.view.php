@@ -36,7 +36,7 @@
                         <span class="bg-red-500 p-1.5 rounded-lg" onclick="cancelShowTicket()">
                             Cancel
                         </span>
-                        <button class="bg-blue-500 p-1.5 rounded-lg w-14" onclick="editShowTicket()">
+                        <button class="bg-blue-500 p-1.5 rounded-lg w-14" id="<?=$_GET['ticketId']?>" onclick="editShowTicket()">
                             Edit
                         </button>
                     </div>
