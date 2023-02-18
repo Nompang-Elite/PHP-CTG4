@@ -7,6 +7,6 @@ if (isset($showId))
 {
     $showTicket = getShowEdit($db , $showId);
 }
-
 require("./views/pages/seller_edit.view.php");
+
 
