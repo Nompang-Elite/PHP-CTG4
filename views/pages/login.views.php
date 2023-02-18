@@ -18,8 +18,8 @@ require('./views/partials/header.php');
             <div class="absolute flex items-center flex-col">
                 <img src="../../../contents/assets/imgs/logo.png" alt="" width="60%" class="">
                 <div class="p-4 w-[60%]">
-                    <h1 class="text-2xl ">Welcome to my website!</h1>
-                    <p class="text-xs">The world is so beautiful. Keep your best. <br>Think positive.</p>
+                    <h1 class="text-2xl text-white">Welcome to my website!</h1>
+                    <p class="text-xs text-white">The world is so beautiful. Keep your best. <br>Think positive.</p>
                 </div>
             </div>
         </div>
